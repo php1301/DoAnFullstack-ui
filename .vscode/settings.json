@@ -1,0 +1,6 @@
+{
+    "prettier.packageManager": "yarn",
+    "eslint.packageManager": "yarn",
+    "eslint.run": "onSave",
+    "eslint.format.enable": true
+}
