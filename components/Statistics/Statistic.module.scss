@@ -1,0 +1,60 @@
+.statisticGroup {
+  .statisticBox {
+    padding: 8px 0;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 228px;
+    height: 111px;
+    opacity: 1;
+    margin-right: 16px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: rgba(0, 0, 0, 0.06);
+    border-image: initial;
+    border-radius: 4px;
+    .statisticIcon {
+      display: flex;
+      width: 50px;
+      height: 45px;
+      margin-right: 10px;
+      margin-left: 10px;
+      background-image: url(https://storage.googleapis.com/fe-production/svgIcon/static-icon-1.svg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .statisticDetail {
+      width: 50%;
+      height: 60%;
+      text-align: center;
+      font-size: 20px;
+      .statisticValue {
+        &:nth-child(1) {
+          font-size: 26px;
+          font-weight: bold;
+          padding-top: 1px;
+        }
+        font-size: 16px;
+        margin: 0px;
+      }
+    }
+  }
+  &:nth-child(2) {
+    .statisticIcon {
+      background-image: url(https://storage.googleapis.com/fe-production/svgIcon/static-icon-2.svg);
+    }
+  }
+  &:nth-child(3) {
+    .statisticIcon {
+      background-image: url(https://storage.googleapis.com/fe-production/svgIcon/static-icon-3.svg);
+    }
+  }
+  &:nth-child(4) {
+    .statisticIcon {
+      background-image: url(https://storage.googleapis.com/fe-production/svgIcon/static-icon-4.svg);
+    }
+  }
+}

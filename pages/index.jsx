@@ -2,6 +2,7 @@ import Head from 'next/head';
 import NavBar from '../components/Navbar/Navbar';
 import Cover from '../components/Cover/Cover';
 import Special from '../components/Special/Special';
+import Statistic from '../components/Statistics/Statistic';
 
 const Home = () => (
   <div className="container">
@@ -27,6 +28,7 @@ const Home = () => (
     <Cover />
     <div className="body-wrapper">
       <Special />
+      <Statistic />
     </div>
   </div>
 );
