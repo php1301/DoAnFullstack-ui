@@ -1,0 +1,45 @@
+.stationGroup {
+  height: 161px;
+  display: block;
+  background-image: url(https://storage.googleapis.com/fe-production/images/bx-mien-dong.jpg);
+  background-size: cover;
+  width: 236px;
+  position: relative;
+  margin-right: 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  &:nth-child(2) {
+    background-image: url(https://storage.googleapis.com/fe-production/images/bx-gia-lam.jpg);
+  }
+  &:nth-child(3) {
+    background-image: url(https://storage.googleapis.com/fe-production/images/bx-nuoc-ngam.jpg);
+  }
+  &:nth-child(4) {
+    background-image: url(https://storage.googleapis.com/fe-production/images/bx-my-dinh.jpg);
+  }
+  .stationh1 {
+    font-weight: 500;
+    font-size: 18px;
+    bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 81px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 80px;
+    opacity: 0.6;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) 0% 0%
+      no-repeat padding-box padding-box transparent;
+    border-radius: 3px;
+  }
+}

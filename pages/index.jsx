@@ -3,6 +3,7 @@ import NavBar from '../components/Navbar/Navbar';
 import Cover from '../components/Cover/Cover';
 import Special from '../components/Special/Special';
 import Statistic from '../components/Statistics/Statistic';
+import Stations from '../components/Stations/Stations';
 
 const Home = () => (
   <div className="container">
@@ -29,6 +30,7 @@ const Home = () => (
     <div className="body-wrapper">
       <Special />
       <Statistic />
+      <Stations />
     </div>
   </div>
 );
