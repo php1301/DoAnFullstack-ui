@@ -4,6 +4,7 @@ import Cover from '../components/Cover/Cover';
 import Special from '../components/Special/Special';
 import Statistic from '../components/Statistics/Statistic';
 import Stations from '../components/Stations/Stations';
+import Footer from '../components/Footer/Footer';
 
 const Home = () => (
   <div className="container">
@@ -32,6 +33,7 @@ const Home = () => (
       <Statistic />
       <Stations />
     </div>
+    <Footer />
   </div>
 );
 export default Home;
