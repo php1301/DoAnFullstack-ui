@@ -1,27 +1,72 @@
-import { Layout, Menu } from 'antd';
-import nav from './Navbar.module.scss';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/require-default-props */
+import React from 'react';
+import PropTypes from 'prop-types';
+import NavbarWrapper, {
+  LogoArea,
+  MenuArea,
+  AvatarWrapper,
+  AuthWrapper,
+  MenuWrapper,
+} from './Navbar.style';
 
-const { Header } = Layout;
+const Navbar = ({
+  className,
+  logo,
+  avatar,
+  navMenu,
+  authMenu,
+  profileMenu,
+  isLogin,
+  headerType,
+  searchComponent,
+  location,
+  searchVisibility,
+}) => {
+  // Add all classs to an array
+  const addAllClasses = ['navbar'];
 
-export default function Navbar() {
+  // className prop checking
+  if (className) {
+    addAllClasses.push(className);
+  }
+
+  // headerType prop checking
+  if (headerType) {
+    addAllClasses.push(`is_${headerType}`);
+  }
+
   return (
-    <Layout className="layout">
-      <Header style={{ background: 'white' }}>
-        <div className={nav.navWrapper}>
-          <div className="ant-row">
-            <div className={`${nav.logo} ant-col ant-col-md-4`}>
-              <img href="/" src="https://storage.googleapis.com/fe-production/icon_vxr_full.svg" alt="logo vexere" />
-            </div>
-            <div className="ant-col ant-col-md-20">
-              <Menu theme="light" mode="horizontal" defaultSelectedKeys={['2']}>
-                <Menu.Item key="1">nav 1</Menu.Item>
-                <Menu.Item key="2">nav 2</Menu.Item>
-                <Menu.Item key="3">nav 3</Menu.Item>
-              </Menu>
-            </div>
-          </div>
-        </div>
-      </Header>
-    </Layout>
+    <NavbarWrapper className={addAllClasses.join(' ')}>
+      {logo || searchVisibility ? (
+        <LogoArea>
+          {logo}
+          {!searchVisibility && location.pathname === '/'
+            ? null
+            : searchComponent}
+        </LogoArea>
+      ) : null}
+      <MenuArea>
+        {navMenu && <MenuWrapper className="main_menu">{navMenu}</MenuWrapper>}
+        {isLogin && avatar ? (
+          <AvatarWrapper>{profileMenu}</AvatarWrapper>
+        ) : (
+          authMenu && (
+            <AuthWrapper className="auth_menu">{authMenu}</AuthWrapper>
+          )
+        )}
+      </MenuArea>
+    </NavbarWrapper>
   );
-}
+};
+
+Navbar.propTypes = {
+  className: PropTypes.string,
+  navMenu: PropTypes.element,
+  avatar: PropTypes.element,
+  authMenu: PropTypes.element,
+  isLogin: PropTypes.bool,
+  headerType: PropTypes.oneOf(['transparent', 'default']),
+};
+
+export default Navbar;
