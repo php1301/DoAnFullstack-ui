@@ -1,12 +1,67 @@
-// const withCSS = require('@zeit/next-css');
-// const withSass = require('@zeit/next-sass');
+/* eslint-disable no-param-reassign */
+/* eslint-disable consistent-return */
+const withPlugins = require('next-compose-plugins');
+const withOptimizedImages = require('next-optimized-images');
+const withFonts = require('next-fonts');
+const withCSS = require('@zeit/next-css');
 
-// module.exports = withCSS(withSass());
-// const withSass = require('@zeit/next-sass')
-// module.exports = withSass({
-//   cssModules: true,
-//   cssLoaderOptions: {
-//     importLoaders: 1,
-//     localIdentName: "[local]___[hash:base64:5]",
-//   }
-// })
+const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+
+const nextConfig = {
+  env: {
+    GOOGLE_API_KEY: 'AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg',
+    REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg&libraries=geometry,drawing,places',
+    SERVER_API: 'http://localhost:3001',
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      const antStyles = /antd\/.*?\/style\/css.*?/;
+      const origExternals = [...config.externals];
+      config.externals = [
+        (context, request, callback) => {
+          if (request.match(antStyles)) return callback();
+          if (typeof origExternals[0] === 'function') {
+            origExternals[0](context, request, callback);
+          } else {
+            callback();
+          }
+        },
+        ...(typeof origExternals[0] === 'function' ? [] : origExternals),
+      ];
+
+      config.module.rules.unshift({
+        test: antStyles,
+        use: 'null-loader',
+      });
+    }
+    //   // HOTFIX: https://github.com/webpack-contrib/mini-css-extract-plugin/issues/250
+    config.plugins.push(
+      new FilterWarningsPlugin({
+        exclude: /mini-css-extract-plugin[^]*Conflicting order between:/,
+      }),
+    );
+    config.resolve.modules.push(__dirname);
+
+    return config;
+  },
+};
+
+module.exports = withPlugins(
+  [
+    [
+      withOptimizedImages,
+      {
+        mozjpeg: {
+          quality: 90,
+        },
+        webp: {
+          preset: 'default',
+          quality: 90,
+        },
+      },
+    ],
+    withFonts,
+    withCSS,
+  ],
+  nextConfig,
+);
