@@ -3,6 +3,7 @@ import { withRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Sticky from 'react-stickynode';
+import { IoIosClose } from 'react-icons/io';
 
 import Text from '../../../components/UI/Text/Text';
 import Button from '../../../components/UI/Antd/Button/Button';
@@ -52,7 +53,7 @@ const Header = ({ router, user, isLoggedIn }) => {
           logo={(
             <>
               {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={hotelFinder} title="HotelFinder." />
+              <Logo withLink linkTo="/" src={hotelFinder} title="HotelokaBNB." />
             </>
           )}
           navMenu={<MainMenu />}
@@ -63,6 +64,28 @@ const Header = ({ router, user, isLoggedIn }) => {
         />
         <MobileNavbar>
           <LogoArea />
+          <Button
+            className={`hamburg-btn ${state ? 'active' : ''}`}
+            onClick={sidebarHandler}
+          >
+            <span />
+            <span />
+            <span />
+          </Button>
+          <Drawer
+            placement="right"
+            closable={false}
+            onClose={sidebarHandler}
+            width="285px"
+            className="mobile-header"
+            visible={state}
+          >
+            <CloseDrawer>
+              <button type="button" onClick={sidebarHandler}>
+                <IoIosClose />
+              </button>
+            </CloseDrawer>
+          </Drawer>
         </MobileNavbar>
       </Sticky>
     </HeaderWrapper>

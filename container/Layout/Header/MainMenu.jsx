@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { withRouter } from 'next/router';
-import Menu from '../../components/UI/Antd/Menu/Menu';
-import ActiveLink from '../../library/helpers/activeLink';
+import Menu from '../../../components/UI/Antd/Menu/Menu';
+import ActiveLink from '../../../library/helpers/activeLink';
 
 import {
   HOME_PAGE,
   LISTING_POSTS_PAGE,
   USER_PROFILE_PAGE,
   PRICING_PLAN_PAGE,
-} from '../../settings/constants'; // routing
+} from '../../../settings/constants'; // routing
 
 const MainMenu = ({ className, router }) => (
   <Menu className={className}>
