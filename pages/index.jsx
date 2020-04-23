@@ -1,39 +1,15 @@
 import Head from 'next/head';
-import NavBar from '../components/Navbar/Navbar';
-import Cover from '../components/Cover/Cover';
-import Special from '../components/Special/Special';
-import Statistic from '../components/Statistics/Statistic';
-import Stations from '../components/Stations/Stations';
-import Footer from '../components/Footer/Footer';
+import SearchArea from '../container/Home/Search/Search';
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      />
-      <link
-        rel="shortcut icon"
-        href="https://storage.googleapis.com/builderbook/favicon32.png"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Muli:300,400:latin"
-      />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    </Head>
-    <NavBar />
-    <Cover />
-    <div className="body-wrapper">
-      <Special />
-      <Statistic />
-      <Stations />
-    </div>
-    <Footer />
-  </div>
-);
+// eslint-disable-next-line arrow-body-style
+const Home = () => {
+  return (
+    <>
+      <Head>
+        <title>Hotel | A react next listing template</title>
+      </Head>
+      <SearchArea />
+    </>
+  );
+};
 export default Home;
