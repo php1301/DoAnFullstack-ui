@@ -11,7 +11,7 @@ const nextConfig = {
   env: {
     GOOGLE_API_KEY: 'AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg',
     REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg&libraries=geometry,drawing,places',
-    SERVER_API: 'http://localhost:3001',
+    SERVER_API: 'http://localhost:3000',
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
