@@ -27,6 +27,7 @@ module.exports = {
     "rules": {
         "react/react-in-jsx-scope": "off",
         "react/prop-types": 0,
+        "react/jsx-props-no-spreading":"off",
         "react/require-default-props": 0,
         "linebreak-style": 0
 
