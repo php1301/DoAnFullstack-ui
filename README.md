@@ -137,7 +137,7 @@ ___
 + SEO with SSR
 + Strict với Folder Structure, Linter
 ***
-## [Tài liệu - Extensions](https://github.com/php1301/DoAnReactJS/blob/master/Developer/docs.md)
+## [Knowledge](https://github.com/php1301/DoAnReactJS/blob/master/Developer/docs.md)
 + [ReactJS.org](https://reactjs.org/)
 + [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 + [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension)
