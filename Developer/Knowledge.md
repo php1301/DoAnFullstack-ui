@@ -1,7 +1,7 @@
 # Knowledge
 Things I learned In this project
 ***
-## :green_book:1. ESLint
+## :green_book: 1. ESLint
 ### :exclamation: Information
 #### :star2: Usage
 ESLint là một công cụ để xác định và báo cáo về các bugs được tìm thấy trong mã ECMAScript / JavaScript, với mục tiêu là strict code style rules, nhằm hạn chế bugs, looks prettier
@@ -23,7 +23,7 @@ Restart VS Code
 #### :pushpin: Noted
 Config ở trên xài style AirBNB, các bạn có thể tham khảo trong cli những style khác, hoặc tự custom style, với sự ra mắt ES2020 thì 1 số nơi trong porject cũng nên tắt ESLint
 ***
-## :green_book:2. NextJS config
+## :green_book: 2. NextJS config
 ### :exclamation: Information
 #### :star2: Usage
 next.config.js là 1 file khá quan trọng của project, chủ yếu để customize với các plugin của zeit, có thể tới thời điểm bạn đọc cái này thì 1 số cái đã bị deprecated(hãy update nó). Trong project này mình config next.config.js như 1 .env để setup môi trường cho toàn project 1 cách thống nhất nhất có thể
@@ -40,7 +40,7 @@ Tạo file next.config.js
 #### :pushpin: Noted
 Tận dụng thiết kế project Monorepo và lợi dựng env:[] trong file này, tìm hiểu thêm các boilerplate nextJS config như thế nào trong file này
 ***
-## :green_book:3. Global Variables - ThemeProvider - GlobalStyle
+## :green_book: 3. Global Variables - ThemeProvider - GlobalStyle
 ### :exclamation: Information
 #### :star2: Usage
 Các global variables cho dự án, sử dụng {ThemeProvider} của styled component, Thiết kế Global Style, Các Global Style trong styled Component như này sẽ không bị hashed, có thể override về sau bằng component-level styling
