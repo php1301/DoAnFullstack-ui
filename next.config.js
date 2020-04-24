@@ -9,8 +9,8 @@ const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 
 const nextConfig = {
   env: {
-    GOOGLE_API_KEY: 'AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg',
-    REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDXOHy2VaqEgJxcXezS9BLkjB0d1VzHoNg&libraries=geometry,drawing,places',
+    GOOGLE_API_KEY: 'AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus',
+    REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus&libraries=geometry,drawing,places',
     SERVER_API: 'http://localhost:3000',
   },
   webpack: (config, { isServer }) => {
