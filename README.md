@@ -22,7 +22,7 @@ ___
 ## [About](https://github.com/php1301/DoAnReactJS/blob/master/Developer/About.md)
 
 Đồ án Fullstack là... (TBA)
-## [Project Structure](https://github.com/php1301/vexere-ui/blob/master/Developer/Project-structure.md)
+## [Project Structure](https://github.com/php1301/vexere-ui/blob/master/Developer/ProjectStructure.md)
 ### Monorepo With Yarn Workspaces:
 Đây là cấu trúc tổ chức thư mục của Project (Chỉ show 1 vài file con của thư mục để ví dụ)
 #### WIP
@@ -148,7 +148,7 @@ ___
 #### Phase 3
 + [3.1](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_1.md)
 + [3.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_2.md)
-## [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/Packages.md)
+## [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE)
 + [Chapter 1](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE/Knowledge_1.md)
 ## [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
 + [Facebook](https://www.facebook.com/dioxittdn.phucprobb)
