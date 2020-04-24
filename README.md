@@ -6,11 +6,10 @@ ___
 + [Wiki - GitLab](https://gitlab.com/php1301/DoAnReactJS/-/wikis/Project-Wiki-about)
 + [Project Overview](https://www.youtube.com/watch?v=__gm2ttLUiI)
 + [About](https://github.com/php1301/DoAnReactJS/blob/master/Developer/About.md)
-+ [Tài liệu - Extensions](https://github.com/php1301/DoAnReactJS/blob/master/Developer/docs.md)
-+ [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
 + [Tính năng nổi bật](https://github.com/php1301/DoAnReactJS/blob/master/Developer/SpecialFeatures.md)
 + [Log - Quá trình làm ](https://github.com/php1301/DoAnReactJS/tree/master/Developer/PROGRESS)
-+ [Thư Viện - Packages - API](https://github.com/php1301/DoAnReactJS/blob/master/Developer/Packages.md)
++ [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/Packages.md)
++ [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
 + [Từ Tác Giả](https://github.com/php1301/DoAnReactJS/edit/master/Developer/Info.md)
 ---
 ***
@@ -23,7 +22,7 @@ ___
 ## [About](https://github.com/php1301/DoAnReactJS/blob/master/Developer/About.md)
 
 Đồ án Fullstack là... (TBA)
-## Project Structure
+## [Project Structure](https://github.com/php1301/vexere-ui/blob/master/Developer/Project-structure.md)
 ### Monorepo With Yarn Workspaces:
 Đây là cấu trúc tổ chức thư mục của Project (Chỉ show 1 vài file con của thư mục để ví dụ)
 #### WIP
@@ -119,7 +118,6 @@ ___
  ┣ 📜README.md
  ┗ 📜yarn.lock
 ```
-...
 ***
 ĐỒ ÁN FULLSTACK - ... (TBA)
 ***
@@ -137,23 +135,10 @@ ___
 + SEO with SSR
 + Strict với Folder Structure, Linter
 ***
-## [Knowledge](https://github.com/php1301/DoAnReactJS/blob/master/Developer/docs.md)
-+ [ReactJS.org](https://reactjs.org/)
-+ [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-+ [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension)
-+ [Firebase](https://firebase.google.com/docs)
-+ [Jest - react - Enzyme](https://www.npmjs.com/package/jest-dom)
-+ (Đang phát triển)
-***
-## [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
-+ [Facebook](https://www.facebook.com/dioxittdn.phucprobb)
-+ [Gmail - UIT](19520854@gm.uit.edu.vn)
-+ [Slack](https://join.slack.com/t/reactjsgroupe/shared_invite/enQtNzk4MzkxMjc2MDIyLWIzZTNlNzVlZmM4YjExYWYyMzhkMmZlYzg2YjJhNWRiMzQ5YmE5ZDMyNmYyNzVlN2VhYTNhYWEwNDhlODA4MWM)
-***
-## [Log - Quá trình làm ](https://github.com/php1301/DoAnReactJS/tree/master/Developer/PROGRESS)
+## [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
 ### Theo dõi quá trình làm ĐỒ ÁN FULLSTACK (UI) - ... của mình tại đây
 #### Phase 1
-+ [1.1](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%201/Phase-1_1.md)
++ [1.1](https://github.com/php1301/vexere-ui/blob/master/Developer/PROGRESS/Phase%201/Phase-1_1.md)
 + [1.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%201/Phase-1_2.md)
 + [1.3](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%201/Phase-1_3.md)
 #### Phase 2
@@ -163,8 +148,13 @@ ___
 #### Phase 3
 + [3.1](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_1.md)
 + [3.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_2.md)
-## [Kiến thức học được](https://github.com/php1301/DoAnReactJS/blob/master/Developer/Packages.md)
-Click vào headline
+## [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/Packages.md)
++ [Chapter 1](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE/Knowledge_1.md)
+## [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
++ [Facebook](https://www.facebook.com/dioxittdn.phucprobb)
++ [Gmail - UIT](19520854@gm.uit.edu.vn)
++ [Slack](https://join.slack.com/t/reactjsgroupe/shared_invite/enQtNzk4MzkxMjc2MDIyLWIzZTNlNzVlZmM4YjExYWYyMzhkMmZlYzg2YjJhNWRiMzQ5YmE5ZDMyNmYyNzVlN2VhYTNhYWEwNDhlODA4MWM)
+***
 ## [Từ tác giả](https://github.com/php1301/DoAnReactJS/edit/master/Developer/Info.md)
 Vì là dự án solo làm từ đầu đến cuối và nhiều assignments vào giai đoạn làm và cả đi quốc phòng nên khá là mệt nhưng cũng rất tâm huyết cho nó vì nhất định mình phải chạm tới được thứ mình nhắm tới
 ***
