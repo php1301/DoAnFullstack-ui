@@ -8,7 +8,7 @@ ___
 + [About](https://github.com/php1301/vexere-ui/blob/master/Developer/About.md)
 + [Tính năng nổi bật](https://github.com/php1301/vexere-ui/blob/master/Developer/SpecialFeatures.md)
 + [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
-+ [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/Packages.md)
++ [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE)
 + [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
 + [Từ Tác Giả](https://github.com/php1301/vexere-ui/edit/master/Developer/Info.md)
 ---
