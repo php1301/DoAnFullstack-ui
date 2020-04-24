@@ -10,7 +10,7 @@ ___
 + [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
 + [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE)
 + [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
-+ [Từ Tác Giả](https://github.com/php1301/vexere-ui/edit/master/Developer/Info.md)
++ [Từ Tác Giả](https://github.com/php1301/vexere-ui/blob/master/Developer/Info.md)
 ---
 ***
 ## [Wiki - GitLab](https://gitlab.com/php1301/DoAnReactJS/-/wikis/Project-Wiki-about)
@@ -155,7 +155,7 @@ ___
 + [Gmail - UIT](19520854@gm.uit.edu.vn)
 + [Slack](https://join.slack.com/t/reactjsgroupe/shared_invite/enQtNzk4MzkxMjc2MDIyLWIzZTNlNzVlZmM4YjExYWYyMzhkMmZlYzg2YjJhNWRiMzQ5YmE5ZDMyNmYyNzVlN2VhYTNhYWEwNDhlODA4MWM)
 ***
-## [Từ tác giả](https://github.com/php1301/DoAnReactJS/edit/master/Developer/Info.md)
+## [Từ tác giả](https://github.com/php1301/DoAnReactJS/blob/master/Developer/Info.md)
 Vì là dự án solo làm từ đầu đến cuối và nhiều assignments vào giai đoạn làm và cả đi quốc phòng nên khá là mệt nhưng cũng rất tâm huyết cho nó vì nhất định mình phải chạm tới được thứ mình nhắm tới
 ***
 Everything will be fulfilled
