@@ -5,12 +5,12 @@ ___
 ---
 + [Wiki - GitLab](https://gitlab.com/php1301/DoAnReactJS/-/wikis/Project-Wiki-about)
 + [Project Overview](https://www.youtube.com/watch?v=__gm2ttLUiI)
-+ [About](https://github.com/php1301/DoAnReactJS/blob/master/Developer/About.md)
-+ [Tính năng nổi bật](https://github.com/php1301/DoAnReactJS/blob/master/Developer/SpecialFeatures.md)
-+ [Log - Quá trình làm ](https://github.com/php1301/DoAnReactJS/tree/master/Developer/PROGRESS)
++ [About](https://github.com/php1301/vexere-ui/blob/master/Developer/About.md)
++ [Tính năng nổi bật](https://github.com/php1301/vexere-ui/blob/master/Developer/SpecialFeatures.md)
++ [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
 + [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/Packages.md)
 + [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
-+ [Từ Tác Giả](https://github.com/php1301/DoAnReactJS/edit/master/Developer/Info.md)
++ [Từ Tác Giả](https://github.com/php1301/vexere-ui/edit/master/Developer/Info.md)
 ---
 ***
 ## [Wiki - GitLab](https://gitlab.com/php1301/DoAnReactJS/-/wikis/Project-Wiki-about)
@@ -121,7 +121,7 @@ ___
 ***
 ĐỒ ÁN FULLSTACK - ... (TBA)
 ***
-## [Tính năng nổi bật](https://github.com/php1301/DoAnReactJS/blob/master/Developer/SpecialFeatures.md)
+## [Tính năng nổi bật](https://github.com/php1301/vexere-ui/blob/master/Developer/SpecialFeatures.md)
 + ReactJS with SSR using NEXTJS
 + Responsive bắt mắt
 + Styled-Components
