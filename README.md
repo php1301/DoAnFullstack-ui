@@ -163,16 +163,8 @@ ___
 #### Phase 3
 + [3.1](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_1.md)
 + [3.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%203/Phase-3_2.md)
-## [Thư Viện - Packages - API](https://github.com/php1301/DoAnReactJS/blob/master/Developer/Packages.md)
-+ ReactJS
-+ Facebook API Login
-+ Redux
-+ React - Redux
-+ OMDB
-+ TMDB
-+ Firebase Firestore
-+ The Movies Database
-+ (Đang phát triển)
+## [Kiến thức học được](https://github.com/php1301/DoAnReactJS/blob/master/Developer/Packages.md)
+Click vào headline
 ## [Từ tác giả](https://github.com/php1301/DoAnReactJS/edit/master/Developer/Info.md)
 Vì là dự án solo làm từ đầu đến cuối và nhiều assignments vào giai đoạn làm và cả đi quốc phòng nên khá là mệt nhưng cũng rất tâm huyết cho nó vì nhất định mình phải chạm tới được thứ mình nhắm tới
 ***
