@@ -142,7 +142,7 @@ ___
 + [1.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%201/Phase-1_2.md)
 + [1.3](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%201/Phase-1_3.md)
 #### Phase 2
-+ [2.1](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%202/Phase-2_1.md)
++ [2.1](https://github.com/php1301/vexere-ui/blob/master/Developer/PROGRESS/Phase%202/Phase-2_1.md)
 + [2.2](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%202/Phase-2_2.md)
 + [2.3](https://github.com/php1301/DoAnReactJS/blob/master/Developer/PROGRESS/Phase%202/Phase-2_3.md)
 #### Phase 3
