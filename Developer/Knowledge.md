@@ -21,7 +21,7 @@ Restart VS Code
 #### :star2: Rating
 :no_mouth:	:hushed:
 #### :sunny: Noted
-Config ở trên xài style airbnb, các bạn có thể tham khảo trong cli những style khác, hoặc tự custom style, với sự ra mắt ES2020 thì 1 số nơi trong porject cũng nên tắt ESLint
+Config ở trên xài style AirBNB, các bạn có thể tham khảo trong cli những style khác, hoặc tự custom style, với sự ra mắt ES2020 thì 1 số nơi trong porject cũng nên tắt ESLint
 ***
 ***
 ## :green_book:2. NextJS config
@@ -35,7 +35,7 @@ Codebase - Config - .env
 Tạo file next.config.js
 ```
 #### :star2: Setup
-+ [ESLint Setup](https://github.com/php1301/vexere-ui/blob/master/.eslintrc.js)
++ [ESLint Setup](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
 #### :star2: Rating
-:no_mouth:	:hushed:
+:no_mouth:	:hushed: :frowning:	
 ***
