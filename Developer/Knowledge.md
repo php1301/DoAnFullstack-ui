@@ -19,7 +19,7 @@ Restart VS Code
 #### :star2: Setup
 + [ESLint Setup](https://github.com/php1301/vexere-ui/blob/master/.eslintrc.js)
 #### :star2: Rating
-:no_mouth:	:hushed:
+:no_mouth:	:open_mouth:
 #### :pushpin: Noted
 Config ở trên xài style AirBNB, các bạn có thể tham khảo trong cli những style khác, hoặc tự custom style, với sự ra mắt ES2020 thì 1 số nơi trong porject cũng nên tắt ESLint
 ***
@@ -36,7 +36,7 @@ Tạo file next.config.js
 #### :star2: Setup
 + [NextJS config Setup](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
 #### :star2: Rating
-:no_mouth:	:hushed: :frowning:	
+:no_mouth: :open_mouth:	:hushed:	
 #### :pushpin: Noted
 Tận dụng thiết kế project Monorepo và lợi dựng env:[] trong file này, tìm hiểu thêm các boilerplate nextJS config như thế nào trong file này
 ***
@@ -54,8 +54,32 @@ yarn add styled-components @styled-system/theme-get
 + [Global Variables - Khai báo](https://github.com/php1301/vexere-ui/blob/master/themes/default.theme.js)
 + [createGlobalStyle](https://github.com/php1301/vexere-ui/blob/master/assets/style/Global.style.jsx)
 #### :star2: Rating
-:no_mouth:	:hushed:
+:no_mouth:	:open_mouth:
 #### :pushpin: Noted
 Việc strict các variables, comment cẩn thận giúp cho Project là 1 thể thống nhất rất quan trọng, giúp chúng ta dễ quản lý project, bên cạnh đó thì tạo global style với styled-components bằng createGlobalStyle
 ***
-
+## :green_book: 4. PropTypes
+### :exclamation: Information
+#### :star2: Usage
+PropTypes là 1 core module của React, nó giúp cho việc manipulate props dễ dàng, strict, HOC, best usage có thể nói là validators, giúp trả về đúng data, đúng mục đích, có thể là bool, string, 1 mảng oneOf, trả về đúng string gắn vô className và render đúng element className tương umg71
+#### :star2: Type
+Techinique - Props - Data manipulating
+#### :star2: Prerequisite
+```
+yarn add prop-types
+```
+#### :star2: Setup
++ Trong Functional Programming, ta có thể declare props bằng cách sau
+![Imgur](https://i.imgur.com/PoryaLO.png)
++ Toàn bộ đều .PropTypes
++ 1 số cách sử dụng
+  * Advance Inline Style
+  ![Imgur](https://i.imgur.com/27zivTP.png)
+  * Đổi className base on headerType
+  ![Imgur](https://i.imgur.com/LbvhD9n.png?1)
+  * Validate và trả đúng data
+  ![Imgur](https://i.imgur.com/sDXQJel.png)
+#### :star2: Rating
+:no_mouth: :open_mouth:	:hushed: :frowning:
+#### :pushpin: Noted
+Phản quản lý props chặt chẽ, có workflow đúng, strict các conditional, trả đúng data và type, nên tận dụng tối đa propTypes cho việc trả đúng className validator bằng oneOf, xài tốt với styled-component
