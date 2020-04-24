@@ -35,7 +35,7 @@ Codebase - Config - .env
 Tạo file next.config.js
 ```
 #### :star2: Setup
-+ [ESLint Setup](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
++ [NextJS config Setup](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
 #### :star2: Rating
 :no_mouth:	:hushed: :frowning:	
 ***
