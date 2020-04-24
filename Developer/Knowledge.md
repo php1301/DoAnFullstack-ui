@@ -84,28 +84,3 @@ yarn add prop-types
 #### :pushpin: Noted
 Phản quản lý props chặt chẽ, có workflow đúng, strict các conditional, trả đúng data và type, nên tận dụng tối đa propTypes cho việc trả đúng className validator bằng oneOf, xài tốt với styled-component
 ***
-## :green_book: 5. PropTypes
-### :exclamation: Information
-#### :star2: Usage
-PropTypes là 1 core module của React, nó giúp cho việc manipulate props dễ dàng, strict, HOC, best usage có thể nói là validators, giúp trả về đúng data, đúng mục đích, có thể là bool, string, 1 mảng oneOf, trả về đúng string gắn vô className và render đúng element className tương umg71
-#### :star2: Type
-Techinique - Props - Data manipulating
-#### :star2: Prerequisite
-```
-yarn add prop-types
-```
-#### :star2: Setup
-+ Trong Functional Programming, ta có thể declare props bằng cách sau
-![Imgur](https://i.imgur.com/PoryaLO.png)
-+ Toàn bộ đều .PropTypes
-+ 1 số cách sử dụng
-  * Advance Inline Style
-  ![Imgur](https://i.imgur.com/27zivTP.png)
-  * Đổi className base on headerType
-  ![Imgur](https://i.imgur.com/LbvhD9n.png?1)
-  * Validate và trả đúng data
-  ![Imgur](https://i.imgur.com/sDXQJel.png)
-#### :star2: Rating
-:no_mouth: :open_mouth:	:hushed: :frowning:
-#### :pushpin: Noted
-Phản quản lý props chặt chẽ, có workflow đúng, strict các conditional, trả đúng data và type, nên tận dụng tối đa propTypes cho việc trả đúng className validator bằng oneOf, xài tốt với styled-component
