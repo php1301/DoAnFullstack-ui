@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
 
     try {
       ctx.renderPage = () => originalRenderPage({
-        // eslint-disable-next-line react/jsx-props-no-spreading
         enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
       });
 
@@ -29,6 +28,7 @@ export default class MyDocument extends Document {
     }
   }
 
+
   render() {
     return (
       <Html>
@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
 
           <link
             rel="icon"
-            href="../static/images/favicon.png"
+            // href="../static/images/favicon.png"
             type="image/png"
             sizes="16x16"
           />
