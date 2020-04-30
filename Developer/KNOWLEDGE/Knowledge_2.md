@@ -48,7 +48,6 @@ yarn add mobile-detect
 Hiểu rõ về SSR, tránh side-effects của người dùng, behaviour lạ, không được lạm dụng ở nhiều nơi, khuyến nghị chỉ sử dụng ở rendered page
 + Đọc thêm tại: https://www.npmjs.com/package/mobile-detect
 ***
-***
 ## :green_book: 8. Global Responsive
 ### :exclamation: Information
 #### :star2: Usage
