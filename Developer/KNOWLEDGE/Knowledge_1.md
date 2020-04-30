@@ -84,3 +84,22 @@ yarn add prop-types
 #### :pushpin: Noted
 Phản quản lý props chặt chẽ, có workflow đúng, strict các conditional, trả đúng data và type, nên tận dụng tối đa propTypes cho việc trả đúng className validator bằng oneOf, xài tốt với styled-component
 ***
+## :green_book: 5. Custom Loader
+### :exclamation: Information
+#### :star2: Usage
+Loader cho trang web hay bất cứ đâu
+#### :star2: Type
+UI - Design - Snippet
+#### :star2: Prerequisite
+```
+Kiếm spinner loader của bạn
+```
+#### :star2: Setup
++ [Loader Setup](https://github.com/php1301/vexere-ui/tree/master/components/Loader)
++ Example usage
+![Imgur](https://i.imgur.com/UZQkjNF.png)
+#### :star2: Rating
+:no_mouth:	:open_mouth:
+#### :pushpin: Noted
+Tham khảo getStaticPageProps hoặc getInitialpPageProps để làm loader load trang
+***
