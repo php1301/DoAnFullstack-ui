@@ -68,3 +68,24 @@ Hiểu cách sử dụng Get Device Type
 #### :pushpin: Noted
 Setup global responsive rất quan trọng giúp cho layout thống nhất, dễ maintain hơn (cảm giác như xài lib chỉ việc thay số 1 2 3,...), nghiên cứu kĩ project để hiểu rõ thêm các advanced usage
 ***
+## :green_book: 9. Override Styling Library
+### :exclamation: Information
+#### :star2: Usage
+Override các styling library để custom khá quan trọng, về cả mặt UI lẫn UX, ở đây sẽ tập trung nói về UI của Antd
+#### :star2: Type
+Library - Styling
+#### :star2: Prerequisite
+```
+Tích hợp các library styling như Material-UI, BS4, Antd
+```
+#### :star2: Setup
++ [Antd setup global sử dụng babel-plugin-import giảm bundle size](https://github.com/php1301/vexere-ui/blob/master/babel.config.js)
++ [Antd setup global, path setup như docs NextJS trong next.config.js ](https://github.com/php1301/vexere-ui/blob/master/pages/index.jsx)
++ [Antd override antd cấp global](https://github.com/php1301/vexere-ui/blob/master/assets/style/Global.style.jsx)
++ Việc import như trên giúp override được những gì ta muốn, 1 level global với cái hash khác nhau(nếu bạn override tiếp ở component-level), thanks to styled
++ Nên thực hiện việc import Antd components như thế này để tiện cho việc sử dụng và style theo ý thích component-level, phù hợp cho việc clone 1 antd-design mà bạn thích
++ ![Imgur](https://i.imgur.com/pOjHaWX.png)
+#### :star2: Rating
+:no_mouth: :open_mouth:	:hushed:
+#### :pushpin: Noted
+Sử dụng styling library giúp tăng tốc độ code đáng kể nhưng quan trọng nhất là mình biết cách làm chủ nó chứ không quá máy móc phụ thuộc nó
