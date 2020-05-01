@@ -1,17 +1,19 @@
 import React, { useState, useContext } from 'react';
+
 import { withRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
 import Sticky from 'react-stickynode';
 import { IoIosClose } from 'react-icons/io';
 
-import Text from '../../../components/UI/Text/Text';
-import Button from '../../../components/UI/Antd/Button/Button';
-import Drawer from '../../../components/UI/Antd/Drawer/Drawer';
-import Logo from '../../../components/UI/Logo/Logo';
-import Navbar from '../../../components/Navbar/Navbar';
+import Text from 'components/UI/Text/Text';
+import Button from 'components/UI/Antd/Button/Button';
+import Drawer from 'components/UI/Antd/Drawer/Drawer';
+import Logo from 'components/UI/Logo/Logo';
+import Navbar from 'components/Navbar/Navbar';
 
-import hotelFinder from '../../../assets/images/logo-alt.svg';
+import hotelFinder from 'assets/images/logo-alt.svg';
 
 import HeaderWrapper, {
   MobileNavbar,
