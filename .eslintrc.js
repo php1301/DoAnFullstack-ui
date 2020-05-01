@@ -12,6 +12,14 @@ module.exports = {
         "SharedArrayBuffer": "readonly",
         "React": "writable"
     },
+    //config cho Absolute import
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["./"]
+              }
+        },
+    },
     "parser": 'babel-eslint',
     "parserOptions": {
         "ecmaFeatures": {
@@ -28,9 +36,10 @@ module.exports = {
         "jsx-a11y/anchor-is-valid": "off",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": 0,
-        "react/jsx-props-no-spreading":"off",
+        "react/jsx-props-no-spreading": "off",
         "react/require-default-props": 0,
-        "linebreak-style": 0
+        "linebreak-style": 0,
+        "import/order":"off"
 
     }
 };

@@ -4,7 +4,6 @@ const withPlugins = require('next-compose-plugins');
 const withOptimizedImages = require('next-optimized-images');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
-
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 
 const nextConfig = {
@@ -40,6 +39,7 @@ const nextConfig = {
         exclude: /mini-css-extract-plugin[^]*Conflicting order between:/,
       }),
     );
+    // config cho absolute import
     config.resolve.modules.push(__dirname);
 
     return config;
