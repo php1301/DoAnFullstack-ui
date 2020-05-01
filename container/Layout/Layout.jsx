@@ -1,9 +1,12 @@
 import React from 'react';
 import { withRouter } from 'next/router';
+
 import LayoutWrapper from '../../components/UI/Antd/Layout/Layout';
-import HomeSearch from '../Home/Search/Search';
 
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
+
+import { SINGLE_POST_PAGE } from '../../settings/constants';
 
 const { Content } = LayoutWrapper;
 
@@ -12,7 +15,8 @@ const Layout = ({
 }) => (
   <LayoutWrapper>
     <Header user={user} isLoggedIn={isLoggedIn} />
-    <HomeSearch />
+    <Content>{children}</Content>
+    <Footer path={router.pathname === SINGLE_POST_PAGE} />
   </LayoutWrapper>
 );
 

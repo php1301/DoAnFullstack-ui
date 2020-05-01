@@ -34,7 +34,7 @@ const MainMenu = ({ className, router }) => (
         className={router.pathname === USER_PROFILE_PAGE ? 'active' : ''}
         href={`${USER_PROFILE_PAGE}`}
       >
-        Agent
+        Profile
       </ActiveLink>
     </Menu.Item>
     <Menu.Item key="3">

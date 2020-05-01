@@ -24,7 +24,6 @@ const GlideCarousel = ({
   numberOfBullets,
   carouselSelector,
 }) => {
-  // Add all classs to an array.
   const addAllClasses = ['glide'];
 
   // className prop checking.
@@ -32,7 +31,7 @@ const GlideCarousel = ({
     addAllClasses.push(className);
   }
 
-  // number of bullets loop.
+  // Số bullets loop
   const totalBullets = [];
   for (let i = 0; i < numberOfBullets; i++) {
     totalBullets.push(i);
@@ -58,7 +57,7 @@ const GlideCarousel = ({
         <ul className="glide__slides">{children}</ul>
       </div>
 
-      {/** if controls prop true then show controls nav. */}
+      {/** if controls prop true thì show controls nav. */}
       {controls && (
         <ButtonControlWrapper
           className="glide__controls"
@@ -73,7 +72,7 @@ const GlideCarousel = ({
         </ButtonControlWrapper>
       )}
 
-      {/** if bullets prop true then show bullets nav. */}
+      {/** if bullets prop true thì show bullets nav. */}
       {bullets && (
         <BulletControlWrapper
           className="glide__bullets"
@@ -94,16 +93,16 @@ const GlideCarousel = ({
   );
 };
 
-// Glide Slide wrapper component.
+// Glide Slide wrapper component
 const GlideSlide = ({ children }) => (
   <GlideSlideWrapper className="glide__slide">{children}</GlideSlideWrapper>
 );
 
 GlideCarousel.propTypes = {
-  /** className of the GlideCarousel. */
+  /** className của GlideCarousel\ */
   className: PropTypes.string,
 
-  /** Children. */
+  /** Children */
   children: PropTypes.element,
 
   /** Custom options của glide. */
@@ -115,7 +114,7 @@ GlideCarousel.propTypes = {
   /** bullets nav. */
   bullets: PropTypes.bool,
 
-  
+
   numberOfBullets: PropTypes.number,
 
   prevButton: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
