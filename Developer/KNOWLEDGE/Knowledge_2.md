@@ -89,3 +89,29 @@ Tích hợp các library styling như Material-UI, BS4, Antd
 :no_mouth: :open_mouth:	:hushed:
 #### :pushpin: Noted
 Sử dụng styling library giúp tăng tốc độ code đáng kể nhưng quan trọng nhất là mình biết cách làm chủ nó chứ không quá máy móc phụ thuộc nó
+***
+## :green_book: 10. Absolute Import
+### :exclamation: Information
+#### :star2: Usage
+Việc sử dụng absolute import giúp giải quyết các vấn đề static path rất hiệu quả cho SEO, gọn gàng, dễ maintain đặc biệt trong các dự án scale lớn
+#### :star2: Type
+Codebase - Config - Alias - linter
+#### :star2: Prerequisite
+```
+yarn add -D eslint-plugin-import
+
+```
+#### :star2: Setup
+Config chuẩn alias phải thỏa mãn 3 yếu tố:
++ Webpack hiểu (ở đây tận dụng webpack plugin của next.config.js)
++ [Webpack - Mình đã commented trong file khúc nào là khúc cho alias](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
++ ESLint không báo lỗi (.eslintrc.js)
++ [ESLint - Mình đã commented trong file khúc nào là khúc cho alias ](https://github.com/php1301/vexere-ui/blob/master/.eslintrc.js)
++ VSCode gợi ý được(.jsConfig.js) ở đây demo mẫu cho alias component
++ [VSCode gợi ý dược - demo cho alias component](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
++ Demo absolute path cho 1 directory - component
+![Imgur](https://i.imgur.com/ksNgEoO.png?1)
+#### :star2: Rating
+:no_mouth: :open_mouth:	:hushed:
+#### :pushpin: Noted
+Với SSR thì Absolute Path đặc biệt hữu ích cho SEO, với NextJS support hết mình cho việc này thì chúng ta nên tận dụng điều trên
