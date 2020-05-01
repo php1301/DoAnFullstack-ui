@@ -61,7 +61,7 @@ Việc strict các variables, comment cẩn thận giúp cho Project là 1 thể
 ## :green_book: 4. PropTypes
 ### :exclamation: Information
 #### :star2: Usage
-PropTypes là 1 core module của React, nó giúp cho việc manipulate props dễ dàng, strict, HOC, best usage có thể nói là validators, giúp trả về đúng data, đúng mục đích, có thể là bool, string, 1 mảng oneOf, trả về đúng string gắn vô className và render đúng element className tương umg71
+PropTypes là 1 core module của React, nó giúp cho việc manipulate props dễ dàng, strict, HOC, best usage có thể nói là validators, giúp trả về đúng data, đúng mục đích, có thể là bool, string, 1 mảng oneOf, trả về đúng string gắn vô className và render đúng element className tương ứng, về mặt perfomance thì nên sử dụng trong môi trường development
 #### :star2: Type
 Techinique - Props - Data manipulating
 #### :star2: Prerequisite
