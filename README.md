@@ -133,6 +133,7 @@ ___
 + Tích hợp Social Login + SSO dễ dàng đăng nhập
 + Update thường xuyên
 + SEO with SSR
++ AMP support (Accelerated Mobile Pages)
 + Strict với Folder Structure, Linter
 ***
 ## [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
