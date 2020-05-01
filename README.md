@@ -151,6 +151,7 @@ ___
 ## [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE)
 + [Chapter 1](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE/Knowledge_1.md)
 + [Chapter 2](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE/Knowledge_2.md)
++ [Chapter 3](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE/Knowledge_3.md)
 ## [Hỗ trợ - Social Media](https://www.facebook.com/dioxittdn.phucprobb)
 + [Facebook](https://www.facebook.com/dioxittdn.phucprobb)
 + [Gmail - UIT](19520854@gm.uit.edu.vn)
