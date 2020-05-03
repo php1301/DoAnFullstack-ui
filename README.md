@@ -93,10 +93,10 @@ ___
  ┃ ┗ 📂hooks        // Custom Hooks
  ┣ 📂pages
  ┃ ┣ 📂__test__     // Unit test cho pages (included built-in)
- ┃   ┗ 📜index.test.jsx
+ ┃ ┃ ┗ 📜index.test.jsx
  ┃ ┣ 📂__mock__     // Unit test temp folder cho parse non-extensions included
- ┃   ┣ fileMock.js //media mock
- ┃   ┗ styleMock.js //styling mock
+ ┃ ┃ ┣ fileMock.js //media mock
+ ┃ ┃ ┗ styleMock.js //styling mock
  ┃ ┣ 📜index.jsx
  ┃ ┣ 📜_app.jsx    
  ┃ ┗ 📜_document.jsx
