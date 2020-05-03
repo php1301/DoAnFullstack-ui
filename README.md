@@ -91,6 +91,11 @@ ___
  ┃ ┣ 📂helpers      // Các lib universal hỗ trợ
  ┃ ┗ 📂hooks        // Custom Hooks
  ┣ 📂pages
+ ┃ ┣ 📂__test__     // Unit test cho pages (included built-in)
+ ┃   ┗ 📜index.test.jsx
+ ┃ ┣ 📂__mock__     // Unit test temp folder cho parse non-extensions included
+ ┃   ┣ fileMock.js //media mock
+ ┃   ┗ styleMock.js //styling mock
  ┃ ┣ 📜index.jsx
  ┃ ┣ 📜_app.jsx    
  ┃ ┗ 📜_document.jsx
@@ -105,12 +110,17 @@ ___
  ┃ ┗ 📜zeit.svg
  ┣ 📂settings
  ┃ ┣ 📜config.js    // Responsive
- ┃ ┗ 📜constants.js // Cho routing
+ ┃ ┣ 📜constants.js // Cho routing
+ ┃ ┗ 📜setup.js // Unit Test setup Enzyme adapter
  ┣ 📂themes
  ┃ ┗ 📜default.theme.js // Variables
  ┣ 📜.eslintrc.js   // Linter
  ┣ 📜.gitignore
  ┣ 📜.prettierrc.js // Prettier
+ ┣ 📜Docker
+ ┣ 📜jest.config.js
+ ┣ 📜jest.setup.js
+ ┣ 📜jsConfig.json
  ┣ 📜babel.config.js //Webpack config
  ┣ 📜mock
  ┣ 📜next.config.js  // Config cho next dùng css
