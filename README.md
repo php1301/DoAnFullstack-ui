@@ -6,6 +6,7 @@ ___
 + [Wiki - GitLab](https://gitlab.com/php1301/DoAnReactJS/-/wikis/Project-Wiki-about)
 + [Project Overview](https://www.youtube.com/watch?v=__gm2ttLUiI)
 + [About](https://github.com/php1301/vexere-ui/blob/master/Developer/About.md)
++ [Project Structure](https://github.com/php1301/vexere-ui/blob/master/Developer/ProjectStructure.md)
 + [Tính năng nổi bật](https://github.com/php1301/vexere-ui/blob/master/Developer/SpecialFeatures.md)
 + [Log - Quá trình làm ](https://github.com/php1301/vexere-ui/tree/master/Developer/PROGRESS)
 + [Kiến thức học được](https://github.com/php1301/vexere-ui/blob/master/Developer/KNOWLEDGE)
