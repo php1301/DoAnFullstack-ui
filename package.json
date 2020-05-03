@@ -6,7 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"**/*.{js,jsx}\""
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "test":"jest"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
@@ -48,10 +60,16 @@
     "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.4",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.5.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react-hooks": "^3.0.0"
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "jest": "^25.5.3"
   }
 }

@@ -17,7 +17,7 @@ module.exports = {
         "import/resolver": {
             "node": {
                 "paths": ["./"]
-              }
+            }
         },
     },
     "parser": 'babel-eslint',
@@ -39,7 +39,7 @@ module.exports = {
         "react/jsx-props-no-spreading": "off",
         "react/require-default-props": 0,
         "linebreak-style": 0,
-        "import/order":"off"
-
+        "import/order": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }]
     }
 };
