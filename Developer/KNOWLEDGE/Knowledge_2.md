@@ -108,7 +108,7 @@ Config chuẩn alias phải thỏa mãn 3 yếu tố:
 + ESLint không báo lỗi (.eslintrc.js)
 + [ESLint - Mình đã commented trong file khúc nào là khúc cho alias ](https://github.com/php1301/vexere-ui/blob/master/.eslintrc.js)
 + VSCode gợi ý được(.jsConfig.js) ở đây demo mẫu cho alias component
-+ [VSCode gợi ý dược - demo cho alias component](https://github.com/php1301/vexere-ui/blob/master/next.config.js)
++ [VSCode gợi ý dược - demo cho alias component](https://github.com/php1301/vexere-ui/blob/master/jsConfig.json)
 + Demo absolute path cho 1 directory - component
 ![Imgur](https://i.imgur.com/ksNgEoO.png?1)
 #### :star2: Rating
