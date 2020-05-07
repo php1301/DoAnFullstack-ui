@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "test":"jest"
+    "test": "jest"
   },
   "jest": {
     "roots": [
@@ -53,6 +53,7 @@
     "react-moment-proptypes": "^1.7.0",
     "react-multi-carousel": "^2.5.5",
     "react-stickynode": "^2.1.1",
+    "react-waypoint": "^9.0.2",
     "recompose": "^0.30.0",
     "sass": "^1.26.3",
     "styled-components": "^5.1.0",

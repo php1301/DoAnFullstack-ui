@@ -40,6 +40,7 @@ module.exports = {
         "react/require-default-props": 0,
         "linebreak-style": 0,
         "import/order": "off",
+        "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }]
     }
 };
