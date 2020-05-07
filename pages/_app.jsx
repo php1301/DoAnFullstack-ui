@@ -4,7 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../themes/default.theme';
 import GlobalStyles from '../assets/style/Global.style';
 import Layout from '../container/Layout/Layout';
-import '../style.css';
+
+import { SearchProvider } from 'context/SearchProvider';
 
 export default class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -20,19 +21,21 @@ export default class CustomApp extends App {
   } // getInitialProps deprecrated
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, query } = this.props;
     return (
-      // Render cứng header và footer -
-      <Layout>
-        {/* Các đoạn code ở dưới là children bao gồm cả các pages default index.js */}
-        <ThemeProvider theme={theme}>
-          <>
-            <GlobalStyles />
-            {/* Các pages - data */}
-            <Component {...pageProps} />
-          </>
-        </ThemeProvider>
-      </Layout>
+      <SearchProvider query={query}>
+        {/* // Render cứng header và footer - */}
+        <Layout>
+          {/* Các đoạn code ở dưới là children bao gồm cả các pages default index.js */}
+          <ThemeProvider theme={theme}>
+            <>
+              <GlobalStyles />
+              {/* Các pages - data */}
+              <Component {...pageProps} />
+            </>
+          </ThemeProvider>
+        </Layout>
+      </SearchProvider>
     );
   }
 }
