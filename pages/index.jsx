@@ -1,7 +1,10 @@
+import React, { useContext } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getDeviceType } from '../library/helpers/get_device_type';
-import GetAPIData from '../library/helpers/get_api_data';
+import { Waypoint } from 'react-waypoint';
+
+import { getDeviceType } from 'library/helpers/get_device_type';
+import GetAPIData from 'library/helpers/get_api_data';
 
 import Container from 'components/UI/Container/Container';
 import Heading from 'components/UI/Heading/Heading';
@@ -10,6 +13,8 @@ import SectionGrid from 'components/SectionGrid/SectionGrid';
 import SearchArea from 'container/Home/Search/Search';
 import LocationGrid from 'container/Home/Location/Location';
 
+
+import { LayoutContext } from 'context/LayoutProvider';
 import { LISTING_POSTS_PAGE, SINGLE_POST_PAGE } from 'settings/constants';
 import {
   HOME_PAGE_SECTIONS_ITEM_LIMIT_FOR_MOBILE_DEVICE,
@@ -25,6 +30,7 @@ const Home = ({
   luxuryHotelData,
 }) => {
   let limit;
+  const [, dispatch] = useContext(LayoutContext);
 
   if (deviceType === 'mobile') {
     limit = HOME_PAGE_SECTIONS_ITEM_LIMIT_FOR_MOBILE_DEVICE;
@@ -42,6 +48,10 @@ const Home = ({
         <title>Hotel | Palace</title>
       </Head>
       <SearchArea />
+      <Waypoint
+        onEnter={() => dispatch({ type: 'HIDE_TOP_SEARCHBAR' })}
+        onLeave={() => dispatch({ type: 'SHOW_TOP_SEARCHBAR' })}
+      />
       {/* Style Location riêng */}
       <LocationGrid data={locationData} deviceType={deviceType} />
       <Container fluid>
