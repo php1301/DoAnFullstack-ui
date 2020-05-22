@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import WithDirection from '../../../library/helpers/rtl';
+import WithDirection from 'library/helpers/rtl';
 
 const ReactDatesStyleWrapper = styled.div`
   display: flex;
