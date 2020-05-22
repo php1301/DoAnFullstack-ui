@@ -11,6 +11,8 @@ export const SINGLE_POST_PAGE = '/post';
 
 // User Profile Page Section
 export const USER_PROFILE_PAGE = '/profile';
+export const USER_ACCOUNT_SETTINGS_PAGE = '/account-settings';
+export const ADD_HOTEL_PAGE = '/add-hotel';
 
 // Other Pages
 export const PRICING_PLAN_PAGE = '/pricing-plan';
