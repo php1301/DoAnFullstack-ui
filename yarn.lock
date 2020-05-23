@@ -9187,6 +9187,11 @@ rc-virtual-list@^1.1.0:
     classnames "^2.2.6"
     rc-util "^4.8.0"
 
+react-content-loader@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-5.0.4.tgz#1493491d2f6b309d281d84144a655417ea734486"
+  integrity sha512-hxv4Td1kQxFOmIUbBZ2S3HGZ/jJr28aJvM+8fndm9TmNOE7tSde7WSTL6R68aTS6qE0BA3ptcWIErrP704pQSw==
+
 react-dates@^21.8.0:
   version "21.8.0"
   resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-21.8.0.tgz#355c3c7a243a7c29568fe00aca96231e171a5e94"
