@@ -42,6 +42,7 @@ module.exports = {
         "import/order": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }],
-        "react/default-props-match-prop-types":"off"
+        "react/default-props-match-prop-types":"off",
+        "no-plusplus":"off"
     }
 };
