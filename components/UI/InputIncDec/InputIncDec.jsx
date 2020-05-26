@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../Antd/Icon/Icon';
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import Input from '../Antd/Input/Input';
 import InputIncDecWrapper from './InputIncDec.style';
 
@@ -14,11 +14,11 @@ const InputIncDec = ({
   return (
     <InputIncDecWrapper className={addAllClasses.join(' ')}>
       <button className="btn decBtn" type="button" onClick={decrement}>
-        <Icon type="minus" />
+        <MinusOutlined />
       </button>
       <Input className="qnt-input" type="number" {...props} />
       <button className="btn incBtn" type="button" onClick={increment}>
-        <Icon type="plus" />
+        <PlusOutlined />
       </button>
     </InputIncDecWrapper>
   );
