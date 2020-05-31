@@ -10,3 +10,11 @@ import Container from 'components/UI/Container/Container';
 import Loader from 'components/Loader/Loader';
 import { getDeviceType } from 'library/helpers/get_device_type';
 import GetAPIData, { ProcessAPIData } from 'library/helpers/get_api_data';
+
+import Description from 'container/SinglePage/Description/Description';
+import Amenities from 'container/SinglePage/Amenities/Amenities';
+import Location from 'container/SinglePage/Location/Location';
+import Review from 'container/SinglePage/Review/Review';
+import Reservation from 'container/SinglePage/Reservation/Reservation';
+import BottomReservation from 'container/SinglePage/Reservation/BottomReservation';
+import TopBar from 'container/SinglePage/TopBar/TopBar';
