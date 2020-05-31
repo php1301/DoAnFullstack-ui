@@ -34,6 +34,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-react": "^7.19.0",
+    "formik": "^2.1.4",
     "history": "^4.10.1",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
@@ -48,6 +49,7 @@
     "null-loader": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
+    "react-accessible-accordion": "^3.0.1",
     "react-content-loader": "^5.0.4",
     "react-dates": "^21.8.0",
     "react-dom": "16.13.1",
@@ -56,13 +58,16 @@
     "react-image-gallery": "^1.0.7",
     "react-moment-proptypes": "^1.7.0",
     "react-multi-carousel": "^2.5.5",
+    "react-scroll": "^1.7.16",
+    "react-share": "^4.1.0",
     "react-stickynode": "^2.1.1",
     "react-waypoint": "^9.0.2",
     "recompose": "^0.30.0",
     "sass": "^1.26.3",
     "styled-components": "^5.1.0",
     "styled-system": "^5.1.5",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "webpack-filter-warnings-plugin": "^1.2.1",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.5.0",

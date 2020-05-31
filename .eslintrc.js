@@ -43,6 +43,7 @@ module.exports = {
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }],
         "react/default-props-match-prop-types":"off",
+        "react/forbid-prop-types":"off",
         "no-plusplus":"off"
     }
 };
