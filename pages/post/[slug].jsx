@@ -1,0 +1,12 @@
+import { useState } from 'react';
+import Head from 'next/head';
+import isEmpty from 'lodash/isEmpty';
+import Sticky from 'react-stickynode';
+import Row from 'components/UI/Antd/Grid/Row';
+import Col from 'components/UI/Antd/Grid/Col';
+import Modal from 'components/UI/Antd/Modal/Modal';
+import Button from 'components/UI/Antd/Button/Button';
+import Container from 'components/UI/Container/Container';
+import Loader from 'components/Loader/Loader';
+import { getDeviceType } from 'library/helpers/get_device_type';
+import GetAPIData, { ProcessAPIData } from 'library/helpers/get_api_data';
