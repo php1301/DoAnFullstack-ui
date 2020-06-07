@@ -13,7 +13,9 @@ import Drawer from 'components/UI/Antd/Drawer/Drawer';
 import Logo from 'components/UI/Logo/Logo';
 import Navbar from 'components/Navbar/Navbar';
 
-import hotelFinder from 'assets/images/logo-alt.svg';
+import { USER_PROFILE_PAGE } from 'settings/constants';
+import { LayoutContext } from 'context/LayoutProvider';
+import palace from 'assets/images/logo-alt.svg';
 
 import HeaderWrapper, {
   MobileNavbar,
@@ -37,15 +39,21 @@ const LogoIcon = () => (
 );// =>() = return
 
 const MainMenu = dynamic(() => import('./MainMenu'));
+const NavbarSearch = dynamic(() => import('./NavbarSearch'));
+const ProfileMenu = dynamic(() => import('./ProfileMenu'));
+const MobileMenu = dynamic(() => import('./MobileMenu'));
+
 const Header = ({ router, user, isLoggedIn }) => {
-  // const [{ searchVisibility }] = useContext(LayoutContext);
+  const [{ searchVisibility }] = useContext(LayoutContext);
   const [state, setState] = useState(false);
   const sidebarHandler = () => {
     setState((prevState) => !prevState);
     // isToggleOn: !prevState.isToggleOn
   };
+
   const headerType = router.pathname === '/' ? 'transparent' : 'default'; // Nếu là section Home thì set Header type trans để truyền vô đối số ở NavBar
   const AvatarImg = 'https://i.imgur.com/Lio3cDN.png'; // fix thành avatar ở backend gửi
+
   return (
     <HeaderWrapper>
       {/* Sticky Header */}
@@ -55,17 +63,26 @@ const Header = ({ router, user, isLoggedIn }) => {
           logo={(
             <>
               {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={hotelFinder} title="HotelokaBNB." />
+              <Logo withLink linkTo="/" src={palace} title="Palace." />
             </>
           )}
           navMenu={<MainMenu />}
           isLogin={isLoggedIn}
           avatar={<Logo src={AvatarImg} />}
+          profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} />}
           headerType={headerType}
+          searchComponent={<NavbarSearch />}
           location={router}
+          searchVisibility={searchVisibility}
         />
-        <MobileNavbar>
-          <LogoArea />
+        <MobileNavbar className={headerType}>
+          <LogoArea>
+            <>
+              {headerType === 'transparent' && <LogoIcon />}
+              <Logo withLink linkTo="/" src={palace} title="Palace." />
+            </>
+            <NavbarSearch />
+          </LogoArea>
           <Button
             className={`hamburg-btn ${state ? 'active' : ''}`}
             onClick={sidebarHandler}
@@ -87,6 +104,18 @@ const Header = ({ router, user, isLoggedIn }) => {
                 <IoIosClose />
               </button>
             </CloseDrawer>
+            <AvatarWrapper>
+              <AvatarImage>
+                <Logo src={AvatarImg} />
+              </AvatarImage>
+              <AvatarInfo>
+                <Text as="h3" content="php1301" />
+                <Link href={USER_PROFILE_PAGE}>
+                  <a>View Profile</a>
+                </Link>
+              </AvatarInfo>
+            </AvatarWrapper>
+            <MobileMenu className="main-menu" />
           </Drawer>
         </MobileNavbar>
       </Sticky>
