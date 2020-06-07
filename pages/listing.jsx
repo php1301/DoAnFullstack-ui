@@ -32,14 +32,57 @@ import ListingWrapper, {
   ShowMapCheckbox,
 } from 'container/Listing/Listing.style';
 
+const FilterDrawer = dynamic(
+  () => import('container/Listing/Search/MobileSearchView'),
+);
 const ListingPage = ({
-  deviceType,
+  processedData, deviceType,
 }) => {
+  // eslint-disable-next-line no-unused-vars
+  const { state, dispatch } = useContext(SearchContext);
+  const statekey = SearchStateKeyCheck(state);
+
+  // states
+  const [posts, setPosts] = useState(
+    processedData.data.slice(0, LISTING_PAGE_POST_LIMIT) || [],
+  );
+
+  const [loading, setLoading] = useState(false);
   const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    if (statekey === true) {
+      const newData = SearchedData(processedData);
+      setPosts(newData);
+    } else {
+      setPosts(processedData.data.slice(0, LISTING_PAGE_POST_LIMIT) || []);
+    }
+  }, [statekey]);
+  // Chỉ rerun khi stateKey thay doi
 
   const handleMapToggle = () => {
     setShowMap((showMapState) => !showMapState);
   };
+
+  const handleLoadMore = () => {
+    setLoading(true);
+    setTimeout(() => {
+      const data = Paginator(posts, processedData, LISTING_PAGE_POST_LIMIT);
+      setPosts(data);
+      setLoading(false);
+    }, 1000);
+  };
+
+  // Xử lý responsive
+  let columnWidth = LISTING_PAGE_COLUMN_WIDTH_WITHOUT_MAP;
+  if (showMap) {
+    columnWidth = LISTING_PAGE_COLUMN_WIDTH_WITH_MAP;
+  }
+  let columnCount = 'col-24';
+  if (deviceType === 'desktop' && showMap === true) {
+    columnCount = 'col-12';
+  }
+
   return (
     <ListingWrapper>
       <Head>
@@ -49,7 +92,7 @@ const ListingPage = ({
       <Sticky top={82} innerZ={999} activeClass="isHeaderSticky">
         <Toolbar
           left={
-        deviceType === 'desktop' ? <CategorySearch /> : ''
+        deviceType === 'desktop' ? <CategorySearch /> : <FilterDrawer />
       }
           right={(
             <ShowMapCheckbox>
@@ -60,12 +103,28 @@ const ListingPage = ({
       )}
         />
       </Sticky>
+      <PostsWrapper className={columnCount}>
+        <SectionGrid
+          link={SINGLE_POST_PAGE}
+          columnWidth={columnWidth}
+          deviceType={deviceType}
+          data={posts}
+          totalItem={processedData.data.length}
+          limit={LISTING_PAGE_POST_LIMIT}
+          loading={loading}
+          handleLoadMore={handleLoadMore}
+          placeholder={<PostPlaceholder />}
+        />
+      </PostsWrapper>
+      {showMap && <ListingMap loading={loading} mapData={posts} />}
     </ListingWrapper>
   );
 };
 
 // Kĩ thuật async await getData
 ListingPage.getInitialProps = async ({ req, query }) => {
+  // custom query để fetch data
+
   const apiUrl = [
     {
       endpoint: 'hotel',
