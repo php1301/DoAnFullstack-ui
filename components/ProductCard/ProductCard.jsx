@@ -1,12 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
-import Rating from '../UI/Rating/Rating';
-import Favourite from '../UI/Favorite/Favorite';
+import Rating from 'components/UI/Rating/Rating';
+import Favourite from 'components/UI/Favorite/Favorite';
 
 import GridCard from '../GridCard/GridCard';
 
@@ -88,11 +86,11 @@ export default function ProductCard({
         sliderClass=""
         slidesToSlide={1}
       >
-        {gallery.map(({ url, title }) => (
+        {gallery.map(({ url, title }, index) => (
           <img
             src={url}
             alt={title}
-            key
+            key={index}
             draggable={false}
             style={{
               width: '100%',
