@@ -6,6 +6,7 @@ import GlobalStyles from '../assets/style/Global.style';
 import Layout from '../container/Layout/Layout';
 
 import { SearchProvider } from 'context/SearchProvider';
+// import { withData } from 'library/helpers/restriction';
 
 export default class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -14,6 +15,7 @@ export default class CustomApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
     const { query, pathname } = ctx;
+    // const { user } = withData(ctx);
 
     return {
       pageProps, query, pathname,
