@@ -18,4 +18,10 @@ export const ADD_HOTEL_PAGE = '/add-hotel';
 export const PRICING_PLAN_PAGE = '/pricing-plan';
 export const PRIVACY_PAGE = '/privacy';
 
+// export const AUTHENTICATION_PAGE = '/user';
+export const LOGIN_PAGE = '/login';
+export const REGISTRATION_PAGE = '/registration';
+export const CHANGE_PASSWORD_PAGE = '/change-password';
+export const FORGET_PASSWORD_PAGE = '/forget-password';
+
 // **************** ROUTE CONSTANT END **************************
