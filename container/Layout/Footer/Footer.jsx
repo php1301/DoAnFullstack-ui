@@ -10,7 +10,7 @@ const url = 'https://github.com/php1301';
 const Footer = ({ path }) => (
   <Footers
     path={path}
-    logo={<Logo withLink linkTo="/" src={LogoImage} title="Palace." />}
+    logo={<Logo withLink linkTo="/" src={LogoImage} title="TripFinder." />}
     menu={<FooterMenu />}
     copyright={(
       <>
