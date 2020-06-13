@@ -38,6 +38,7 @@ const LogoIcon = () => (
   </svg>
 );// =>() = return
 
+const AuthMenu = dynamic(() => import('./AuthMenu'));
 const MainMenu = dynamic(() => import('./MainMenu'));
 const NavbarSearch = dynamic(() => import('./NavbarSearch'));
 const ProfileMenu = dynamic(() => import('./ProfileMenu'));
@@ -63,12 +64,13 @@ const Header = ({ router, user, isLoggedIn }) => {
           logo={(
             <>
               {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={palace} title="Palace." />
+              <Logo withLink linkTo="/" src={palace} title="TripFinder." />
             </>
           )}
           navMenu={<MainMenu />}
           isLogin={isLoggedIn}
           avatar={<Logo src={AvatarImg} />}
+          authMenu={<AuthMenu />}
           profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} />}
           headerType={headerType}
           searchComponent={<NavbarSearch />}
@@ -79,7 +81,7 @@ const Header = ({ router, user, isLoggedIn }) => {
           <LogoArea>
             <>
               {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={palace} title="Palace." />
+              <Logo withLink linkTo="/" src={palace} title="TripFinder." />
             </>
             <NavbarSearch />
           </LogoArea>
@@ -104,17 +106,21 @@ const Header = ({ router, user, isLoggedIn }) => {
                 <IoIosClose />
               </button>
             </CloseDrawer>
-            <AvatarWrapper>
-              <AvatarImage>
-                <Logo src={AvatarImg} />
-              </AvatarImage>
-              <AvatarInfo>
-                <Text as="h3" content="php1301" />
-                <Link href={USER_PROFILE_PAGE}>
-                  <a>View Profile</a>
-                </Link>
-              </AvatarInfo>
-            </AvatarWrapper>
+            {isLoggedIn
+              ? (
+                <AvatarWrapper>
+                  <AvatarImage>
+                    <Logo src={AvatarImg} />
+                  </AvatarImage>
+                  <AvatarInfo>
+                    <Text as="h3" content="php1301" />
+                    <Link href={USER_PROFILE_PAGE}>
+                      <a>View Profile</a>
+                    </Link>
+                  </AvatarInfo>
+                </AvatarWrapper>
+              )
+              : <AuthMenu className="auth-menu" />}
             <MobileMenu className="main-menu" />
           </Drawer>
         </MobileNavbar>
