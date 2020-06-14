@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef } from 'react';
 import Menu from 'components/UI/Antd/Menu/Menu';
 import useOnClickOutside from 'library/hooks/useOnClickOutside';
 import ActiveLink from 'library/helpers/activeLink';
-// import { AuthContext } from 'context/AuthProvider';
+import { AuthContext } from 'context/AuthProvider';
 import {
   USER_PROFILE_PAGE,
   USER_ACCOUNT_SETTINGS_PAGE,
@@ -10,7 +10,7 @@ import {
 } from 'settings/constants';
 
 const ProfileMenu = ({ avatar }) => {
-//   const { logOut } = useContext(AuthContext);
+  const { logOut } = useContext(AuthContext);
   const [state, setState] = useState(false);
 
   const handleDropdown = () => {
@@ -20,7 +20,7 @@ const ProfileMenu = ({ avatar }) => {
   const closeDropdown = () => {
     setState(false);
   };
-  //Chủ yếu xử lý dropdown
+  // Chủ yếu xử lý dropdown
   const dropdownRef = useRef(null);
   useOnClickOutside(dropdownRef, () => setState(false));
 
@@ -45,8 +45,7 @@ const ProfileMenu = ({ avatar }) => {
           </ActiveLink>
         </Menu.Item>
         <Menu.Item key="3">
-          <button type="button">Log Out</button>
-          {/* <button type="button" onClick={logOut}>Log Out</button> */}
+          <button type="button" onClick={logOut}>Log Out</button>
         </Menu.Item>
       </Menu>
     </div>
