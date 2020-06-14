@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Menu from 'components/UI/Antd/Menu/Menu';
 import ActiveLink from 'library/helpers/activeLink';
-import { AuthContext } from 'context/AuthProvider';
+// import { AuthContext } from 'context/AuthProvider';
 import {
   HOME_PAGE,
   LISTING_POSTS_PAGE,
@@ -12,7 +12,7 @@ import {
 // có thể coi className như props
 const MobileMenu = ({ className }) => {
   // auth context
-  const { loggedIn, logOut } = useContext(AuthContext);
+//   const { loggedIn, logOut } = useContext(AuthContext);
 
   return (
     <Menu className={className}>
@@ -25,7 +25,7 @@ const MobileMenu = ({ className }) => {
       <Menu.Item key="2">
         <ActiveLink href={PRICING_PLAN_PAGE}>Pricing</ActiveLink>
       </Menu.Item>
-      {loggedIn && (
+      {/* {loggedIn && (
         <Menu.Item key="3">
           <ActiveLink href={USER_ACCOUNT_SETTINGS_PAGE}>
             Account Settings
@@ -34,9 +34,9 @@ const MobileMenu = ({ className }) => {
       )}
       {loggedIn && (
         <Menu.Item key="4">
-          <button type="button" onClick={logOut}>Log Out</button>
+          <button onClick={logOut}>Log Out</button>
         </Menu.Item>
-      )}
+      )} */}
     </Menu>
   );
 };
