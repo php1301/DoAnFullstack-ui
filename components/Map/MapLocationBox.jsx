@@ -79,3 +79,59 @@ export const MapDataHelper = (infoValue) => {
 
   return tempMapArray;
 };
+
+const MapLocationBox = (props) => {
+  const { infoValue } = props;
+  const tempMapArray = MapDataHelper(infoValue);
+
+  return (
+    <div className="hotel-form-location">
+      {tempMapArray
+        && tempMapArray.length !== 0
+        && tempMapArray.map((single, id) => (
+          <div key={id}>
+            <Card title="Hotel Location" bordered={false}>
+              <p>
+                <strong>Formatted Address :</strong>
+                <span>{single && single.formattedAddress}</span>
+              </p>
+              <p>
+                <strong>ZipCode :</strong>
+                <span>{single && single.zipcode}</span>
+              </p>
+              <p>
+                <strong>City :</strong>
+                <span>{single && single.city}</span>
+              </p>
+              <p>
+                <strong>State Long :</strong>
+                <span>{single && single.state_long}</span>
+              </p>
+              <p>
+                <strong>State Short:</strong>
+                <span>{single && single.state_short}</span>
+              </p>
+              <p>
+                <strong>Country Long :</strong>
+                <span>{single && single.country_long}</span>
+              </p>
+              <p>
+                <strong>Country Short:</strong>
+                <span>{single && single.country_short}</span>
+              </p>
+              <p>
+                <strong>Lattitude :</strong>
+                <span>{single && single.lat}</span>
+              </p>
+              <p>
+                <strong>Longitude :</strong>
+                <span>{single && single.lng}</span>
+              </p>
+            </Card>
+          </div>
+        ))}
+    </div>
+  );
+};
+
+export default MapLocationBox;
