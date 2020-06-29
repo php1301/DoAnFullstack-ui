@@ -6,7 +6,7 @@ const InputIncDecWrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   input[type='number'] {
     width: calc(100% - 54px);
