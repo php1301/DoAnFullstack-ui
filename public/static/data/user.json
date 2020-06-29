@@ -18,7 +18,7 @@
     "date_of_birth": "2018-06-20T17:30:05.970Z",
     "gender": "female",
     "content": " Hello! I'm glad to share with you all the listings that i've created. Enjoy! And please let me know if you like it with 'Say Thanks' from or include my creadits when you will use it. Peace and Love ^__^ ",
-    "userLocation": {
+    "agent_location": {
       "lat": "52.7675",
       "lng": "-78.9194",
       "formattedAddress": "959 Jerde Prairie",
@@ -50,7 +50,7 @@
       "instagram": "http://www.instagram.com/redqinc",
       "pinterest": "http://www.pinterest.com/redqinc"
     },
-    "listedPost": [
+    "listed_posts": [
       {
         "id": 63811,
         "agentId": 22353,
@@ -1228,7 +1228,7 @@
         "updatedAt": "2019-01-23T02:03:54.799Z"
       }
     ],
-    "favoritePost": [
+    "favourite_post": [
       {
         "id": 63288,
         "agentId": 38076,
