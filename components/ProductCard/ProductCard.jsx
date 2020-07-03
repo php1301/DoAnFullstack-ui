@@ -46,7 +46,7 @@ export default function ProductCard({
   link,
   deviceType,
   id,
-  heart
+  heart,
 }) {
   return (
     <GridCard
