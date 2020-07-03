@@ -1,40 +1,70 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import gql from 'graphql-tag';
 
-export const GET_PROFILE_OF_CURRENT_USER = gql`
-  query GetProfile($uid: ID!) {
-    user(uid: $uid) {
-      uid
-      name
-      username
-      avatar
-      cover_photo
-      posts {
+export const GET_USER_POSTS = gql`
+  query GetUserPosts($uid: ID!) {
+    userPosts(id: $uid) {
+    favourite_post{
+      id
+    }
+      listed_posts{
+       id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      condition
+      contactNumber
+      termsAndCondition
+      amenities{
         id
-        type
-        thumb_url
-        numberOflike
-        numberOfcomment
-        gallery
-        video
-        comments {
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        id
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        id
+        url
+      }
+      categories{
+        id
+        slug
+        name
+        image
+        {
           id
-          role
-          username
-          avatar
-          comment
+          url
         }
       }
-      followers {
-        id
-        name
-        avatar
-      }
-      following {
-        id
-        name
-        avatar
-      }
+      createdAt
+      updatedAt
+    }
+  }
+  }
+`;
+export const GET_HEART = gql`
+  query FavouritePostsHeart($id: ID){
+    favouritePostsHeart(id: $id){
+      last_name
     }
   }
 `;
