@@ -1,11 +1,12 @@
+/* eslint-disable no-shadow */
 import React from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
+import { v4 as uuidv4 } from 'uuid';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Rating from 'components/UI/Rating/Rating';
 import Favourite from 'components/UI/Favorite/Favorite';
-
 import GridCard from '../GridCard/GridCard';
 
 const responsive = {
@@ -44,17 +45,21 @@ export default function ProductCard({
   slug,
   link,
   deviceType,
+  id,
+  heart
 }) {
   return (
     <GridCard
       favorite={(
         <Favourite
+          heart={heart}
+          id={id}
           onClick={(event) => {
             console.log(event);
           }}
         />
       )}
-      location={location.formattedAddress}
+      location={location[0] ? location[0].formattedAddress : 'Somewhere on the Map'}
       title={title}
       price={`$${price}/Night - Free Cancellation`}
       rating={<Rating rating={rating} ratingCount={ratingCount} type="bulk" />}
@@ -86,11 +91,11 @@ export default function ProductCard({
         sliderClass=""
         slidesToSlide={1}
       >
-        {gallery.map(({ url, title }, index) => (
+        {gallery.map(({ url, title }) => (
           <img
             src={url}
             alt={title}
-            key={index}
+            key={uuidv4()}
             draggable={false}
             style={{
               width: '100%',
