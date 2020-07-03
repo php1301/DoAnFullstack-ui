@@ -10,7 +10,7 @@ const AuthMenu = ({ className }) => (
       <ActiveLink href={`${LOGIN_PAGE}`}>Sign in</ActiveLink>
     </Menu.Item>
     <Menu.Item key="1">
-      <ActiveLink href={`${REGISTRATION_PAGE}`}>Sign up</ActiveLink>
+      <ActiveLink href={`${REGISTRATION_PAGE}`}>Register</ActiveLink>
     </Menu.Item>
   </Menu>
 );
