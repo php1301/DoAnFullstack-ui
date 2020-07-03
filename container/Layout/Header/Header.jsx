@@ -51,10 +51,9 @@ const Header = ({ router, user, isLoggedIn }) => {
     setState((prevState) => !prevState);
     // isToggleOn: !prevState.isToggleOn
   };
-
   const headerType = router.pathname === '/' ? 'transparent' : 'default'; // Nếu là section Home thì set Header type trans để truyền vô đối số ở NavBar
-  const AvatarImg = 'https://i.imgur.com/Lio3cDN.png'; // fix thành avatar ở backend gửi
-
+  const AvatarImg = user.profile_pic_main ?? 'https://i.imgur.com/Lio3cDN.png'; // fix thành avatar ở backend gửi
+  const userName = `${user.first_name} ${user.last_name}`;
   return (
     <HeaderWrapper>
       {/* Sticky Header */}
@@ -71,6 +70,7 @@ const Header = ({ router, user, isLoggedIn }) => {
           isLogin={isLoggedIn}
           avatar={<Logo src={AvatarImg} />}
           authMenu={<AuthMenu />}
+          // Chỗ truyền 1 trong những info của user - avatar
           profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} />}
           headerType={headerType}
           searchComponent={<NavbarSearch />}
@@ -113,7 +113,7 @@ const Header = ({ router, user, isLoggedIn }) => {
                     <Logo src={AvatarImg} />
                   </AvatarImage>
                   <AvatarInfo>
-                    <Text as="h3" content="php1301" />
+                    <Text as="h3" content={userName} />
                     <Link href={USER_PROFILE_PAGE}>
                       <a>View Profile</a>
                     </Link>
