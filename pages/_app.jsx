@@ -1,6 +1,7 @@
 import App from 'next/app';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-dates/lib/css/_datepicker.css';
 import { ThemeProvider } from 'styled-components';
 import theme from '../themes/default.theme';
 import GlobalStyles from '../assets/style/Global.style';
@@ -38,7 +39,7 @@ export default class CustomApp extends App {
                 <>
                   <GlobalStyles />
                   {/* Các pages - data */}
-                  <Component isLoggedIn={isLoggedIn} {...pageProps} />
+                  <Component isLoggedIn={isLoggedIn} user={user} {...pageProps} />
                 </>
               </ThemeProvider>
             </Layout>
