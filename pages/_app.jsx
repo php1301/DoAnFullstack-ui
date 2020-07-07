@@ -10,9 +10,16 @@ import { withData } from 'library/helpers/restriction';
 import { SearchProvider } from 'context/SearchProvider';
 import AuthProvider from 'context/AuthProvider';
 import { ApolloComponent } from 'apollo-graphql/ApolloProvider';
+// import Amplify from 'aws-amplify';
+// import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+// import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
+
+// import awsExports from 'apollo-graphql/aws-exports';
 
 export default class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
+    // Amplify.configure(awsExports);
+    // Amplify.addPluggable(new AmazonAIPredictionsProvider());
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
