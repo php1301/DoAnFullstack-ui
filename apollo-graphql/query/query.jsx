@@ -68,3 +68,39 @@ export const GET_HEART = gql`
     }
   }
 `;
+export const GET_USER_INFO = gql`
+query GetUserInfo($id: ID!){
+  getUserInfo(id:$id){
+    first_name
+    last_name
+    date_of_birth
+    gender
+    gallery{
+      url
+      uid
+      id
+    }
+    agent_location {
+      lat
+      lng
+      formattedAddress
+      zipcode
+      city
+      state_long
+      state_short
+      country_long
+      country_short
+    }
+    social_profile{
+      facebook
+      linkedIn
+      twitter
+      instagram
+    }
+    cellNumber
+    content
+    profile_pic_main
+    cover_pic_main
+  }
+}
+`;
