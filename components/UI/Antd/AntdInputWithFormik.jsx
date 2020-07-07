@@ -58,7 +58,7 @@ const CreateAntField = (Component) => ({
           onChange={type ? onInputChange : onChange}
         >
           {selectOptions
-            && map(selectOptions, (name) => <Option key={name}>{name}</Option>)}
+            && map(selectOptions, (name) => <Option value={name} key={name}>{name}</Option>)}
         </Component>
       </FormItem>
     </div>
