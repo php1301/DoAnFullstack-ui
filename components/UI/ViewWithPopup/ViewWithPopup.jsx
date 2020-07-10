@@ -15,7 +15,6 @@ export default function ViewWithPopup({
   const [showPopup, setShowPopup] = useState(false);
   const ref = useRef();
   // dùng ref bắt thuộc tính DOM node, ở đây là click ra ngoài
-  console.log(ref);
   // bắt ref của clickOutSide
   useOnClickOutside(ref, () => setShowPopup(false));
   // kĩ thuật gắn tên class
