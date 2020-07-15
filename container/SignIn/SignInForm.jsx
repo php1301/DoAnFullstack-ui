@@ -29,17 +29,18 @@ export default () => {
     signIn(formProps);
   };
   return (
+    //  tất cả các props của formik
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
-    //  tất cả các props của formik
-      render={(props) => (
+      validationSchema={getLoginValidationSchema}
+    >
+      {(props) => (
         <RenderSignInForm
           {...props}
           forgetPasswordLink={FORGET_PASSWORD_PAGE}
         />
       )}
-      validationSchema={getLoginValidationSchema}
-    />
+    </Formik>
   );
 };
