@@ -9,10 +9,7 @@ import {
 import { compose, withProps } from 'recompose';
 import Input from 'components/UI/Antd/Input/Input';
 import MakerImage from './hotelMapMarker.png';
-const {
-  SearchBox,
-} = require('react-google-maps/lib/components/places/SearchBox');
-
+import SearchBox from "react-google-maps/lib/components/places/SearchBox";
 // Customize SeachBox như trên docs react-google-maps
 const MapWithSearchBox = compose(
   withProps({
@@ -29,14 +26,14 @@ const MapWithSearchBox = compose(
   const [locationInput, setLocationInput] = useState({ searchedLocation: '' });
   const [locationDetails, setLocationDetails] = useState({
     center: {
-      lat: 40.7128,
-      lng: -74.006,
+      lat: props.current ? props.current.lat : 40.7128,
+      lng: props.current ? props.current.lng :-74.006,
     },
     markers: [
       {
         position: {
-          lat: 40.7128,
-          lng: -74.006,
+          lat:props.current ? props.current.lat : 40.7128,
+          lng:props.current ? props.current.lng : -74.006,
         },
       },
     ],
@@ -135,7 +132,7 @@ const MapWithSearchBox = compose(
         >
           <Input
             type="text"
-            placeholder="Enter your hotel location"
+            placeholder={props.locationType ?? "Enter your hotel location"}
             style={{
               boxSizing: `border-box`,
               border: `1px solid transparent`,
