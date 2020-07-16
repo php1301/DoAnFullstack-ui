@@ -61,7 +61,7 @@ const NavbarSearch = () => {
   };
   return (
     <NavbarSearchWrapper className="navbar_search">
-      <MapAutoComplete updateValueFunc={(value) => updateValueFunc(value)} />
+      <MapAutoComplete updateValue={(value) => updateValueFunc(value)} />
       <FiSearch />
     </NavbarSearchWrapper>
   );
