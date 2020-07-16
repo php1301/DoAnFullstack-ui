@@ -1,22 +1,38 @@
 import React from 'react';
+import { useMutation } from 'react-apollo';
 import PropTypes from 'prop-types';
 import useToggle from './useToggle';
 import FavoriteWrapper from './Favorite.style';
+import { LIKE, DISLIKE } from 'apollo-graphql/mutation/mutation';
 
-const Favorite = ({ className, content, onClick }) => {
+const Favorite = ({
+  className, content, onClick, id, heart,
+}) => {
   // use toggle hooks
-  const [toggleValue, toggleHandler] = useToggle(false);
-
-  // Add all classs to an array
+  const [toggleValue, toggleHandler] = useToggle(heart === 1);
+  const [likeHotel, { data, error }] = useMutation(LIKE);
+  const [dislikeHotel] = useMutation(DISLIKE);
   const addAllClass = ['favorite'];
 
-  // className prop checking
   if (className) {
     addAllClass.push(className);
   }
-
   const handleClick = (event) => {
     toggleHandler();
+    if (toggleValue) {
+      dislikeHotel({
+        variables: {
+          id,
+        },
+      });
+    } else {
+      likeHotel({
+        variables: {
+          id,
+        },
+
+      });
+    }
     onClick(!toggleValue);
   };
 
@@ -37,15 +53,13 @@ const Favorite = ({ className, content, onClick }) => {
 };
 
 Favorite.propTypes = {
-  /** ClassName of the Favorite */
   className: PropTypes.string,
-  /** content of the Favorite */
   content: PropTypes.string,
   /**
-   * Callback fired when the value is changed.
+   * Callback triggered khi mà value bị thay đổi
    *
-   * @param {object} event The event source of the callback.
-   * You can pull out the new value by accessing `event.target.value`.
+   * @param {object} event Nguồn event source của callback
+   * Access value mới bằng cách `event.target.value`.
    */
   onClick: PropTypes.func,
 };
