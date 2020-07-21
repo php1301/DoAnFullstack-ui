@@ -36,7 +36,7 @@ import {
 const history = process.browser ? createBrowserHistory() : false;
 const location = process.browser && window.location;
 
-function serchReducer(state, action) {
+function searchReducer(state, action) {
   switch (action.type) {
     case 'amenities':
       return { ...state, amenities: action.payload };
@@ -86,7 +86,7 @@ const FilterDrawer = (props) => {
     room: parseInt(state.room, 10) || 0,
     guest: parseInt(state.guest, 10) || 0,
   };
-  const [current, dispatchCurrent] = useReducer(serchReducer, initialState);
+  const [current, dispatchCurrent] = useReducer(searchReducer, initialState);
   // state for drawer
   const [toggle, setToggle] = useState(false);
   // Room guest state
