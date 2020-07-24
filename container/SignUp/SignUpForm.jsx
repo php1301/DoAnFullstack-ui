@@ -40,7 +40,7 @@ const getRegisterValidationSchema = () => Yup.object().shape({
 
 export default () => {
   const { signUp, loggedIn } = useContext(AuthContext);
-  if (loggedIn) return Router.push('/');
+  if (loggedIn) Router.push('/');
   const handleSubmit = (formProps) => {
     signUp(formProps);
   };
@@ -49,7 +49,8 @@ export default () => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={getRegisterValidationSchema}
-      render={RenderSignUpForm}
-    />
+    >
+      {RenderSignUpForm}
+    </Formik>
   );
 };
