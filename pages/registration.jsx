@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import Link from 'next/link';
 import Row from 'components/UI/Antd/Grid/Row';
 import Col from 'components/UI/Antd/Grid/Col';
@@ -56,6 +57,7 @@ const SignUp = () => {
 
   return (
     <SignUpWrapper>
+      <ToastContainer/>
       <SignUpFormWrapper>
         <Logo withLink linkTo="/" src={tripFinder} title="TripFinder." />
         <Title>Welcome to TripFinder.</Title>
