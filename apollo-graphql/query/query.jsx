@@ -1,11 +1,51 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import gql from 'graphql-tag';
-
+// Thừa
 export const GET_USER_POSTS = gql`
   query GetUserPosts($uid: ID!) {
     userPosts(id: $uid) {
-    favourite_post{
+      favourite_post{
       id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        id
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        id
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        id
+        url
+      }
+      createdAt
+      updatedAt
     }
       listed_posts{
        id
@@ -17,6 +57,8 @@ export const GET_USER_POSTS = gql`
       isNegotiable
       propertyType
       condition
+      rating
+      ratingCount
       contactNumber
       termsAndCondition
       amenities{
@@ -91,6 +133,92 @@ query GetUserInfo($id: ID!){
       country_long
       country_short
     }
+    favourite_post{
+      id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        id
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        id
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        id
+        url
+      }
+      createdAt
+      updatedAt
+    }
+      listed_posts{
+       id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        id
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        id
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        id
+        url
+      }
+      createdAt
+      updatedAt
+    }
     social_profile{
       facebook
       linkedIn
@@ -103,4 +231,84 @@ query GetUserInfo($id: ID!){
     cover_pic_main
   }
 }
+`;
+export const GET_HOTEL_INFO = gql`
+  query GetHotelInfo($id: ID!){
+    getHotelInfo(id: $id){
+      id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      image{
+       url
+       thumb_url
+      }
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        url
+      }
+      reviews{
+        reviewID
+        reviewTitle
+        reviewText
+        sortOfTrip
+        reviewAuthorId{
+          id
+        }
+        reviewAuthorFirstName
+        reviewAuthorLastName
+        reviewAuthorEmail
+        reviewOverall
+        reviewAuthorPic{
+          url
+        }
+        reviewedHotelId
+        reviewPics{
+           url
+        }
+        reviewDate
+        reviewOptional{
+          option 
+          optionField
+        }
+        reviewFields{
+            rating 
+            ratingFieldName
+          }
+      }
+      peopleLiked{
+        id
+      }
+      createdAt
+      updatedAt
+    }
+  }
 `;
