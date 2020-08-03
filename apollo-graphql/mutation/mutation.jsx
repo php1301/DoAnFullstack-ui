@@ -164,3 +164,10 @@ export const SET_COVER_PIC = gql`
         }
     }
 `;
+export const SEND_CONTACT = gql`
+mutation SendContact($contact: ContactInput){
+    sendContact(contact: $contact){
+        email
+    }
+}
+`;
