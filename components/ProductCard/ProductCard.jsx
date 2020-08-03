@@ -54,9 +54,9 @@ export default function ProductCard({
         <Favourite
           heart={heart}
           id={id}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          // onClick={(event) => {
+          //   console.log(event);
+          // }}
         />
       )}
       location={location[0] ? location[0].formattedAddress : 'Somewhere on the Map'}
@@ -64,7 +64,12 @@ export default function ProductCard({
       price={`$${price}/Night - Free Cancellation`}
       rating={<Rating rating={rating} ratingCount={ratingCount} type="bulk" />}
       viewDetailsBtn={(
-        <Link href={`${link}/[slug]`} as={`${link}/${slug}`} prefetch={false}>
+        <Link href={{
+          pathname:`${link}/[slug]`, 
+          query:{id}
+        }} 
+        // Pass data bằng query object
+          as={`${link}/${slug}`} prefetch={false}>
           <a>
             <FiExternalLink />
             {' '}
