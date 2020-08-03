@@ -5,12 +5,22 @@ const withOptimizedImages = require('next-optimized-images');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+const { nextI18NextRewrites } = require('next-i18next/rewrites');
+
+const localeSubpaths = {
+  fr: 'fr',
+  en: 'eng',
+};
 
 const nextConfig = {
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths,
+  },
   env: {
     GOOGLE_API_KEY: 'AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus',
     REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus&libraries=geometry,drawing,places',
-    SERVER_API: 'http://localhost:3000',
+    SERVER_API: 'http://localhost:3002',
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
