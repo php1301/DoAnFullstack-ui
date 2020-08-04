@@ -240,6 +240,8 @@ export const GET_HOTEL_INFO = gql`
       content
       slug
       price
+      agentName
+      agentEmail
       status
       isNegotiable
       propertyType
@@ -287,10 +289,9 @@ export const GET_HOTEL_INFO = gql`
         reviewAuthorLastName
         reviewAuthorEmail
         reviewOverall
-        reviewAuthorPic{
-          url
-        }
+        reviewAuthorPic
         reviewedHotelId
+        reviewTips
         reviewPics{
            url
         }
