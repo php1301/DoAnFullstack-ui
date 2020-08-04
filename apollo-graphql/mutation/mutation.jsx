@@ -171,3 +171,10 @@ mutation SendContact($contact: ContactInput){
     }
 }
 `;
+export const MAKE_REVIEWS = gql`
+  mutation MakeReviews($reviews: ReviewInput, $hotelId: ID){
+    makeReviews(reviews: $reviews, hotelId: $hotelId){
+        title
+    }
+  }
+`;
