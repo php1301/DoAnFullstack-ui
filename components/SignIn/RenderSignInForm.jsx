@@ -12,8 +12,6 @@ import FormWrapper, {
 } from './SignInForm.style';
 
 const RenderBasicInfoForm = (props) => {
-  console.log(props, 'formprops');
-
   const {
     values, submitCount, handleSubmit, forgetPasswordLink,
   } = props;
@@ -46,6 +44,7 @@ const RenderBasicInfoForm = (props) => {
               name="rememberMe"
               submitCount={submitCount}
               defaultValue={values.rememberMe}
+              valuepropsname="checked"
             />
             <Label>Remember Me</Label>
           </SwitchWrapper>
