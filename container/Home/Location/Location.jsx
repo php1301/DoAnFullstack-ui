@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 
 import Container from 'components/UI/Container/Container';
 import Heading from 'components/UI/Heading/Heading';
