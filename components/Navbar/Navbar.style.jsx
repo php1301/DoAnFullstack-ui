@@ -154,7 +154,7 @@ export const MenuWrapper = styled.div`
     background-color: transparent;
     li {
       margin: 0 14px;
-      padding: 0;
+      padding: 8px 6px 0 0;
       height: auto;
       margin-bottom: 0 !important;
       color: ${themeGet('text.0', '#2C2C2C')};
