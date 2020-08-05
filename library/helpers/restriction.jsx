@@ -5,11 +5,12 @@ export const isAuthenticated = (ctx) => {
   const token = getCookie(TOKEN_COOKIE, ctx);
   const isLoggedIn = !!token;
   //  token ? true: false
-  if (isLoggedIn) redirect(context, '/');
+  if (isLoggedIn) redirect(ctx, '/');
   return { isLoggedIn };
 };
 
 export const secretPage = (ctx) => {
+  // ctx từ getInitialProps
   const token = getCookie(TOKEN_COOKIE, ctx);
   const isLoggedIn = !!token;
   if (!isLoggedIn) {
