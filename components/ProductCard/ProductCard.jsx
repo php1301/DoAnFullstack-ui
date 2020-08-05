@@ -65,11 +65,11 @@ export default function ProductCard({
       rating={<Rating rating={rating} ratingCount={ratingCount} type="bulk" />}
       viewDetailsBtn={(
         <Link href={{
-          pathname:`${link}/[slug]`, 
+          pathname:`${link}/[...slug]`, //Catch all routes, tức là abc/slug/a/b/c,...
           query:{id}
         }} 
         // Pass data bằng query object
-          as={`${link}/${slug}`} prefetch={false}>
+          as={`${link}/${slug}/${id}`} prefetch={false}>
           <a>
             <FiExternalLink />
             {' '}
