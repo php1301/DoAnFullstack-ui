@@ -10,7 +10,7 @@ const Favorite = ({
 }) => {
   // use toggle hooks
   const [toggleValue, toggleHandler] = useToggle(heart === 1);
-  const [likeHotel, { data, error }] = useMutation(LIKE);
+  const [likeHotel] = useMutation(LIKE);
   const [dislikeHotel] = useMutation(DISLIKE);
   const addAllClass = ['favorite'];
 
