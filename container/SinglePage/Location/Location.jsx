@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from 'components/UI/Heading/Heading';
@@ -15,12 +16,12 @@ const Location = ({
   location,
   ...props
 }) => {
-  const { formattedAddress } = location;
+  const { formattedAddress, country_long, city } = location;
   return (
     <Element name="location" className="location">
       <LocationWrapper>
         <Heading as="h2" content="Location" {...titleStyle} />
-        <Text content={formattedAddress} {...locationMetaStyle} />
+        <Text content={`${formattedAddress} ${country_long} ${city}`} {...locationMetaStyle} />
         <Text
           content="Take an easy walk to the main historic sites of the city. The
           neighborhood is perfect for an authentic taste of Roman life, with
@@ -35,7 +36,7 @@ const Location = ({
         />
         <Text content="26 mins by car without traffic" {...contentStyle} />
         <Map>
-          <MapDataProcessing location={location} multiple={false} />
+          <MapDataProcessing location={location} multiple={false} {...props} />
         </Map>
       </LocationWrapper>
     </Element>
