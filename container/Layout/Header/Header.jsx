@@ -12,6 +12,7 @@ import Button from 'components/UI/Antd/Button/Button';
 import Drawer from 'components/UI/Antd/Drawer/Drawer';
 import Logo from 'components/UI/Logo/Logo';
 import Navbar from 'components/Navbar/Navbar';
+import Notifications from 'components/Notifications/Notifications';
 
 import { USER_PROFILE_PAGE } from 'settings/constants';
 import { LayoutContext } from 'context/LayoutProvider';
@@ -85,6 +86,7 @@ const Header = ({ router, user, isLoggedIn }) => {
             </>
             <NavbarSearch />
           </LogoArea>
+          <Notifications />
           <Button
             className={`hamburg-btn ${state ? 'active' : ''}`}
             onClick={sidebarHandler}
