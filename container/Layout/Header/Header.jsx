@@ -67,7 +67,7 @@ const Header = ({ router, user, isLoggedIn }) => {
               <Logo withLink linkTo="/" src={palace} title="TripFinder." />
             </>
           )}
-          navMenu={<MainMenu />}
+          navMenu={<MainMenu id={user.id} />}
           isLogin={isLoggedIn}
           avatar={<Logo src={AvatarImg} />}
           authMenu={<AuthMenu />}
@@ -86,7 +86,7 @@ const Header = ({ router, user, isLoggedIn }) => {
             </>
             <NavbarSearch />
           </LogoArea>
-          <Notifications />
+          <Notifications id={user.id} />
           <Button
             className={`hamburg-btn ${state ? 'active' : ''}`}
             onClick={sidebarHandler}
