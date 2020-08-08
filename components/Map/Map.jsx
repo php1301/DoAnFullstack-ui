@@ -79,8 +79,8 @@ export const MapDataProcessing = compose(
           styles={MAPSTYLE}
           defaultZoom={8}
           defaultCenter={{
-            lat: 40.706877,
-            lng: -74.011265,
+            lat: props.location.lat,
+            lng: props.location.lng,
           }}
         >
           <HotelMapMarkerSingle {...props} />
