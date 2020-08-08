@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import gql from 'graphql-tag';
-// Thừa
+
 export const GET_USER_POSTS = gql`
   query GetUserPosts($uid: ID!) {
     userPosts(id: $uid) {
@@ -305,6 +305,9 @@ export const GET_HOTEL_INFO = gql`
             ratingFieldName
           }
       }
+      peopleReviewed{
+        id
+      }
       peopleLiked{
         id
       }
@@ -313,3 +316,22 @@ export const GET_HOTEL_INFO = gql`
     }
   }
 `;
+export const GET_USER_NOTIFICATION = gql`
+ query GetUserNotifcation($id: ID!){
+      getUserNotification(id:$id){
+        reviewTitle
+        reviewText
+        reviewAuthorName
+        reviewedHotelName
+        peopleReviewedQuanity
+        reviewedAuthorId
+      }
+    }
+`;
+export const GET_USER_UNREAD_NOTIFICATION_NUMBER = gql`
+query GetUserInfo($id: ID!){
+  getUserInfo(id:$id){
+    unreadNotification
+  }
+}
+    `;
