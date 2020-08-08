@@ -59,15 +59,10 @@ const nextConfig = {
 module.exports = withPlugins(
   [
     [
-      withOptimizedImages,
-      {
-        mozjpeg: {
-          quality: 90,
-        },
-        webp: {
-          preset: 'default',
-          quality: 90,
-        },
+
+      withOptimizedImages, {
+        handleImages: ['jpeg', 'png', 'svg', 'webp'],
+        optimizeImagesInDev: false,
       },
     ],
     withFonts,
