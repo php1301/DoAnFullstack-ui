@@ -77,7 +77,35 @@ const HeaderWrapper = styled.header`
         }
       }
     }
+    .isoIconWrapper {
+          position: relative;
+          line-height: normal;
 
+          span:last-child {
+            font-size: 12px;
+            color: #fff;
+            background-color: rgb(55, 117, 242);
+            width: 20px;
+            height: 20px;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flex;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            top: -8px;
+            left: ${(props) => (props['data-rtl'] === 'rtl' ? 'inherit' : '10px')};
+            right: ${(props) => (props['data-rtl'] === 'rtl' ? '10px' : 'inherit')};
+            border-radius:50%;
+          }
+        }
+    &.topbarNotification {
+    @media only screen and (max-width: 500px) {
+      right: -120px;
+    }
+  }
     &.isHeaderSticky {
       nav {
         &.is_transparent {
