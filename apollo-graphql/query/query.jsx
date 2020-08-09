@@ -316,6 +316,41 @@ export const GET_HOTEL_INFO = gql`
     }
   }
 `;
+export const GET_HOTEL_REVIEWS = gql`
+  query GetHotelReviews($id: ID!){
+    getHotelInfo(id:$id){
+      id
+      reviews{
+        reviewID
+        reviewTitle
+        reviewText
+        sortOfTrip
+        reviewAuthorId{
+          id
+        }
+        reviewAuthorFirstName
+        reviewAuthorLastName
+        reviewAuthorEmail
+        reviewOverall
+        reviewAuthorPic
+        reviewedHotelId
+        reviewTips
+        reviewPics{
+           url
+        }
+        reviewDate
+        reviewOptional{
+          option 
+          optionField
+        }
+        reviewFields{
+            rating 
+            ratingFieldName
+          }
+      }
+    }
+  }
+`;
 export const GET_USER_NOTIFICATION = gql`
  query GetUserNotifcation($id: ID!){
       getUserNotification(id:$id){
@@ -323,8 +358,10 @@ export const GET_USER_NOTIFICATION = gql`
         reviewText
         reviewAuthorName
         reviewedHotelName
-        peopleReviewedQuanity
-        reviewedAuthorId
+        peopleReviewedQuantity
+        query
+        reviewAuthorProfilePic
+        read
       }
     }
 `;
