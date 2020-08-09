@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { IntlProvider } from 'react-intl';
+import { ToastContainer } from 'react-toastify';
 import { withRouter } from 'next/router';
 
 import LayoutWrapper from 'components/UI/Antd/Layout/Layout';
@@ -36,6 +37,7 @@ const Layout = ({
           <Content>{children}</Content>
           ) : (
             <>
+              <ToastContainer />
               <IntlProvider
                 locale="en"
                 defaultLocale="en"
