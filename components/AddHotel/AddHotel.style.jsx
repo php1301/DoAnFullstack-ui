@@ -325,6 +325,17 @@ export const Title = styled.h2`
   }
 `;
 
+export const Label = styled.h3`
+  color: ${themeGet('text.0', '#2C2C2C')};
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+`;
+
 export const Description = styled.p`
   color: ${themeGet('text.0', '#2C2C2C')};
   font-size: 15px;
