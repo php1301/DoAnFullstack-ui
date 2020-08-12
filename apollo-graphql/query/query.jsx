@@ -113,6 +113,7 @@ export const GET_HEART = gql`
 export const GET_USER_INFO = gql`
 query GetUserInfo($id: ID!){
   getUserInfo(id:$id){
+    id
     first_name
     last_name
     date_of_birth
@@ -231,6 +232,56 @@ query GetUserInfo($id: ID!){
     cover_pic_main
   }
 }
+`;
+export const GET_ALL_HOTELS = gql`
+    query GetAllHotels{
+    getAllHotels{
+      id
+      title
+      content
+      slug
+      price
+      agentName
+      agentEmail
+      status
+      isNegotiable
+      propertyType
+      image{
+       url
+       thumb_url
+      }
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        url
+      }
+      createdAt
+      updatedAt
+    }
+  }
 `;
 export const GET_HOTEL_INFO = gql`
   query GetHotelInfo($id: ID!){
@@ -351,6 +402,34 @@ export const GET_HOTEL_REVIEWS = gql`
     }
   }
 `;
+export const GET_HOTEL_REVIEWS_LIKE_DISLIKE = gql`
+      query GetReviewLikeDislike($id: ID!){
+        getHotelInfo(id:$id){
+        id
+        reviews{
+          peopleLiked {
+            id
+          }
+          peopleDisliked {
+            id
+          }
+        }
+      }
+    }
+`;
+export const GET_REVIEWS_LIKE_DISLIKE = gql`
+    query GetReviewsLikeDislike($id: ID!){
+      getReviewsLikeDislike(id:$id){
+          reviewID
+          peopleLiked {
+          id
+          }
+          peopleDisliked {
+          id
+          }
+      }
+    }
+`;
 export const GET_USER_NOTIFICATION = gql`
  query GetUserNotifcation($id: ID!){
       getUserNotification(id:$id){
@@ -366,8 +445,8 @@ export const GET_USER_NOTIFICATION = gql`
     }
 `;
 export const GET_USER_UNREAD_NOTIFICATION_NUMBER = gql`
-query GetUserInfo($id: ID!){
-  getUserInfo(id:$id){
+query GetUserUnreadNotification($id: ID!){
+  getUserUnreadNotification(id:$id){
     unreadNotification
   }
 }
