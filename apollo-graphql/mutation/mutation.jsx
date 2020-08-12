@@ -178,3 +178,32 @@ export const MAKE_REVIEWS = gql`
     }
   }
 `;
+export const LIKE_OR_DISLIKE_REVIEW = gql`
+    mutation LikeOrDislikeReview($id: ID!, $type: Int){
+        likeOrDislikeReview(id:$id, type: $type){
+            reviewTitle
+        }
+    }
+`;
+
+export const CHECK_NOTIFICATION = gql`
+    mutation CheckNotification($id: ID!){
+        checkNotification(id:$id){
+            id
+        }
+    }
+`;
+export const DELETE_ALL_NOTIFICATIONS = gql`
+    mutation DeleteAllNotifications($id: ID!){
+        deleteAllNotifications(id: $id){
+            profile_pic_main
+        }
+    }
+`;
+export const READ_NOTIFICATION = gql`
+    mutation ReadNotification($query: String){
+        readNotification(query: $query){
+            profile_pic_main
+        }
+    }
+`;
