@@ -14,7 +14,10 @@ import fetch from 'node-fetch';
 // });
 
 // const link = new WebSocketLink(client);
-const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
+// Có thể viết thành 1 hàm để lấy client tùy thích
+// -> sử dụng cho getServerSidesProps
+export const withApolloClient = () => {
+  const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
   uri: `ws://localhost:3000/graphql`,
   options: {
     reconnect: true,
@@ -51,12 +54,16 @@ const link = process.browser ? split( //Chỉ split khi trên browser (đủ 2 l
   wsLink,
   httplink,
 ) : httplink;
-const client = new ApolloClient({
+ const client = new ApolloClient({
   link,
   ssrMode: true,
   cache: new InMemoryCache(),
 });
+return client;
+}
+
 export const ApolloComponent = (props) => {
+  const client = withApolloClient();
   const { children } = props;
   return (<ApolloProvider client={client}>{children}</ApolloProvider>);
 };
