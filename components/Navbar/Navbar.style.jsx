@@ -68,7 +68,6 @@ export const AvatarWrapper = styled.div`
 
   .avatar-dropdown {
     position: relative;
-
     .dropdown-handler {
       width: 40px;
       height: 40px;
@@ -89,6 +88,7 @@ export const AvatarWrapper = styled.div`
       right: 0;
       top: 45px;
       border-radius: 4px;
+      z-index: 99999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
       &.hide {
