@@ -3,24 +3,37 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 import 'react-dates/lib/css/_datepicker.css';
 import { ThemeProvider } from 'styled-components';
+// import { appWithTranslation } from '../i18n';
+import AppLocale from 'translations/index';
 import theme from '../themes/default.theme';
 import GlobalStyles from '../assets/style/Global.style';
-import Layout from '../container/Layout/Layout';
 import { withData } from 'library/helpers/restriction';
-import { SearchProvider } from 'context/SearchProvider';
+
+import { LanguageProvider } from 'context/LanguageProvider';
 import AuthProvider from 'context/AuthProvider';
+import { SearchProvider } from 'context/SearchProvider';
+import Layout from '../container/Layout/Layout';
 import { ApolloComponent } from 'apollo-graphql/ApolloProvider';
+
 // import Amplify from 'aws-amplify';
 // import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 // import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 
 // import awsExports from 'apollo-graphql/aws-exports';
 
-export default class CustomApp extends App {
+class CustomApp extends App {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentSelectedLanguage: AppLocale.en,
+    };
+  }
+
   static async getInitialProps({ Component, ctx }) {
     // Amplify.configure(awsExports);
     // Amplify.addPluggable(new AmazonAIPredictionsProvider());
     let pageProps = {};
+
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
@@ -31,28 +44,46 @@ export default class CustomApp extends App {
     };
   } // getInitialProps về các bản sau 9.3 không dc khuyến khích
 
+
+  componentDidMount() {
+    const languageChoosed = localStorage.getItem('lang') || "en";
+    const language = AppLocale[`${languageChoosed}`];
+    this.setState({
+      currentSelectedLanguage: language,
+    });
+  }
+
+
   render() {
     const {
-      Component, pageProps, query, user, isLoggedIn,
+      Component, pageProps, query, user, isLoggedIn, pathname
     } = this.props;
+    const {
+      currentSelectedLanguage,
+    } = this.state;
+    // console.log(currentSelectedLanguage);
     return (
       <ApolloComponent>
-        <AuthProvider>
-          <SearchProvider query={query}>
-            {/* // Render cứng header và footer - */}
-            <Layout user={user} isLoggedIn={isLoggedIn}>
-              {/* Các đoạn code ở dưới là children bao gồm cả các pages default index.js */}
-              <ThemeProvider theme={theme}>
-                <>
-                  <GlobalStyles />
-                  {/* Các pages - data */}
-                  <Component isLoggedIn={isLoggedIn} user={user} {...pageProps} />
-                </>
-              </ThemeProvider>
-            </Layout>
-          </SearchProvider>
-        </AuthProvider>
+        <LanguageProvider language={currentSelectedLanguage}>
+          <AuthProvider>
+            <SearchProvider query={query}>
+              {/* // Render cứng header và footer - */}
+              <Layout user={user} isLoggedIn={isLoggedIn}>
+                {/* Các đoạn code ở dưới là children bao gồm cả các pages default index.js */}
+                <ThemeProvider theme={theme}>
+                  <>
+                    <GlobalStyles />
+                    {/* Các pages - data */}
+                    <Component isLoggedIn={isLoggedIn} user={user} query={query} {...pageProps} />
+                  </>
+                </ThemeProvider>
+              </Layout>
+            </SearchProvider>
+          </AuthProvider>
+        </LanguageProvider>
       </ApolloComponent>
     );
   }
 }
+// export default appWithTranslation(CustomApp);
+export default CustomApp;
