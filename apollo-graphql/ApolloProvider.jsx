@@ -16,7 +16,7 @@ import fetch from 'node-fetch';
 // const link = new WebSocketLink(client);
 // Có thể viết thành 1 hàm để lấy client tùy thích
 // -> sử dụng cho getServerSidesProps
-export const withApolloClient = () => {
+// export const withApolloClient = () => {
   const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
   uri: `ws://localhost:3000/graphql`,
   options: {
@@ -59,11 +59,11 @@ const link = process.browser ? split( //Chỉ split khi trên browser (đủ 2 l
   ssrMode: true,
   cache: new InMemoryCache(),
 });
-return client;
-}
+// return client;
+// }
 
 export const ApolloComponent = (props) => {
-  const client = withApolloClient();
+  // const client = withApolloClient();
   const { children } = props;
   return (<ApolloProvider client={client}>{children}</ApolloProvider>);
 };
