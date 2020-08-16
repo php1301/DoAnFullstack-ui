@@ -104,9 +104,51 @@ export const GET_USER_POSTS = gql`
   }
 `;
 export const GET_HEART = gql`
-  query FavouritePostsHeart($id: ID){
-    favouritePostsHeart(id: $id){
-      last_name
+  query GetUserPosts($uid: ID!) {
+    userPosts(id: $uid) {
+      favourite_post{
+      id
+      title
+      content
+      slug
+      price
+      status
+      isNegotiable
+      propertyType
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        id
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        id
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        id
+        url
+      }
+      createdAt
+      updatedAt
+      }
     }
   }
 `;
@@ -234,9 +276,62 @@ query GetUserInfo($id: ID!){
 }
 `;
 export const GET_ALL_HOTELS = gql`
-    query GetAllHotels{
-    getAllHotels{
+    query GetAllHotels($type: String, $search: SearchInput, $amenities: AmenitiesSearchInput, $property: [String], $location: LocationInput){
+    getAllHotels(type:$type, search: $search, amenities: $amenities, property: $property, location: $location){
       id
+      title
+      content
+      slug
+      price
+      agentName
+      agentEmail
+      peopleLiked{
+        id
+      }
+      status
+      isNegotiable
+      propertyType
+      image{
+       url
+       thumb_url
+      }
+      condition
+      rating
+      ratingCount
+      contactNumber
+      termsAndCondition
+      amenities{
+        guestRoom
+        bedRoom
+        wifiAvailability
+        parkingAvailability
+        poolAvailability
+        airCondition
+        extraBedFacility
+      }
+      location{
+        lat
+        lng
+        formattedAddress
+        zipcode
+        city
+        state_long
+        state_short
+        country_long
+        country_short
+      }
+      gallery{
+        url
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const GET_FILTERED_HOTELS = gql`
+  query GetFilteredHotels($search: SearchInput, $amenities: AmenitiesSearchInput, $property: [String]){
+      getFilteredHotels(search: $search, amenities: $amenities, property: $property){
+         id
       title
       content
       slug
@@ -280,7 +375,7 @@ export const GET_ALL_HOTELS = gql`
       }
       createdAt
       updatedAt
-    }
+      }
   }
 `;
 export const GET_HOTEL_INFO = gql`
@@ -369,9 +464,7 @@ export const GET_HOTEL_INFO = gql`
 `;
 export const GET_HOTEL_REVIEWS = gql`
   query GetHotelReviews($id: ID!){
-    getHotelInfo(id:$id){
-      id
-      reviews{
+    getHotelReviews(id:$id){
         reviewID
         reviewTitle
         reviewText
@@ -398,7 +491,6 @@ export const GET_HOTEL_REVIEWS = gql`
             rating 
             ratingFieldName
           }
-      }
     }
   }
 `;
