@@ -8,6 +8,20 @@ export const CREATE_HOTEL = gql`
         }
     }
 `;
+export const SORT_HOTEL = gql`
+       mutation SortHotel($type: String){
+            sortHotel(type: $type){
+                price
+            }
+        }
+`;
+export const FILTER_HOTELS = gql`
+    mutation FilterHotels{
+        filterHotels{
+                price
+            }
+        }
+`;
 
 export const LOGIN = gql`
     mutation Login($loginInput: LoginInput){
