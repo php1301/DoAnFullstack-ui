@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 
 import map from 'lodash/map';
@@ -36,8 +37,17 @@ const CreateAntField = (Component) => ({
   const hasError = form.errors[field.name];
   const submittedError = hasError && submitted;
   const touchedError = hasError && touched;
-  const onInputChange = ({ target: { value } }) => form.setFieldValue(field.name, value);
-  const onChange = (value) => form.setFieldValue(field.name, value);
+  const onInputChange = ({ target: { value } }) => {
+    props.setCouponType && value.length === 1 && props.setCouponType(field.name === 'couponDiscountPercent' ? 1 : 2);
+    if (value === '' && props.setCouponType) props.setCouponType && props.setCouponType(null);
+    form.setFieldValue(field.name, value);
+  };
+  const onChange = (value) => {
+    props.setCheck && props.setCheck(!props.check);
+    props.balanceCheckbox
+      ? form.setFieldValue(field.name, !props.check)
+      : form.setFieldValue(field.name, value);
+  };
   const onBlur = () => form.setFieldTouched(field.name, true);
   return (
     <div className="field-container">
