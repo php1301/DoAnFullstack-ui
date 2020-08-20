@@ -6,7 +6,6 @@ import { TOKEN_COOKIE, USER_COOKIE } from 'library/helpers/session';
 import redirect from 'library/helpers/redirect';
 import { LOGIN, SIGNUP } from 'apollo-graphql/mutation/mutation';
 import { useMutation } from 'react-apollo';
-import 'react-toastify/dist/ReactToastify.min.css';
 
 export const AuthContext = React.createContext();
 
@@ -81,6 +80,7 @@ const AuthProvider = (props) => {
       addItem(USER_COOKIE, userPayload.data.login);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
+      window.history.back();
     } catch (e) {
     // Nhớ render ToastContainer ít nhất 1 lần ở trong root app/page
       toast.error(e.message.slice(15), {
@@ -117,6 +117,7 @@ const AuthProvider = (props) => {
       addItem(USER_COOKIE, userPayload.data.signup);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
+      redirect({}, '/account-settings');
     } catch (e) {
       // Try catch của error có 3 props default là name, message, stack
       toast.error(e.message.slice(15), {
@@ -150,13 +151,13 @@ const AuthProvider = (props) => {
     console.log(params, 'change password from Props');
   };
 
-  const logOut = (pathname) => {
+  const logOut = () => {
     setUser(null);
     setToken(null);
     clearItem(TOKEN_COOKIE);
     clearItem(USER_COOKIE);
     setLoggedIn(false);
-    pathname === '/login' ? redirect({}, '/login') : redirect({}, '/');
+    redirect({}, '/');
   };
 
   const { children } = props;
