@@ -17,6 +17,7 @@ export const ADD_HOTEL_PAGE = '/add-hotel';
 // Other Pages
 export const PRICING_PLAN_PAGE = '/pricing-plan';
 export const PRIVACY_PAGE = '/privacy';
+export const SEARCH_TXID_PAGE = '/search';
 
 // export const AUTHENTICATION_PAGE = '/user';
 export const LOGIN_PAGE = '/login';
