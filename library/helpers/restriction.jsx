@@ -10,10 +10,13 @@ export const isAuthenticated = (ctx) => {
 };
 
 export const secretPage = (ctx) => {
+  // console.log(ctx)
   // ctx từ getInitialProps
   const token = getCookie(TOKEN_COOKIE, ctx);
   const isLoggedIn = !!token;
   if (!isLoggedIn) {
+    // Có thể sử dụng ctx.pathname để lấy prevUrl
+    // Global Redirect trang trước
     redirect(ctx, '/login');
   }
   return { isLoggedIn };
