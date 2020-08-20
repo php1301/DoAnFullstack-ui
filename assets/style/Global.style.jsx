@@ -693,6 +693,14 @@ const GlobalStyle = createGlobalStyle`
 /*------------------------------------------*/ 
 // style for reservation form
 /*------------------------------------------*/
+.coupon_name{
+  input{
+    text-transform: uppercase;
+  ::placeholder{
+    text-transform: capitalize;
+    }
+  }
+}
 .reservation_modal {
   .ant-modal {
     width: 100% !important;
