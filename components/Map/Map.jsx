@@ -61,8 +61,8 @@ export const MapDataProcessing = compose(
           styles={MAPSTYLE}
           defaultZoom={7}
           defaultCenter={{
-            lat: 41.8858,
-            lng: -75.7223,
+            lat: 42.2268,
+            lng: -76.4359,
           }}
         >
           <MarkerClusterer
