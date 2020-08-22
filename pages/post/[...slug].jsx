@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from 'react-apollo';
 import { ToastContainer } from 'react-toastify';
 import Head from 'next/head';
 // import isEmpty from 'lodash/isEmpty';
 import Sticky from 'react-stickynode';
+import * as _ from 'lodash';
 import Row from 'components/UI/Antd/Grid/Row';
 import Col from 'components/UI/Antd/Grid/Col';
 import Modal from 'components/UI/Antd/Modal/Modal';
@@ -11,7 +12,7 @@ import Button from 'components/UI/Antd/Button/Button';
 import Container from 'components/UI/Container/Container';
 import Loader from 'components/Loader/Loader';
 import useWindowSize from 'library/hooks/useWindowSize';
-import { ReviewProvider } from 'context/ReviewProvider';
+// import { ReviewProvider } from 'context/ReviewProvider';
 // import { getDeviceType } from 'library/helpers/get_device_type';
 // import GetAPIData, { ProcessAPIData } from 'library/helpers/get_api_data';
 
@@ -22,7 +23,8 @@ import Review from 'container/SinglePage/Review/Review';
 import Reservation from 'container/SinglePage/Reservation/Reservation';
 import BottomReservation from 'container/SinglePage/Reservation/BottomReservation';
 import TopBar from 'container/SinglePage/TopBar/TopBar';
-import { GET_HOTEL_INFO } from 'apollo-graphql/query/query';
+import { GET_HOTEL_INFO, GET_HOTEL_REVIEWS } from 'apollo-graphql/query/query';
+import { REALTIME_REVIEWS } from 'apollo-graphql/subscription/subscription';
 import SinglePageWrapper, {
   PostImage,
 } from 'container/SinglePage/SinglePageView.style';
@@ -31,16 +33,17 @@ import PostImageGallery from 'container/SinglePage/ImageGallery/ImageGallery';
 
 const SinglePostPage = ({
   // processedData,
-  query, user,
+  query, user, isLoggedIn,
   // deviceType,
 }) => {
   const [isModalShowing, setIsModalShowing] = useState(false);
   let widthWindow = 0;
   // Xử lý window của SSR
-  if (typeof window !== 'undefined') {
-    const { width } = useWindowSize();
-    widthWindow = width;
+  if (typeof window === 'undefined') {
+    return 'Loading';
   }
+  const { width } = useWindowSize();
+  widthWindow = width;
   // if (isEmpty(processedData)) return <Loader />;
   //   Destructuring default data
   //   Custom tag Title theo query
@@ -53,14 +56,51 @@ const SinglePostPage = ({
       .split('-')
       .join(' ')
       .slice(1);
-  const { loading, error, data: processedData } = useQuery(GET_HOTEL_INFO, {
+
+  const {
+    loading, error, data: processedData,
+  } = useQuery(GET_HOTEL_INFO, {
     variables: {
       id: query.slug[1],
     },
   });
-  if (loading) return <Loader />;
+
   const {
-    reviews,
+    subscribeToMore,
+    loading: reviewsLoading,
+    data: reviewData,
+  } = useQuery(GET_HOTEL_REVIEWS, {
+    variables: {
+      id: query.slug[1],
+    },
+  });
+
+  useEffect(() => {
+    subscribeToMore({
+      document: REALTIME_REVIEWS,
+      variables: { hotelId: query.slug[1] },
+      updateQuery: (prev, { subscriptionData }) => {
+        if (!subscriptionData.data) return prev;
+        // console.log(subscriptionData);
+        // console.log(prev);
+        const reviews = subscriptionData.data.realtimeReviews;
+        // // console.log(reviews);
+        const newData = {
+          ...prev,
+          getHotelReviews: [
+            reviews, ...prev.getHotelReviews,
+          ],
+        };
+        // console.log('this is new');
+        // console.log(newData);
+        return newData;
+      },
+    });
+  }, []);
+  if (loading) return <Loader />;
+  if (error) return `Error ${error} has occurred`;
+  const {
+    // reviews,
     rating,
     ratingCount,
     price,
@@ -71,10 +111,20 @@ const SinglePostPage = ({
     amenities,
     agentName,
     agentEmail,
+    agentId,
     contactNumber,
     image,
     peopleLiked,
+    termsAndCondition,
+    isNegotiable,
+    propertyType,
   } = processedData.getHotelInfo;
+  if (reviewsLoading) return <Loader />;
+  // console.log(reviewData);
+  const reviews = reviewData.getHotelReviews;
+  const { guestRoom, bedRoom } = amenities[0];
+  let total = Math.round(_.sumBy(reviews, 'reviewOverall') * 10) / 10;
+  total /= reviews.length;
   const heart = peopleLiked.findIndex((id) => user.id === id.id) !== -1 ? 1 : -1;
   return (
     <>
@@ -85,7 +135,10 @@ const SinglePostPage = ({
           {headerTitle}
         </title>
       </Head>
-      <ReviewProvider reviews={reviews}>
+      {/* <ReviewProvider reviews={reviews}> */}
+      {/* <ReviewProvider
+        reviews={reviews} */}
+      <>
         <SinglePageWrapper>
           <ToastContainer />
           <PostImage>
@@ -137,6 +190,7 @@ const SinglePostPage = ({
                   location={location}
                   rating={rating}
                   ratingCount={ratingCount}
+                  propertyType={propertyType}
                 />
                 <Amenities amenities={amenities} />
                 <Location
@@ -146,35 +200,54 @@ const SinglePostPage = ({
                   ratingCount={ratingCount}
                   image={image}
                   price={price}
+                  locationDescription={termsAndCondition}
                 />
               </Col>
               <Col xl={8}>
                 {widthWindow > 991 ? (
                   <Sticky
-                    innerZ={999}
+                    innerZ={900}
                     activeClass="isSticky"
                     top={202}
                     bottomBoundary="#reviewSection"
                   >
                     <Reservation
+                      id={query.slug[1]}
                       agentEmail={agentEmail}
-                      contactNumber={contactNumber}
                       agentName={agentName}
+                      agentId={agentId}
+                      contactNumber={contactNumber}
                       title={title}
+                      propertyType={propertyType}
+                      lat={(location && location[0] && location[0].lat) || 'none'}
+                      lng={(location && location[0] && location[0].lng) || 'none'}
+                      address={(location && location[0] && location[0].formattedAddress) || 'none'}
                       price={price}
-                      rating={rating}
-                      ratingCount={ratingCount}
+                      rating={total}
+                      ratingCount={reviews.length}
+                      guestRoom={guestRoom}
+                      bedRoom={bedRoom}
+                      isNegotiable={isNegotiable}
                     />
                   </Sticky>
                 ) : (
                   <BottomReservation
+                    id={query.slug[1]}
                     agentEmail={agentEmail}
-                    contactNumber={contactNumber}
                     agentName={agentName}
+                    agentId={agentId}
+                    contactNumber={contactNumber}
                     title={title}
+                    propertyType={propertyType}
+                    lat={(location && location[0] && location[0].lat) || 'none'}
+                    lng={(location && location[0] && location[0].lng) || 'none'}
+                    address={(location && location[0] && location[0].formattedAddress) || 'none'}
                     price={price}
-                    rating={rating}
-                    ratingCount={ratingCount}
+                    rating={total}
+                    ratingCount={reviews.length}
+                    guestRoom={guestRoom}
+                    bedRoom={bedRoom}
+                    isNegotiable={isNegotiable}
                   />
                 )}
               </Col>
@@ -184,16 +257,18 @@ const SinglePostPage = ({
                 <Review
                   hotelId={query.slug[1]}
                   reviews={reviews}
-                  ratingCount={ratingCount}
-                  rating={rating}
+                  rating={total}
+                  ratingCount={reviews.length}
                   user={user}
+                  isLoggedIn={isLoggedIn}
                 />
               </Col>
               <Col xl={8} />
             </Row>
           </Container>
         </SinglePageWrapper>
-      </ReviewProvider>
+      </>
+      {/* </ReviewProvider> */}
     </>
   );
 };
