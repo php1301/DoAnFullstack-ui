@@ -97,6 +97,9 @@ export const GET_USER_POSTS = gql`
           url
         }
       }
+      reviews{
+        reviewID
+      }
       createdAt
       updatedAt
     }
@@ -158,6 +161,8 @@ query GetUserInfo($id: ID!){
     id
     first_name
     last_name
+    role
+    stripeId
     date_of_birth
     gender
     gallery{
@@ -388,6 +393,7 @@ export const GET_HOTEL_INFO = gql`
       price
       agentName
       agentEmail
+      agentId
       status
       isNegotiable
       propertyType
@@ -494,6 +500,52 @@ export const GET_HOTEL_REVIEWS = gql`
     }
   }
 `;
+export const GET_HOTEL_MANAGER_COUPONS = gql`
+  query  {
+    getHotelManagerCoupons{
+      couponId
+      couponName
+      couponDescription
+      couponType
+      couponValue
+      couponQuantity
+      couponStartDate
+      couponEndDate
+      couponRange
+      couponTarget{
+        slug
+        id
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const GET_HOTEL_COUPONS = gql`
+    query GetHotelCoupons($id: ID!){
+      getHotelCoupons(id: $id){
+        couponId
+        couponName
+        couponDescription
+        couponAuthor{
+         email
+        }
+        couponAuthorId
+        couponType
+        couponValue
+        couponQuantity
+        couponStartDate
+        couponEndDate
+        couponTarget{
+        id
+        slug
+        title
+      }
+        createdAt
+        updatedAt
+       }
+     }
+`;
 export const GET_HOTEL_REVIEWS_LIKE_DISLIKE = gql`
       query GetReviewLikeDislike($id: ID!){
         getHotelInfo(id:$id){
@@ -543,3 +595,55 @@ query GetUserUnreadNotification($id: ID!){
   }
 }
     `;
+export const GET_TRANSACTIONS_HAVING = gql`
+    query GetTransactionsHaving($orderBy: String){
+        getTransactionsHaving(orderBy: $orderBy){
+            TXID
+            transactionSecretKey
+            transactionHotelName
+            transactionHotelId
+            transactionHotelManager{
+                first_name
+                last_name
+                email
+                cellNumber
+            }
+            transactionHotelManagerId
+            transactionHotelType
+            transactionPrice
+            transactionAuthorId
+            transactionAuthorName
+            transactionAuthorEmail
+            transactionAuthorContactNumber
+            transactionAuthorSpecial
+            transactionAuthorNote
+            transactionLocationLat
+            transactionLocationLng
+            transactionLocationFormattedAddress
+            transactionRoom
+            transactionGuest
+            transactionRange
+            transactionStatus
+            transactionCoupon
+            transactionCouponType
+            transactionCouponValue
+            transactionStartDate
+            transactionEndDate
+            transactionStripeId
+        }
+    }
+`;
+export const GET_TRANSACTION_DETAILS = gql`
+    query GetTransactionDetails($transactionSecretKey: String){
+      getTransactionDetails(transactionSecretKey: $transactionSecretKey){
+            transactionLocationLa
+      }
+    }
+`;
+export const GET_VENDOR_STRIPE_ID = gql`
+  query GetVendorStripeId($id: String){
+    getVendorStripeId(id: $id){
+      stripeId
+    }
+  }
+`;
