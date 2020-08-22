@@ -75,7 +75,7 @@ export default function SectionGrid({
               key={item.id}
               {...columnStyle}
             >
-              <ProductCard heart={heartValue(item.id)} link={link} {...item} />
+              <ProductCard type={type} heart={heartValue(item.id)} link={link} {...item} />
             </Box>
           ))
           : null}
@@ -92,7 +92,7 @@ export default function SectionGrid({
             ))}
       </Box>
 
-      {(type === 'listed' || type === 'favorite') && data.length > 0 ? (
+      {(type === 'listed' || type === 'favorite') && data.length > 0 && (
         <Pagination
           total={data.length}
           hideOnSinglePage
@@ -100,8 +100,8 @@ export default function SectionGrid({
           showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} Hotels`}
           onChange={handleChange}
         />
-      )
-        : (<Text content="Nothing to show" />)}
+      )}
+      {data.length === 0 && (<Text content="Nothing to show" />)}
       {showButton && (
       <LoadMore
         showButton={showButton}
