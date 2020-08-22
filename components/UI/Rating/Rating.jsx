@@ -8,19 +8,18 @@ const Rating = (props) => {
     rating, ratingCount, type, ratingFieldName,
   } = props;
   //   Render đúng số sao
-  let i; let
-    floorValue;
+  let i;
   const ratingView = [];
-  if (rating && rating !== 0) {
-    floorValue = Math.floor(rating);
-    for (i = 0; i < 5; i++) {
-      if (i < floorValue) {
-        ratingView.push(<IoIosStar key={i} />);
-      } else {
-        ratingView.push(<IoIosStarOutline key={i} />);
-      }
+  // if (rating && rating !== 0) {
+  const floorValue = Math.floor(rating);
+  for (i = 0; i < 5; i++) {
+    if (i < floorValue) {
+      ratingView.push(<IoIosStar key={i} />);
+    } else {
+      ratingView.push(<IoIosStarOutline key={i} />);
     }
   }
+  // }
   let listingCondition;
   if (rating && rating === 5) {
     listingCondition = 'Awesome';
@@ -33,7 +32,7 @@ const Rating = (props) => {
   } else if (rating >= 1) {
     listingCondition = 'Terrible';
   } else {
-    listingCondition = '';
+    listingCondition = 'No Rating Yet';
   }
 
   let showRatingCount;
