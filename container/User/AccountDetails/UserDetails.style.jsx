@@ -142,7 +142,7 @@ export const NavigationArea = styled.div`
     background-color: ${themeGet('primary.0', '#008489')};
     transition: all 0.3s ease;
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 510px) {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -262,7 +262,14 @@ export const AgentContactWrapper = styled.div`
       line-height: 21px;
     }
   }
-
+  table{
+    td:first-child{
+      font-weight: 800;
+    }
+    td:nth-child(3){
+      font-weight: 800;
+    }
+  }
   > .ant-row {
     > div {
       @media only screen and (max-width: 991px) {
