@@ -4,7 +4,8 @@ import gql from 'graphql-tag';
 export const CREATE_HOTEL = gql`
     mutation CreateHotel($addHotelInput: AddHotelInput, $location: [LocationInput], $image: [ImageInput], $categories: CategoriesInput){
         createHotel(addHotelInput: $addHotelInput, location: $location, image: $image, categories: [$categories]){
-            title
+            id
+            slug
         }
     }
 `;
@@ -218,6 +219,56 @@ export const READ_NOTIFICATION = gql`
     mutation ReadNotification($query: String){
         readNotification(query: $query){
             profile_pic_main
+        }
+    }
+`;
+
+export const CREATE_TRANSACTION = gql`
+    mutation  CreateTransaction($transaction: TransactionInput, $hotelId: String, $userId: String, $coupon: CouponCheckedPayload){
+    createTransaction(transaction: $transaction, hotelId: $hotelId, userId: $userId, coupon: $coupon)
+        {
+            TXID
+            transactionSecretKey
+        }
+    }
+`;
+export const PROCESS_TRANSACTION = gql`
+    mutation ProcessTransactions($id: [String], $type: Int){
+        processTransactions(id: $id, type: $type){
+            transactionAuthorNote
+        }
+    }
+`;
+export const CREATE_COUPON = gql`
+    mutation CreateCoupon($coupon: CouponInput, $hotelsId: [String], $type: Int){
+        createCoupon(coupon: $coupon, hotelsId: $hotelsId, type: $type){
+            couponQuantity
+        }
+    }
+`;
+export const CHECK_COUPON = gql`
+    mutation CheckCoupon($hotelId: String, $couponName: String){
+        checkCoupon(hotelId: $hotelId, couponName: $couponName){
+            couponQuantity
+            couponName
+            couponId
+            couponType
+            couponValue
+        }
+    }
+`;
+export const DELETE_COUPONS = gql`
+    mutation DeleteCoupons($id: [String]){
+        deleteCoupons(id: $id){
+            couponQuantity
+        }
+    }
+`;
+
+export const UPDATE_STRIPE_ID = gql`
+    mutation UpdateStripeId($stripeId: String, $type: String){
+        updateStripeId(stripeId: $stripeId, type: $type){
+            content
         }
     }
 `;
