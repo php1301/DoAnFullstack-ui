@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 // import { palette } from 'styled-theme';
-// import WithDirection from '@iso/lib/helpers/rtl';
 
 const ThemeSwitcherStyle = styled.div`
   background-color: #ffffff;
@@ -13,7 +12,7 @@ const ThemeSwitcherStyle = styled.div`
   right: ${(props) => (props['data-rtl'] === 'rtl' ? 'inherit' : '-340px')};
   left: ${(props) => (props['data-rtl'] === 'rtl' ? '-340px' : 'inherit')};
   z-index: 1001;
-
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
   @media only screen and (max-width: 767px) {
     width: 270px;
@@ -178,7 +177,6 @@ const ThemeSwitcherStyle = styled.div`
   .purchaseBtnWrapper {
     width: 100%;
     padding: 25px 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     bottom: 0px;
@@ -188,17 +186,23 @@ const ThemeSwitcherStyle = styled.div`
     .purchaseBtn {
       width: calc(100% - 50px);
       height: 42px;
+      margin: 0 28px;
       font-size: 14px;
       font-weight: 700;
-      color: #fff;
-      text-decoration: none;
+      color: rgb(255, 255, 255);
+      background-color: rgb(68, 130, 255);
       text-transform: uppercase;
       line-height: 1;
       text-align: center;
       display: flex;
+      -webkit-box-align: center;
       align-items: center;
+      -webkit-box-pack: center;
       justify-content: center;
       cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
     }
   }
 
