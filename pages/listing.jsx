@@ -1,3 +1,6 @@
+/* eslint-disable no-shadow */
+/* eslint-disable camelcase */
+/* eslint-disable no-mixed-operators */
 /* eslint-disable no-param-reassign */
 import { useState, useEffect, useContext } from 'react';
 import { useQuery } from 'react-apollo';
@@ -12,7 +15,7 @@ import SectionGrid from 'components/SectionGrid/SectionGrid';
 import { PostPlaceholder } from 'components/UI/ContentLoader/ContentLoader';
 import useWindowSize from 'library/hooks/useWindowSize';
 // import { withApolloClient } from 'apollo-graphql/ApolloProvider';
-import { GET_ALL_HOTELS, GET_FILTERED_HOTELS } from 'apollo-graphql/query/query';
+import { GET_ALL_HOTELS, GET_HEART } from 'apollo-graphql/query/query';
 import ListingMap from 'container/Listing/ListingMap';
 import CategorySearch from 'container/Listing/Search/CategorySearch/CategorySearch';
 import { SearchContext } from 'context/SearchProvider';
@@ -22,7 +25,7 @@ import GetAPIData, {
   SearchStateKeyCheck,
   ProcessAPIData,
 } from 'library/helpers/get_api_data';
-import { getDeviceType } from 'library/helpers/get_device_type';
+// import { getDeviceType } from 'library/helpers/get_device_type';
 
 import { SINGLE_POST_PAGE } from 'settings/constants';
 import {
@@ -38,77 +41,89 @@ import ListingWrapper, {
 
 const FilterDrawer = dynamic(() => import('container/Listing/Search/MobileSearchView'));
 const ListingPage = ({
-  deviceType, processedData
+  // deviceType,
+  user,
 }) => {
   // eslint-disable-next-line no-unused-vars
   const { state, dispatch } = useContext(SearchContext);
-  console.log(state);
   const statekey = SearchStateKeyCheck(state);
-  console.log(statekey);
-  // const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [stateFilter, setStateFilter] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showMap, setShowMap] = useState(false);
   const [type, setType] = useState('price_DESC');
   const { width } = useWindowSize();
-  const [posts, setPosts] = useState(
-    processedData.data.slice(0, LISTING_PAGE_POST_LIMIT) || [],
-  );
-  // const { data: processedData, loading: listingLoading } = useQuery(GET_ALL_HOTELS, {
-  //   variables: {
-  //     type,
-  //     // search: {
-  //     //   minPrice: state && state.minPrice && state.minPrice.toString() || '0',
-  //     //   maxPrice: state && state.maxPrice && state.maxPrice.toString(),
-  //     // },
-  //     property: (stateFilter && stateFilter.property) || undefined,
-  //     amenities: {
-  //       wifiAvailability: (stateFilter && _.includes(stateFilter.amenities, 'free-wifi')) || undefined,
-  //       poolAvailability: (stateFilter && _.includes(stateFilter.amenities, 'pool')) || undefined,
-  //       parkingAvailability: (stateFilter && _.includes(stateFilter.amenities, 'free-parking')) || undefined,
-  //       airCondition: (stateFilter && _.includes(stateFilter.amenities, 'air-condition')) || undefined,
-  //       // rooms,
-  //       // guest,
-  //     },
-  //   },
-  //   fetchPolicy: 'cache-and-network',
-  //   errorPolicy: 'ignore',
+  const { data: processedData, loading: listingLoading } = useQuery(GET_ALL_HOTELS, {
+    variables: {
+      type,
+      location: {
+        country_short: state && state.country_short && state.country_short[0] || undefined,
+      },
+      search: {
+        minPrice: (stateFilter && stateFilter.minPrice
+           && parseInt(stateFilter.minPrice, 10)) || 0,
+        maxPrice: (stateFilter && stateFilter.maxPrice
+          && parseInt(stateFilter.maxPrice, 10)) || 1000,
+      },
+      property: (stateFilter && stateFilter.property) || undefined,
+      amenities: {
+        wifiAvailability: (stateFilter && _.includes(stateFilter.amenities, 'free-wifi')) || undefined,
+        poolAvailability: (stateFilter && _.includes(stateFilter.amenities, 'pool')) || undefined,
+        parkingAvailability: (stateFilter && _.includes(stateFilter.amenities, 'free-parking')) || undefined,
+        airCondition: (stateFilter && _.includes(stateFilter.amenities, 'air-condition')) || undefined,
+        // rooms,
+        // guest,
+      },
+    },
+    fetchPolicy: 'cache-and-network',
+    errorPolicy: 'ignore',
+  });
+  // const { data: filteredData, loading: filteredLoading } = useQuery(GET_FILTERED_HOTELS, {
+
   // });
-  // // const { data: filteredData, loading: filteredLoading } = useQuery(GET_FILTERED_HOTELS, {
 
-  // // });
-
-
+  const {
+    loading: heartLoading,
+    data,
+  } = useQuery(GET_HEART, {
+    variables: {
+      uid: user && user.id || '',
+    },
+  });
+  useEffect(() => {
+    if (processedData && processedData.getAllHotels) {
+      // console.log(processedData);
+      // processedData = data;
+      setPosts(processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT) || []);
+    }
+  }, [processedData]);
   // useEffect(() => {
-  //   if (processedData && processedData.getAllHotels) {
+  //   if (filteredData && filteredData.getFilteredHotels) {
   //     // console.log(processedData);
   //     // processedData = data;
-  //     setPosts(processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT) || []);
+  //     setPosts(filteredData.getFilteredHotels.slice(0, LISTING_PAGE_POST_LIMIT) || []);
   //   }
-  // }, [processedData]);
-  // // useEffect(() => {
-  // //   if (filteredData && filteredData.getFilteredHotels) {
-  // //     // console.log(processedData);
-  // //     // processedData = data;
-  // //     setPosts(filteredData.getFilteredHotels.slice(0, LISTING_PAGE_POST_LIMIT) || []);
-  // //   }
-  // // }, [filteredData]);
+  // }, [filteredData]);
 
-  // useEffect(() => {
-  //   if (statekey === true) {
-  //     const newData = SearchedData(processedData);
-  //     setPosts(newData);
-  //   } else {
-  //     setPosts((processedData && processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT))
-  //     || []);
-  //   }
-  // }, [statekey]);
-  // if (listingLoading) return <Loader />;
-  // // if (filteredLoading) return <Loader />;
-  // // console.log(filteredData);
+  useEffect(() => {
+    if (statekey === true) {
+      const newData = SearchedData(processedData);
+      setPosts(newData);
+    } else {
+      setPosts((processedData && processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT))
+      || []);
+    }
+  }, [statekey]);
+  if (listingLoading) return <Loader />;
+  if (heartLoading) return <Loader />;
+  // if (filteredLoading) return <Loader />;
+  // console.log(filteredData);
   // console.log(processedData);
   // console.log(posts);
 
+  // const heart = processedData.getAllHotels.peopleLiked
+  //   .findIndex((id) => user.id === id.id) !== -1 ? 1 : -1;
+  const favourite_post = data && data.userPosts.favourite_post ? data.userPosts.favourite_post : [];
   // Comment dưới là lodash chaining usage
   // let mock = [];
   // mock = _.chain(processedData.getAllHotels).map(({
@@ -257,10 +272,10 @@ const ListingPage = ({
   if (showMap) {
     columnWidth = LISTING_PAGE_COLUMN_WIDTH_WITH_MAP;
   }
-  let columnCount = 'col-24';
-  if (deviceType === 'desktop' && showMap === true) {
-    columnCount = 'col-12';
-  }
+  const columnCount = 'col-24';
+  // if (deviceType === 'desktop' && showMap === true) {
+  //   columnCount = 'col-12';
+  // }
   // Chữa cháy bugs mobile-detect
 
   // processedData = data;
@@ -275,9 +290,9 @@ const ListingPage = ({
         <Toolbar
           left={
             width > 991 ? (
-              <CategorySearch setType={setType} setStateFilter={setStateFilter} />
+              <CategorySearch typeSort={type} setType={setType} setStateFilter={setStateFilter} />
             ) : (
-              <FilterDrawer setType={setType} setStateFilter={setStateFilter} />
+              <FilterDrawer typeSort={type} setType={setType} setStateFilter={setStateFilter} />
             )
       }
           right={(
@@ -293,42 +308,40 @@ const ListingPage = ({
         <SectionGrid
           link={SINGLE_POST_PAGE}
           columnWidth={columnWidth}
-          deviceType={deviceType}
+          // deviceType={deviceType}
+          type="listing"
           data={posts}
-          totalItem={processedData.data.length}
+          totalItem={processedData.getAllHotels.length}
           limit={LISTING_PAGE_POST_LIMIT}
           loading={loading}
+          heart={favourite_post}
           handleLoadMore={handleLoadMore}
           placeholder={<PostPlaceholder />}
         />
       </PostsWrapper>
       {showMap && <ListingMap loading={loading} mapData={posts} />}
-      <button type="button" onClick={seed}>Seed mock data</button>
+      {/* <button type="button" onClick={seed}>Seed mock data</button> */}
     </ListingWrapper>
   );
 };
 // Kĩ thuật async await getData
 
-ListingPage.getInitialProps = async ({ req, query }) => {
-  // custom query để fetch data
+// ListingPage.getInitialProps = async ({ req, query }) => {
+//   // custom query để fetch data
 
-  const apiUrl = [
-    {
-      endpoint: 'hotel',
-      name: 'listingHotel',
-    },
-  ];
-  const pageData = await GetAPIData(apiUrl);
-  const processedData = ProcessAPIData(pageData);
-  const deviceType = getDeviceType(req);
-  return { processedData, query, deviceType };
-};
+//   const apiUrl = [
+//     {
+//       endpoint: 'hotel',
+//       name: 'listingHotel',
+//     },
+//   ];
+//   const pageData = await GetAPIData(apiUrl);
+//   const processedData = ProcessAPIData(pageData);
+//   const deviceType = getDeviceType(req);
+//   return { processedData, query, deviceType };
+// };
 
-// export async function getServerSideProps() {
-//   const client = withApolloClient();
-//   const processedData = await client.query({
-//     query: GET_ALL_HOTELS,
-//   });
-//   return { props: { processedData } };
-// }
+export async function getServerSideProps({ query }) {
+  return { props: { query } };
+}
 export default ListingPage;
