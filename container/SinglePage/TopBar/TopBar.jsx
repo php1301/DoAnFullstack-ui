@@ -12,7 +12,7 @@ import Dropdown from 'components/UI/Antd/Dropdown/Dropdown';
 import Favorite from 'components/UI/Favorite/Favorite';
 import ScrollBar from 'components/UI/ScrollBar/ScrollBar';
 import { useLocation } from 'library/hooks/useLocation';
-import { TobBarWrapper, ButtonGroup } from '../SinglePageView.style';
+import { TopBarWrapper, ButtonGroup } from '../SinglePageView.style';
 
 const topBarMenu = [
   {
@@ -83,14 +83,22 @@ const TopBar = (props) => {
     title, agentName, media, id, heart,
   } = props;
   return (
-    <TobBarWrapper>
-      <Sticky innerZ={9999} top={82} activeClass="isSticky">
+    <TopBarWrapper>
+      <Sticky innerZ={999} top={82} activeClass="isSticky">
         <ScrollBar
           menu={topBarMenu}
-          other={<SideButtons media={media} agentName={agentName} title={title} id={id} heart={heart} />}
+          other={(
+            <SideButtons
+              media={media}
+              agentName={agentName}
+              title={title}
+              id={id}
+              heart={heart}
+            />
+          )}
         />
       </Sticky>
-    </TobBarWrapper>
+    </TopBarWrapper>
   );
 };
 
