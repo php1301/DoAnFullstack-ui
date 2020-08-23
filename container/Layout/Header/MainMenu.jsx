@@ -1,17 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { withRouter } from 'next/router';
-import Menu from '../../../components/UI/Antd/Menu/Menu';
-import ActiveLink from '../../../library/helpers/activeLink';
+import Menu from 'components/UI/Antd/Menu/Menu';
+import Notifications from 'components/Notifications/Notifications';
+import ActiveLink from 'library/helpers/activeLink';
 
 import {
   HOME_PAGE,
   LISTING_POSTS_PAGE,
   USER_PROFILE_PAGE,
   PRICING_PLAN_PAGE,
-} from '../../../settings/constants'; // routing
+  SEARCH_TXID_PAGE,
+} from 'settings/constants'; // routing
 
-const MainMenu = ({ className, router }) => (
+const MainMenu = ({
+  className, router, id, isLoggedIn,
+}) => (
   <Menu className={className}>
     <Menu.Item key="0">
       <ActiveLink
@@ -45,6 +49,21 @@ const MainMenu = ({ className, router }) => (
         Pricing
       </ActiveLink>
     </Menu.Item>
+    <Menu.Item key="4">
+      <ActiveLink
+        className={router.pathname === SEARCH_TXID_PAGE ? 'active' : ''}
+        href={`${SEARCH_TXID_PAGE}`}
+      >
+        TXID
+      </ActiveLink>
+    </Menu.Item>
+    {isLoggedIn
+      ? (
+        <Menu.Item key="5">
+          <Notifications id={id} />
+        </Menu.Item>
+      )
+      : ''}
   </Menu>
 );
 
