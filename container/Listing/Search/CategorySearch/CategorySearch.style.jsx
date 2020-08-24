@@ -92,7 +92,7 @@ const CategroySearchWrapper = styled.div`
       }
     }
   }
-
+  
   .date_picker {
     .DateRangePicker {
       display: block;
@@ -108,6 +108,27 @@ const CategroySearchWrapper = styled.div`
             color: ${themeGet('text.0', '#2C2C2C')};
           }
         }
+      }
+    }
+  }
+  .price_range {
+    height: 38px;
+    margin-right: 15px;
+    font-size: 15px;
+    border-radius:3px;
+    color: ${themeGet('text.0', '#2C2C2C')};
+    border: 1px solid ${themeGet('border.3', '#E6E6E6')};
+    &:hover {
+          border: 1px solid ${themeGet('border.3', '#E6E6E6')};
+          color: ${themeGet('text.0', '#2C2C2C')};
+          background-color: ${themeGet('border.3', '#E6E6E6')};
+        }
+    &.activated {
+          color: ${themeGet('color.1', '#ffffff')};
+          border-color: ${themeGet('primary.0', '#008489')};
+          background-color: ${themeGet('primary.0', '#008489')};
+          &:hover {
+            opacity: 0.85;
       }
     }
   }
