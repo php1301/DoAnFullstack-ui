@@ -68,7 +68,7 @@ export const TextButton = styled.div`
   }
 `;
 
-export const TobBarWrapper = styled.div`
+export const TopBarWrapper = styled.div`
   .sticky-outer-wrapper {
     .sticky-inner-wrapper {
       background-color: ${themeGet('color.1', '#ffffff')};
