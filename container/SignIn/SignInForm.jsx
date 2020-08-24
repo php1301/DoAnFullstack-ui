@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { useContext } from 'react';
 import { Formik } from 'formik';
 import Router from 'next/router';
@@ -6,25 +7,27 @@ import * as Yup from 'yup';
 import { AuthContext } from '../../context/AuthProvider';
 import { FORGET_PASSWORD_PAGE } from 'settings/constants';
 
-const initialValues = {
-  email: '',
-  password: '',
-  rememberMe: false,
-};
+const SignInForm = ({ prev }) => {
+  const initialValues = {
+    email: '',
+    password: '',
+    rememberMe: false,
+  };
 
-const getLoginValidationSchema = () => Yup.object().shape({
-  email: Yup.string()
-    .email('Invalid Email')
-    .required('Email is required'),
-  password: Yup.string()
-    .min(6, 'Password is too short')
-    .max(20, 'Password is too long')
-    .required('Password is required!'),
-});
+  const getLoginValidationSchema = () => Yup.object().shape({
+    email: Yup.string()
+      .email('Invalid Email')
+      .required('Email is required'),
+    password: Yup.string()
+      .min(6, 'Password is too short')
+      .max(20, 'Password is too long')
+      .required('Password is required!'),
+  });
 
-export default () => {
   const { signIn, loggedIn } = useContext(AuthContext);
-  if (loggedIn) Router.push('/');
+  if (loggedIn) {
+    prev ? Router.push(prev) : Router.push('/');
+  }
   const handleSubmit = (formProps) => {
     signIn(formProps);
   };
@@ -44,3 +47,4 @@ export default () => {
     </Formik>
   );
 };
+export default SignInForm;
