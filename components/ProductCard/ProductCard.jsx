@@ -2,9 +2,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
-import { v4 as uuidv4 } from 'uuid';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { v4 as uuidv4 } from 'uuid';
+import  _ from 'lodash';
 import Rating from 'components/UI/Rating/Rating';
 import Favourite from 'components/UI/Favorite/Favorite';
 import GridCard from '../GridCard/GridCard';
@@ -47,10 +48,15 @@ export default function ProductCard({
   deviceType,
   id,
   heart,
+  type,
+  reviews
 }) {
+  let total = Math.round(_.sumBy(reviews, 'reviewOverall') * 10) / 10;
+  reviews && reviews.length > 0 ? total /= reviews.length : total = Math.floor(Math.random() * 5)
+  const totalRating =  reviews && reviews.length === 0 && total < 1   ? 0 : (reviews && reviews.length)
   return (
     <GridCard
-      favorite={(
+      favorite={type !=='index' && (
         <Favourite
           heart={heart}
           id={id}
@@ -61,9 +67,9 @@ export default function ProductCard({
       )}
       location={location[0] ? location[0].formattedAddress : 'Somewhere on the Map'}
       title={title}
-      price={`$${price}/Night - Free Cancellation`}
-      rating={<Rating rating={rating} ratingCount={ratingCount} type="bulk" />}
-      viewDetailsBtn={(
+      price={`$${price}.00/Night - Free Cancellation`}
+      rating={<Rating rating={(reviews && total) || rating} ratingCount={type!=='index' ? totalRating : ratingCount} type="bulk" />}
+      viewDetailsBtn={type !=='index' &&(
         <Link href={{
           pathname:`${link}/[...slug]`, //Catch all routes, tức là abc/slug/a/b/c,...
           query:{id}
