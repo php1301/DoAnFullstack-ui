@@ -13,9 +13,12 @@ const ReviewWrapper = styled.div`
 
   /* comment area style */
   .comment-area {
+    &.comment-just-now{
+      -webkit-animation: color-change-2x 5s linear alternate both;
+       animation: color-change-2x 5s linear alternate both;
+      }
     .comment-wrapper {
       padding: 20px 0;
-
       /* comment header style */
       .comment-header {
         width: 100%;
@@ -95,7 +98,26 @@ const ReviewWrapper = styled.div`
           margin-bottom: 19px;
         }
       }
-
+      .rating-widget {
+          display: flex;
+          align-items: center;
+          @media only screen and (max-width: 667px) {
+            margin: 5px 0;
+          }
+          span {
+            font-size: 13px;
+            font-weight: 700;
+            color: ${themeGet('text.0', '#2C2C2C')};
+            margin-right: 10px;
+            @media only screen and (max-width: 480px) {
+              min-width: 80px;
+              font-size: 14px;
+            }
+          }
+          svg {
+            fill: ${themeGet('primary.0', '#008489')};
+          }
+        }
       /* comment rating style */
       .comment-rating {
         display: flex;
@@ -132,6 +154,22 @@ const ReviewWrapper = styled.div`
       }
     }
   }
+  @-webkit-keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #b22cff;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #fff;
+  }
+}
 `;
 
 export const FilterElement = styled.div`
@@ -224,7 +262,7 @@ export const RatingSearch = styled.div`
   /* input search style */
   .ant-input-search {
     width: calc(100% - 165px);
-    margin-right: 30px;
+    margin-right: 15px;
     .ant-input {
       padding-left: 44px;
       padding-right: 11px;
@@ -303,5 +341,4 @@ export const ModalTitle = styled.h2`
     line-height: 32px;
   }
 `;
-
 export default ReviewWrapper;
