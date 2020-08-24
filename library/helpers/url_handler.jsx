@@ -26,14 +26,14 @@ export function setStateToUrl(state) {
     // Validate các cases để tránh render query phù hợp, tránh âm, query=0|NULL
     switch (key) {
       case 'minPrice':
-        if (state[key] && state[key] > 0) {
+        if (state[key] && state[key] >= 0) {
           urlData[key] = state[key];
         } else {
           urlData[key] = '';
         }
         break;
       case 'maxPrice':
-        if (state[key] && state[key] < 100) {
+        if (state[key] && state[key] < 1000) {
           urlData[key] = state[key];
         } else {
           urlData[key] = '';
@@ -69,6 +69,9 @@ export function setStateToUrl(state) {
         }
         if (state[key] && state[key].location_lng) {
           urlData[`${key}_lng`] = state[key].location_lng;
+        }
+        if (state[key] && state[key].country_short) {
+          urlData[`${key}_countryshort`] = state[key].country_short;
         }
         break;
       case 'reset':
