@@ -26,6 +26,19 @@ export const Container = styled.div`
       }
     }
   }
+  .ant-radio-group {
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-group-item {
+      margin: 9px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   .date_picker {
     margin-bottom: 0;
