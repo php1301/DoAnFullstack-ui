@@ -99,6 +99,7 @@ export const GET_USER_POSTS = gql`
       }
       reviews{
         reviewID
+        reviewOverall
       }
       createdAt
       updatedAt
@@ -327,6 +328,10 @@ export const GET_ALL_HOTELS = gql`
       }
       gallery{
         url
+      }
+      reviews{
+        reviewID
+        reviewOverall
       }
       createdAt
       updatedAt
@@ -637,6 +642,16 @@ export const GET_TRANSACTION_DETAILS = gql`
     query GetTransactionDetails($transactionSecretKey: String){
       getTransactionDetails(transactionSecretKey: $transactionSecretKey){
             transactionLocationLa
+      }
+    }
+`;
+export const GET_TOTAL_UNREAD_TRANSACTIONS = gql`
+    query GetTotalUnreadTransactions{
+      getTotalUnreadTransactions{
+          uncheckTransactions {
+          totalPrice
+          totalTransactions
+        }
       }
     }
 `;
