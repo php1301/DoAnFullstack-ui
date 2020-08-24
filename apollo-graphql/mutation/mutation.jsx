@@ -33,6 +33,7 @@ export const LOGIN = gql`
             first_name
             profile_pic_main
             cover_pic_main
+            role
         }
     }
 `;
@@ -45,6 +46,7 @@ export const SIGNUP = gql`
             first_name
             profile_pic_main
             cover_pic_main
+            role
         }
     }
 `;
@@ -236,6 +238,13 @@ export const PROCESS_TRANSACTION = gql`
     mutation ProcessTransactions($id: [String], $type: Int){
         processTransactions(id: $id, type: $type){
             transactionAuthorNote
+        }
+    }
+`;
+export const UPDATE_TOTAL_UNREAD_TRANSACTIONS = gql`
+    mutation UpdateTotalUnreadTransactions {
+        updateTotalUnreadTransactions{
+            content
         }
     }
 `;
