@@ -67,3 +67,11 @@ export const REALTIME_LIKE_DISLIKE = gql`
         }
     }
 `;
+export const REALTIME_NOTIFICATION_TRANSACTION = gql`
+    subscription RealtimeNotificationTransaction($userId: String){
+        realtimeNotificationTransaction(userId: $userId){
+            TXID
+            transactionPrice
+        }
+    }
+`;
