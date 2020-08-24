@@ -55,7 +55,7 @@ const AuthProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(isValidToken());
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
-  const [login, { data, error }] = useMutation(LOGIN);
+  const [login] = useMutation(LOGIN);
   const [signup] = useMutation(SIGNUP);
 
   async function signIn(params) {
@@ -80,7 +80,6 @@ const AuthProvider = (props) => {
       addItem(USER_COOKIE, userPayload.data.login);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
-      window.history.back();
     } catch (e) {
     // Nhớ render ToastContainer ít nhất 1 lần ở trong root app/page
       toast.error(e.message.slice(15), {
@@ -157,7 +156,8 @@ const AuthProvider = (props) => {
     clearItem(TOKEN_COOKIE);
     clearItem(USER_COOKIE);
     setLoggedIn(false);
-    redirect({}, '/');
+    window.location.reload();
+    // redirect({}, '/');
   };
 
   const { children } = props;
