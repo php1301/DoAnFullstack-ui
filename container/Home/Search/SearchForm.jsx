@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { useState, useContext } from 'react';
 import Router, { withRouter } from 'next/router';
 import isEmpty from 'lodash/isEmpty';
@@ -11,7 +12,8 @@ import { MapDataHelper } from 'components/Map/MapLocationBox';
 import ViewWithPopup from 'components/UI/ViewWithPopup/ViewWithPopup';
 
 import { LISTING_POSTS_PAGE } from 'settings/constants';
-
+import { SearchContext } from 'context/SearchProvider';
+import { setStateToUrl } from 'library/helpers/url_handler';
 import {
   FormWrapper,
   ComponentWrapper,
@@ -29,6 +31,7 @@ const calendarItem = {
 // type là key value, truy xuất = [] vì state dạng obj
 // ví dụ roomguest, truy xuất động dựa trên type thay vì ghi từng cai
 const SearchForm = () => {
+  const { state, dispatch } = useContext(SearchContext);
   const [searchDate, setSearchDate] = useState({
     setStartDate: null,
     setEndDate: null,
@@ -67,6 +70,69 @@ const SearchForm = () => {
       ...roomGuest,
       [type]: currentValue,
     });
+  };
+  const goToSearchPage = () => {
+    const tempLocation = [];
+    const dateRange = {};
+    let location_lat = '';
+    let location_lng = '';
+    let country_short = ''
+    const mapData = mapValue ? MapDataHelper(mapValue) : [];
+    // eslint-disable-next-line no-unused-expressions
+    console.log(mapData)
+    mapData && mapData.forEach((singleMapData) => {
+      tempLocation.push({
+        formattedAddress: singleMapData.formattedAddress ?? '',
+        lat: singleMapData.lat.toFixed(3) ?? null,
+        lng: singleMapData.lng.toFixed(3) ?? null,
+        country_short: singleMapData ? singleMapData.country_short : 'O',
+      });
+    });
+    const location = tempLocation ? tempLocation[0] : {};
+    console.log(location)
+    dateRange.startDate = searchDate ? searchDate.setStartDate : null;
+    dateRange.endDate = searchDate ? searchDate.setEndDate : null;
+
+    if (location && location.lat) {
+      location_lat = parseFloat(location.lat);
+    }
+
+    if (location && location.lng) {
+      location_lng = parseFloat(location.lng);
+    }
+    if (location && location.country_short) {
+      country_short = location.country_short;
+    }
+
+    const query = {
+      setStartDate: searchDate.setStartDate,
+      setEndDate: searchDate.setEndDate,
+      room: roomGuest.room,
+      guest: roomGuest.guest,
+      location_lat,
+      location_lng,
+      country_short,
+    };
+
+    Object.keys(query).forEach((key) => {
+      if (query[key] === '' || query[key] === null || query[key] === 0) {
+        delete query[key];
+      }
+    });
+    const params = setStateToUrl(query);
+    console.log(params)
+    dispatch({
+      type: 'UPDATE',
+      payload: {
+        ...state,
+        ...query,
+      },
+    });
+
+    Router.push({
+        pathname: `${LISTING_POSTS_PAGE}`,
+        query: params,
+      });
   };
   return (
     <FormWrapper>
@@ -152,7 +218,7 @@ const SearchForm = () => {
         type="primary"
         htmlType="submit"
         size="large"
-        // onClick={goToSearchPage}
+        onClick={goToSearchPage}
       >
         Find Hotels
       </Button>
