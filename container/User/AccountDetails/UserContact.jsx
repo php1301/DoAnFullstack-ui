@@ -2,9 +2,9 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import { useMutation } from 'react-apollo';
+import { toast } from 'react-toastify';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import isEmpty from 'lodash/isEmpty';
 import Row from 'components/UI/Antd/Grid/Row';
 import Col from 'components/UI/Antd/Grid/Col';
 import Heading from 'components/UI/Heading/Heading';
@@ -31,9 +31,22 @@ const getContactFormValidation = () => Yup.object().shape({
 });
 
 const AgentContact = (props) => {
-  const [sendContact, { data }] = useMutation(SEND_CONTACT);
+  const [sendContact, { data }] = useMutation(SEND_CONTACT, {
+    onCompleted: () => {
+      toast.success('Submitted succesfully, we will contact you ASAP',
+        {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+    },
+  });
   const {
-    processedData, loadMoreData, loading, user,
+    loading,
   } = props;
   if (loading) return <Loader />;
   // const { agent_location, cellNumber, email } = processedData[0];
@@ -44,7 +57,7 @@ const AgentContact = (props) => {
     const contact = formProps ? formProps.contact : '';
     const cookieConsent = formProps ? formProps.cookieConsent : false; // alert việc su dung cookie
     try {
-      sendContact({
+      await sendContact({
         variables: {
           contact: {
             subject,
@@ -54,7 +67,16 @@ const AgentContact = (props) => {
         },
       });
     } catch (e) {
-      console.log(e);
+      toast.error(e.message,
+        {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
     }
     // alert(
     //   `Email : ${emailSubmit} \n Contact : ${contact}
