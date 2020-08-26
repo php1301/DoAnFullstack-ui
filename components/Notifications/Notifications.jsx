@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, Fragment } from 'react';
-import { useMutation, useQuery } from 'react-apollo';
+import { useMutation, useQuery, useSubscription } from 'react-apollo';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import { v4 as uuidv4 } from 'uuid';
@@ -8,9 +8,9 @@ import Popover from '../UI/Antd/Popover/Popover';
 import Button from '../UI/Antd/Button/Button';
 import HeaderWrapper from 'container/Layout/Header/Header.style';
 import { BellFilled } from '@ant-design/icons';
-import { GET_USER_NOTIFICATION, GET_USER_UNREAD_NOTIFICATION_NUMBER } from 'apollo-graphql/query/query';
-import { CHECK_NOTIFICATION, DELETE_ALL_NOTIFICATIONS, READ_NOTIFICATION } from 'apollo-graphql/mutation/mutation';
-import { UNREAD_NOTIFICATION, NOTIFICATION_BELL } from 'apollo-graphql/subscription/subscription';
+import { GET_USER_NOTIFICATION, GET_USER_UNREAD_NOTIFICATION_NUMBER, GET_TOTAL_UNREAD_TRANSACTIONS } from 'apollo-graphql/query/query';
+import { CHECK_NOTIFICATION, DELETE_ALL_NOTIFICATIONS, READ_NOTIFICATION, UPDATE_TOTAL_UNREAD_TRANSACTIONS } from 'apollo-graphql/mutation/mutation';
+import { UNREAD_NOTIFICATION, NOTIFICATION_BELL, REALTIME_NOTIFICATION_TRANSACTION } from 'apollo-graphql/subscription/subscription';
 
 const demoNotifications = [
   {
@@ -72,6 +72,41 @@ export default function TopbarNotification({ id }) {
       },
     ],
   });
+  const [updateTotalUnreadTransactions] = useMutation(UPDATE_TOTAL_UNREAD_TRANSACTIONS)
+  useSubscription(REALTIME_NOTIFICATION_TRANSACTION,
+    {
+      variables: {
+        userId: id,
+      },
+      onSubscriptionData: async ({ subscriptionData }) => {
+        if(subscriptionData && subscriptionData.data && subscriptionData.data.realtimeNotificationTransaction) {
+        const { TXID, transactionPrice } = subscriptionData.data.realtimeNotificationTransaction;
+        toast.info(`You have just received $${transactionPrice}.00 total from ${TXID}`,
+          {
+            position: 'top-left',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          try{
+            await updateTotalUnreadTransactions()
+          }
+          catch(e){
+            toast.error(e.message, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      }
+    }})
   const router = useRouter();
   // console.log(id);
   // console.log(id);
@@ -93,6 +128,48 @@ export default function TopbarNotification({ id }) {
   //   // },
   //   shouldResubscribe: true,
   // });
+   useQuery(GET_TOTAL_UNREAD_TRANSACTIONS, {
+    onCompleted: async (data) => {
+      if(data 
+        && data.getTotalUnreadTransactions
+        && data.getTotalUnreadTransactions.uncheckTransactions
+        && data.getTotalUnreadTransactions.uncheckTransactions.totalTransactions) {
+        const {totalTransactions, totalPrice} = data.getTotalUnreadTransactions.uncheckTransactions
+        if(totalTransactions > 0) {
+        toast.info(`You had ${totalTransactions} transactions(s) in total $${totalPrice}.00 while you're away `,
+        {
+          position: 'top-left',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        try{
+          await updateTotalUnreadTransactions()
+        }
+        catch(e){
+          toast.error(e.message,{
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        }
+      }
+    }
+        // try{
+        //    await updateTotalUnreadTransactions();
+        // }
+        // catch (e) {
+        //   console.log(e)
+        // }
+    }
+  })
   const {
     subscribeToMore,
     data: notiData,
@@ -269,7 +346,7 @@ export default function TopbarNotification({ id }) {
           {!unreadNotificationLoading && unreadNotificationData
         && unreadNotificationData.getUserUnreadNotification.unreadNotification
             ? (unreadNotificationData.getUserUnreadNotification.unreadNotification > 50 ? '50+'
-              : unreadNotificationData.getUserUnreadNotification.unreadNotification + 1)
+              : unreadNotificationData.getUserUnreadNotification.unreadNotification)
             : 0}
         </span>
       </div>
