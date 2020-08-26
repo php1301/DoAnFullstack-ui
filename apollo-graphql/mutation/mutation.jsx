@@ -24,6 +24,32 @@ export const FILTER_HOTELS = gql`
         }
 `;
 
+export const FACEBOOK_LOGIN = gql`
+       mutation FacebookLogin($email: String, $accessToken: String, $socialInfo: String, $socialId: String, $socialProfileLink: String){
+            facebookLogin(email: $email, accessToken: $accessToken, socialInfo: $socialInfo, socialId: $socialId, socialProfileLink: $socialProfileLink){
+                id
+                email
+                last_name
+                first_name
+                profile_pic_main
+                cover_pic_main
+                role
+            }
+        }
+`;
+export const GOOGLE_LOGIN = gql`
+       mutation GoogleLogin($email: String, $accessToken: String, $socialInfo: String, $socialId: String, $profileImage: String){
+            googleLogin(email: $email, accessToken: $accessToken, socialInfo: $socialInfo, socialId: $socialId, profileImage: $profileImage){
+                id
+                email
+                last_name
+                first_name
+                profile_pic_main
+                cover_pic_main
+                role
+            }
+        }
+`;
 export const LOGIN = gql`
     mutation Login($loginInput: LoginInput){
         login(loginInput: $loginInput){
