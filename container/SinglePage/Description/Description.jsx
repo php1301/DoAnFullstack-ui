@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import Rating from 'components/UI/Rating/Rating';
@@ -15,24 +15,41 @@ const Description = ({
   rating,
   ratingCount,
   titleStyle,
+  propertyStyle,
   locationMetaStyle,
   contentStyle,
-  linkStyle,
-}) => (
-  <Element name="overview" className="overview">
-    <DescriptionWrapper>
-      <Text content={location.formattedAddress} {...locationMetaStyle} />
-      <Heading as="h2" content={title} {...titleStyle} />
-      <RatingMeta>
-        <Rating rating={rating} ratingCount={ratingCount} type="bulk" />
-      </RatingMeta>
-      <Text content={content} {...contentStyle} />
-      <TextButton>
-        <Button>Read more about the hotel</Button>
-      </TextButton>
-    </DescriptionWrapper>
-  </Element>
-);
+  propertyType,
+  // linkStyle,
+}) => {
+  const [readMore, setReadMore] = useState(false);
+  return (
+    <Element name="overview" className="overview">
+      <DescriptionWrapper>
+        <Text content={location.formattedAddress} {...locationMetaStyle} />
+        <Heading as="h2" content={title} {...titleStyle} />
+        <Heading as="h4" content={`Property Type: ${propertyType || 'Normal Hotel'}`} {...propertyStyle} />
+        <RatingMeta>
+          <Rating rating={rating} ratingCount={ratingCount} type="bulk" />
+        </RatingMeta>
+        {content.length > 30 ? (
+          <>
+            <Text
+              content={`${content.slice(0, !readMore ? 30 : content.length)}
+            ${!readMore ? '....Read more' : ''}`}
+              {...contentStyle}
+            />
+            <TextButton>
+              <Button onClick={() => { setReadMore(!readMore); }}>
+                {`${!readMore ? 'Read more' : 'Hide Read more'} about the hotel`}
+              </Button>
+            </TextButton>
+          </>
+        ) : (<Text content={content} {...contentStyle} />
+        )}
+      </DescriptionWrapper>
+    </Element>
+  );
+};
 
 Description.propTypes = {
   titleStyle: PropTypes.object,
@@ -43,6 +60,12 @@ Description.propTypes = {
 Description.defaultProps = {
   titleStyle: {
     color: '#2C2C2C',
+    fontSize: ['17px', '20px', '25px'],
+    lineHeight: ['1.15', '1.2', '1.36'],
+    mb: '4px',
+  },
+  propertyStyle: {
+    color: '#008489',
     fontSize: ['17px', '20px', '25px'],
     lineHeight: ['1.15', '1.2', '1.36'],
     mb: '4px',
