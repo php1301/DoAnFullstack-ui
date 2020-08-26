@@ -1,7 +1,7 @@
 import Router from 'next/router';
 
 /**
- * Redirect to any given url
+ * Redirect đến bất kì url
  */
 export default (ctx = {}, target) => {
   if (ctx.res) {
