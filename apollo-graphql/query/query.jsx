@@ -641,7 +641,28 @@ export const GET_TRANSACTIONS_HAVING = gql`
 export const GET_TRANSACTION_DETAILS = gql`
     query GetTransactionDetails($transactionSecretKey: String){
       getTransactionDetails(transactionSecretKey: $transactionSecretKey){
-            transactionLocationLa
+            transactionHotelManager{
+                first_name
+                last_name
+                email
+                cellNumber
+            }
+            transactionAuthorName
+            transactionHotelName
+            transactionLocationLat
+            transactionHotelType
+            transactionPrice
+            transactionLocationLng
+            transactionLocationFormattedAddress
+            transactionRoom
+            transactionGuest
+            transactionRange
+            transactionStatus
+            transactionCoupon
+            transactionCouponType
+            transactionCouponValue
+            transactionStartDate
+            transactionEndDate
       }
     }
 `;
