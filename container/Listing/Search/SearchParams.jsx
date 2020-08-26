@@ -18,11 +18,11 @@ export const getAmenities = {
   options: [
     { label: 'Free Wi-Fi', value: 'free-wifi' },
     { label: 'Free Parking', value: 'free-parking' },
-    { label: 'Breakfast included(x)', value: 'breakfast' },
+    { label: 'Breakfast included', value: 'breakfast', disabled: true },
     { label: 'Pool', value: 'pool' },
     { label: 'Air Conditioning', value: 'air-condition' },
-    { label: 'Hot Shower(x)', value: 'hot-shower' },
-    { label: 'Cable TV(x)', value: 'cable-tv' },
+    { label: 'Hot Shower', value: 'hot-shower', disabled: true },
+    { label: 'Cable TV', value: 'cable-tv', disabled: true },
   ],
 };
 
