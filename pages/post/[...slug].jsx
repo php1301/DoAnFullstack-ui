@@ -188,8 +188,8 @@ const SinglePostPage = ({
                   content={content}
                   title={title}
                   location={location}
-                  rating={rating}
-                  ratingCount={ratingCount}
+                  rating={total}
+                  ratingCount={reviews.length}
                   propertyType={propertyType}
                 />
                 <Amenities amenities={amenities} />
