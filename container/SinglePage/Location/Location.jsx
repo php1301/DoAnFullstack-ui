@@ -13,6 +13,7 @@ const Location = ({
   contentStyle,
   boldContentStyle,
   linkStyle,
+  locationDescription,
   location,
   ...props
 }) => {
@@ -27,6 +28,10 @@ const Location = ({
           neighborhood is perfect for an authentic taste of Roman life, with
           shops, art galleries, restaurants, bars, and clubs all nearby and
           ready to be discovered."
+          {...contentStyle}
+        />
+        <Text
+          content={`Location Description: ${locationDescription || 'No more context for this location'}`}
           {...contentStyle}
         />
         <Text
