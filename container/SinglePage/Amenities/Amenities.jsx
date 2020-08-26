@@ -23,22 +23,22 @@ const Amenities = ({ titleStyle, linkStyle, amenities }) => (
       <Heading as="h2" content="Amenities" {...titleStyle} />
       <AmenitiesArea>
         {amenities[0].wifiAvailability
-          ? <IconCard icon={<FaWifi />} title="Free wifi" />
-          : <IconCard icon={<FiWifiOff />} title="No free wifi" />}
+          ? <IconCard icon={<FaWifi />} title="Free Wifi" />
+          : <IconCard icon={<FiWifiOff />} title="No free Wifi" />}
         {amenities[0].parkingAvailability
-          ? <IconCard icon={<FaCarAlt />} title="Free parking" />
-          : <IconCard icon={<FaBan />} title="No Free parking" />}
+          ? <IconCard icon={<FaCarAlt />} title="Free Parking" />
+          : <IconCard icon={<FaBan />} title="No Free Parking" />}
         {amenities[0].poolAvailability
-          ? <IconCard icon={<FaSwimmer />} title="Free pool" />
-          : <IconCard icon={<GiPoolDive />} title="No Free pool" />}
+          ? <IconCard icon={<FaSwimmer />} title="Free Pool" />
+          : <IconCard icon={<GiPoolDive />} title="No Free Pool" />}
         {amenities[0].airCondition
           ? <IconCard icon={<FaAirFreshener />} title="Air Condition" />
           : <IconCard icon={<GiDespair />} title="No Air Condition" />}
       </AmenitiesArea>
       <TextButton>
-        <Link href="#1">
+        {/* <Link href="#1">
           <a style={{ ...linkStyle }}>Show all amenities</a>
-        </Link>
+        </Link> */}
       </TextButton>
     </AmenitiesWrapper>
   </Element>
