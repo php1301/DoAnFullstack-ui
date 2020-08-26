@@ -12,11 +12,11 @@ const HotelMapMarkerCluster = (props) => {
   if (location && location.length !== 0) {
     for (let i = 0; i < location.length; i++) {
       const { id } = location[i];
-      const lat = parseFloat(location[i].location.lat);
-      const lng = parseFloat(location[i].location.lng);
+      const lat = parseFloat(location[i].location[0].lat);
+      const lng = parseFloat(location[i].location[0].lng);
       const { title } = location[i];
       const thumbUrl = location[i].image.thumb_url;
-      const { formattedAddress } = location[i].location;
+      const { formattedAddress } = location[i].location[0];
       const { price } = location[i];
       const { rating } = location[i];
       const { ratingCount } = location[i];
@@ -34,7 +34,7 @@ const HotelMapMarkerCluster = (props) => {
       });
     }
   }
-
+  console.log(locationArray);
   return locationArray.map((singlePostLocation) => (
     <Marker
       key
