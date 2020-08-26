@@ -74,6 +74,8 @@
     "react-content-loader": "^5.0.4",
     "react-dates": "^21.8.0",
     "react-dom": "16.13.1",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.1.21",
     "react-google-maps": "^9.4.5",
     "react-google-recaptcha": "^2.1.0",
     "react-highlight-words": "^0.16.0",
