@@ -5,10 +5,25 @@ import MakerImage from './hotelMapMarker.png';
 // Render map cho trang details của từng hotel - truyền data tương tự theo query
 const SingleMapDisplay = (props) => {
   const locationArray = [];
+  const TXIDLocation = [];
   const {
-    location, infoWindowToggle, isOpen, markerIndex, rating, ratingCount, image, price, title,
+    location,
+    infoWindowToggle,
+    isOpen,
+    markerIndex,
+    rating,
+    ratingCount,
+    image,
+    price,
+    title,
   } = props;
-
+  if (location && location.type && location.type === 'txid') {
+    TXIDLocation.push({
+      lat: location && location.lat,
+      lng: location && location.lng,
+      formattedAddress: location && location.formattedAddress,
+    });
+  }
   locationArray.push({
     lat: location && location.lat,
     lng: location && location.lng,
@@ -20,16 +35,17 @@ const SingleMapDisplay = (props) => {
     rating,
     ratingCount,
   });
+
   return locationArray.map((singlePostLocation) => (
     <Marker
       key
       icon={MakerImage}
       position={singlePostLocation}
       onClick={() => {
-        infoWindowToggle(singlePostLocation.id);
+        if (location && location.type && location.type !== 'txid') infoWindowToggle(singlePostLocation.id);
       }}
     >
-      {isOpen && markerIndex === singlePostLocation.id ? (
+      {isOpen && markerIndex === singlePostLocation.id && location && location.type && location.type !== 'txid' ? (
         <HotelInfoWindow
           postData={singlePostLocation}
           onCloseClick={() => {
