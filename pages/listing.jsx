@@ -23,7 +23,7 @@ import GetAPIData, {
   Paginator,
   SearchedData,
   SearchStateKeyCheck,
-  ProcessAPIData,
+  // ProcessAPIData,
 } from 'library/helpers/get_api_data';
 // import { getDeviceType } from 'library/helpers/get_device_type';
 
@@ -105,15 +105,15 @@ const ListingPage = ({
   //   }
   // }, [filteredData]);
 
-  useEffect(() => {
-    if (statekey === true) {
-      const newData = SearchedData(processedData);
-      setPosts(newData);
-    } else {
-      setPosts((processedData && processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT))
-      || []);
-    }
-  }, [statekey]);
+  // useEffect(() => {
+  //   if (statekey === true) {
+  //     const newData = SearchedData(processedData);
+  //     setPosts(newData);
+  //   } else {
+  //     setPosts((processedData && processedData.getAllHotels.slice(0, LISTING_PAGE_POST_LIMIT))
+  //     || []);
+  //   }
+  // }, [statekey]);
   if (listingLoading) return <Loader />;
   if (heartLoading) return <Loader />;
   // if (filteredLoading) return <Loader />;
@@ -283,7 +283,7 @@ const ListingPage = ({
   return (
     <ListingWrapper>
       <Head>
-        <title>Listing | A react next listing template</title>
+        <title>Listing | Listing Page</title>
       </Head>
 
       <Sticky top={82} innerZ={999} activeClass="isHeaderSticky">
