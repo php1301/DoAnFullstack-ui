@@ -8,7 +8,7 @@ export const LanguageContext = createContext();
 const reducer = (state, action) => {
   switch (action.type) {
     case 'SWITCH':
-      console.log('state changed');
+      // console.log('state changed');
       return state = AppLocale[`${localStorage.getItem('lang') || 'en'}`];
     default:
       return state;
