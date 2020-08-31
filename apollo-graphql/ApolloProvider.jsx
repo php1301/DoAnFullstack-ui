@@ -18,7 +18,7 @@ import fetch from 'node-fetch';
 // -> sử dụng cho getServerSidesProps
 // export const withApolloClient = () => {
   const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
-  uri: `ws://localhost:3000/graphql`,
+  uri: `ws://35.201.199.79:3000/graphql`,
   options: {
     reconnect: true,
     lazy: true,
@@ -36,7 +36,7 @@ import fetch from 'node-fetch';
 }) : null;
 
 const httplink = new createHttpLink({
-	uri: 'http://localhost:3000/graphql',
+	uri: 'http://35.201.199.79:3000/graphql',
   credentials: 'include',
   fetch,
   onError: ({ networkError, graphQLErrors }) => {
