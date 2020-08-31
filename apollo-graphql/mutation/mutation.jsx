@@ -83,6 +83,20 @@ export const UPDATE_PASSWORD = gql`
         }
     }
 `;
+export const FORGET_PASSWORD = gql`
+    mutation ForgetPassword($email: String){
+        forgetPassword(email: $email){
+            content
+        }
+    }
+`;
+export const CHANGE_PASSWORD_FROM_FORGET_PASSWORD = gql`
+    mutation ChangePasswordFromForgetPassword($password: String, $email: String){
+        changePasswordFromForgetPassword(password: $password, email: $email){
+            content
+        }
+    }
+`;
 
 export const LIKE = gql`
     mutation LikeHotel($id: ID!){
@@ -303,7 +317,7 @@ export const DELETE_COUPONS = gql`
 export const UPDATE_STRIPE_ID = gql`
     mutation UpdateStripeId($stripeId: String, $type: String){
         updateStripeId(stripeId: $stripeId, type: $type){
-            content
+          content
         }
     }
 `;
