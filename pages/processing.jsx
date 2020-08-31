@@ -1,17 +1,17 @@
 /* eslint-disable no-unused-expressions */
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { useMutation } from 'react-apollo';
+import Router from 'next/router';
+import Head from 'next/head';
 import Loader from 'components/Loader/Loader';
+import Cookies from 'js-cookie';
 import { UPDATE_STRIPE_ID } from 'apollo-graphql/mutation/mutation';
 import { toast } from 'react-toastify';
-import Router from 'next/router';
 import redirect from 'library/helpers/redirect';
 
-const Processing = ({ query }) => {
-  const [success, setSuccess] = useState(false);
+const Processing = ({ user, query }) => {
   const [updateStripeId] = useMutation(UPDATE_STRIPE_ID, {
     onCompleted: () => {
-      setSuccess(true);
       toast.success('Validation successfully you will now be redirected to profile', {
         position: 'top-right',
         autoClose: 5000,
@@ -21,20 +21,29 @@ const Processing = ({ query }) => {
         draggable: true,
         progress: undefined,
       });
-      setTimeout(() => {
-        Router.push('/profile');
-      }, 6000);
+      const newCookie = { ...user, role: query.plan };
+      Cookies.set('user', newCookie, { expires: 7 });
+      Router.replace('/profile?u=1');
     },
   });
-  setTimeout(() => {
-    updateStripeId({
+  useEffect(async () => {
+    await updateStripeId({
       variables: {
         stripeId: query.accountId,
         type: query.plan,
       },
     });
-  }, 6000);
-  return (success ? (<Loader />) : '...');
+  }, []);
+  return (
+    <>
+      <Head>
+        <title>
+          Processing...
+        </title>
+      </Head>
+      <Loader />
+    </>
+  );
 };
 
 

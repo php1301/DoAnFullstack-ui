@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import Head from 'next/head';
 import { CheckCircleTwoTone, CloseCircleOutlined } from '@ant-design/icons';
 import PricingItems from 'container/Pricing/PricingItems';
 import PricingWrapper, {
@@ -9,13 +11,12 @@ import PricingWrapper, {
   PricingTableArea,
   Button,
 } from 'container/Pricing/Pricing.style';
-import Head from 'next/head';
 
 // Render số lượng ít nhiều nhờ map các array
 const monthlyPlans = [
   {
     title: 'Basic Plan',
-    key: 'BPM',
+    key: 'Normal',
     price: '0.00',
     type: 'monthly',
     features: [
@@ -292,6 +293,7 @@ export default function Pricing({ user }) {
   }
   return (
     <PricingWrapper>
+      <ToastContainer />
       <Head>
         <title>Pricing Plan</title>
       </Head>
