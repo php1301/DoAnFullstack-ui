@@ -5,14 +5,14 @@ import 'react-dates/lib/css/_datepicker.css';
 import { ThemeProvider } from 'styled-components';
 // import { appWithTranslation } from '../i18n';
 import AppLocale from 'translations/index';
-import theme from '../themes/default.theme';
-import GlobalStyles from '../assets/style/Global.style';
+import theme from 'themes/default.theme';
+import GlobalStyles from 'assets/style/Global.style';
 import { withData } from 'library/helpers/restriction';
 
 import { LanguageProvider } from 'context/LanguageProvider';
 import AuthProvider from 'context/AuthProvider';
 import { SearchProvider } from 'context/SearchProvider';
-import Layout from '../container/Layout/Layout';
+import Layout from 'container/Layout/Layout';
 import { ApolloComponent } from 'apollo-graphql/ApolloProvider';
 
 // import Amplify from 'aws-amplify';
