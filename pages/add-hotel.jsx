@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useMutation } from 'react-apollo';
 import { toast, ToastContainer } from 'react-toastify';
 import Router from 'next/router';
+import Head from 'next/head'
 import { Field } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
@@ -43,8 +44,8 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const required = (value) => (value ? undefined : 'Required');
 const getAddHotelValidationSchema = () => Yup.object().shape({
   pricePerNight: Yup.number()
-    .min(1, 'Please enter Price that greater than 0')
-    .max(1000, 'Please enter Price that less than 1000'),
+    .min(1, 'Please enter Price that greater than 0$ USD')
+    .max(1000, 'Please enter Price that less than 1000$ USD'),
 });
 const formValue = {
   hotelName: '',
@@ -123,6 +124,9 @@ const RenderCreateOrUpdateForm = ({ fieldLabel, radioBoxLabel }) => {
   });
   return (
     <StepperWrapper className="hotel-submission-form">
+      <Head>
+        <title>Add Hotel</title>
+      </Head>
       <FormStepper
     // Làm các ô input formStepper blank bằng initialValues
         initialValues={formValue}
