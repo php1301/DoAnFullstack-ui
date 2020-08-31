@@ -78,8 +78,7 @@ const SearchForm = () => {
     let location_lng = '';
     let country_short = ''
     const mapData = mapValue ? MapDataHelper(mapValue) : [];
-    // eslint-disable-next-line no-unused-expressions
-    console.log(mapData)
+    // console.log(mapData)
     mapData && mapData.forEach((singleMapData) => {
       tempLocation.push({
         formattedAddress: singleMapData.formattedAddress ?? '',
@@ -89,7 +88,7 @@ const SearchForm = () => {
       });
     });
     const location = tempLocation ? tempLocation[0] : {};
-    console.log(location)
+    // console.log(location)
     dateRange.startDate = searchDate ? searchDate.setStartDate : null;
     dateRange.endDate = searchDate ? searchDate.setEndDate : null;
 
