@@ -1,14 +1,24 @@
+import Head from 'next/head';
+import Router from 'next/router';
 import { UserDetailsPage } from 'container/User/index';
 // import GetAPIData, { ProcessAPIData } from 'library/helpers/get_api_data';
 import { secretPage } from 'library/helpers/restriction';
 import { getDeviceType } from 'library/helpers/get_device_type';
 
-const Profile = ({ processedData, ...props }) => (
-  <UserDetailsPage
+const Profile = ({ processedData, ...props }) => {
+  if (typeof window !== 'undefined') { if (props.query.u) Router.replace('/profile'); }
+  return (
+    <>
+      <Head>
+        <title>Profile | Profile Page</title>
+      </Head>
+      <UserDetailsPage
     // processedData={processedData.data}
-    {...props}
-  />
-);
+        {...props}
+      />
+    </>
+  );
+};
 
 Profile.getInitialProps = async (context) => {
   const { query, req } = context;
