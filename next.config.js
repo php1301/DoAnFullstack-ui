@@ -17,12 +17,15 @@ const nextConfig = {
   publicRuntimeConfig: {
     localeSubpaths,
   },
-  env: {
-    GOOGLE_API_KEY: 'AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus',
-    REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus&libraries=geometry,drawing,places',
-    SERVER_API: 'http://localhost:3002',
-  },
   webpack: (config, { isServer }) => {
+    if (config.optimization.splitChunks) {
+      config.optimization.splitChunks.cacheGroups.shared = {
+        name: 'app-other',
+        test: /\.css$/,
+        chunks: 'all',
+        enforce: true,
+      };
+    }
     if (isServer) {
       const antStyles = /antd\/.*?\/style\/css.*?/;
       const origExternals = [...config.externals];
@@ -37,7 +40,6 @@ const nextConfig = {
         },
         ...(typeof origExternals[0] === 'function' ? [] : origExternals),
       ];
-
       config.module.rules.unshift({
         test: antStyles,
         use: 'null-loader',
