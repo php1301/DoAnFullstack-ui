@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useQuery } from 'react-apollo';
+import { ToastContainer } from 'react-toastify';
 import dynamic from 'next/dynamic';
 import ActiveLink from 'library/helpers/activeLink';
 import Row from 'components/UI/Antd/Grid/Row';
@@ -7,6 +9,7 @@ import Menu from 'components/UI/Antd/Menu/Menu';
 import Avatar from 'components/UI/Antd/Avatar/Avatar';
 import Container from 'components/UI/Container/Container.style';
 import { USER_PROFILE_PAGE } from 'settings/constants';
+import { GET_USER_INFO } from 'apollo-graphql/query/query';
 import AccountSettingWrapper, {
   AccountSidebar,
   AgentAvatar,
@@ -20,26 +23,40 @@ const UserCreateOrUpdateForm = dynamic(() => import('./UserCreateOrUpdateForm'))
 const UserPictureChangeForm = dynamic(() => import('./UserPictureChangeForm'));
 const ChangePassword = dynamic(() => import('./ChangePasswordForm'));
 const UserAccountSettingsPage = (props) => {
-  const { processedData } = props;
-  const [currentRoute, setCurrentRoute] = useState('edit-profile');
+  // const { loading: loadingO, error: errorO, data: dataO } = useQuery(Q_GET_O,
+  // { onCompleted: d => setO(d.getO[0].id) });
 
-  const profileData = processedData ? processedData[0] : '';
-  const firstName = profileData ? profileData.first_name : '';
-  const lastName = profileData ? profileData.last_name : '';
-  const profilePic = profileData ? profileData.profile_pic.url : '';
+  const [currentRoute, setCurrentRoute] = useState('edit-profile');
+  const { processedData, user } = props;
+  // Nhớ để hooks useQuery cuối cùng vì useQuery async, có thể sẽ chạy qua luôn các hooks khác
+  // Dẫn tới hooks bị render nhiều lần ngoài ý muốn
+  const {
+    loading, error, data,
+  } = useQuery(GET_USER_INFO, {
+    variables: {
+      id: user.id,
+    },
+  });
+  if (loading) return null;
+  const userInfo = data && data.getUserInfo ? data.getUserInfo : [];
+  // const profileData = processedData ? processedData[0] : '';
+  // const firstName = profileData ? profileData.first_name : '';
+  // const lastName = profileData ? profileData.last_name : '';
+  // const profilePic = profileData ? profileData.profile_pic.url : '';
   return (
     <AccountSettingWrapper>
+      <ToastContainer />
       <Container fullWidth>
         <Row gutter={30}>
           <Col md={9} lg={6}>
             <AccountSidebar>
               <AgentAvatar>
-                <Avatar src={profilePic} alt="Profile Picture" />
+                <Avatar src={data.getUserInfo.profile_pic_main || 'https://i.imgur.com/Lio3cDN.png'} alt="Profile Picture" />
                 <ContentWrapper>
                   <AgentName>
-                    {firstName}
+                    {data.getUserInfo.first_name}
                     {' '}
-                    {lastName}
+                    {data.getUserInfo.last_name}
                   </AgentName>
                   <ActiveLink href={`${USER_PROFILE_PAGE}`}>
                     View profile
@@ -77,16 +94,16 @@ const UserAccountSettingsPage = (props) => {
             {/* 1 div FormWrapper nhưng đổi content dựa vào route */}
             <FormWrapper>
               {currentRoute === 'edit-profile' ? (
-                <UserCreateOrUpdateForm />
+                <UserCreateOrUpdateForm user={userInfo} payloadUser={user} />
               ) : (
                 ''
               )}
               {currentRoute === 'change-photo' ? (
-                <UserPictureChangeForm />
+                <UserPictureChangeForm user={userInfo} payloadUser={user} />
               ) : (
                 ''
               )}
-              {currentRoute === 'change-password' ? <ChangePassword /> : ''}
+              {currentRoute === 'change-password' ? <ChangePassword user={userInfo} payloadUser={user} /> : ''}
             </FormWrapper>
           </Col>
         </Row>
