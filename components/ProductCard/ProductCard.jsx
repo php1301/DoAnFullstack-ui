@@ -65,7 +65,7 @@ export default function ProductCard({
           // }}
         />
       )}
-      location={location[0] ? location[0].formattedAddress : 'Somewhere on the Map'}
+      location={location && location[0] ? location[0].formattedAddress : 'Somewhere on the Map'}
       title={title}
       price={`$${price}.00/Night - Free Cancellation`}
       rating={<Rating rating={(reviews && total) || rating} ratingCount={type!=='index' ? totalRating : ratingCount} type="bulk" />}
@@ -102,7 +102,7 @@ export default function ProductCard({
         sliderClass=""
         slidesToSlide={1}
       >
-        {gallery.map(({ url, title }) => (
+        {gallery && gallery.length > 0 && gallery.map(({ url, title }) => (
           <img
             src={url}
             alt={title}
