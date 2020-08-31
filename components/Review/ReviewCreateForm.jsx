@@ -9,7 +9,11 @@ import RenderReviewForm from './RenderReviewForm';
 
 export default function ReviewCreateForm(props) {
   const {
-    hotelId, setState, state, dispatch, user,
+    hotelId,
+    setState,
+    state,
+    // dispatch,
+    // user,
   } = props;
   const [makeReviews] = useMutation(MAKE_REVIEWS);
   const initialValues = {
@@ -122,25 +126,25 @@ export default function ReviewCreateForm(props) {
     const reviewPics = reviewPhotos.map((i) => _.pick(i, ['url']));
     const reviewOverall = (ratings + roomsRatings
       + serviceRatings + cleanlinessRatings + cleanlinessRatings) / 5;
-    dispatch({
-      type: 'ADD_COMMENT',
-      payload: {
-        reviewTitle,
-        reviewText: reviewDetails,
-        sortOfTrip: tripType,
-        reviewAuthorFirstName: user.first_name,
-        reviewAuthorLastName: user.last_name,
-        reviewAuthorEmail: user.email,
-        reviewOverall,
-        reviewAuthorPic: user.profile_pic_main,
-        reviewTips: tips,
-        reviewPics,
-        justAdded: true,
-        reviewDate: 'Just now', // Co the xai moment nhung anh huong perfomance
-        reviewOptional: reviewOptionals,
-        reviewFields: reviewRating,
-      },
-    });
+    // dispatch({
+    //   type: 'ADD_COMMENT',
+    //   payload: {
+    //     reviewTitle,
+    //     reviewText: reviewDetails,
+    //     sortOfTrip: tripType,
+    //     reviewAuthorFirstName: user.first_name,
+    //     reviewAuthorLastName: user.last_name,
+    //     reviewAuthorEmail: user.email,
+    //     reviewOverall,
+    //     reviewAuthorPic: user.profile_pic_main,
+    //     reviewTips: tips,
+    //     reviewPics,
+    //     justAdded: true,
+    //     reviewDate: 'Just now', // Co the xai moment nhung anh huong perfomance
+    //     reviewOptional: reviewOptionals,
+    //     reviewFields: reviewRating,
+    //   },
+    // });
     try {
       await makeReviews({
         variables: {
