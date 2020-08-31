@@ -32,6 +32,10 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "env": {
+        "jest": true,
+        "mochai": true,
+    },
     "rules": {
         "jsx-a11y/anchor-is-valid": "off",
         "react/react-in-jsx-scope": "off",
