@@ -19,6 +19,7 @@ const NavbarSearch = () => {
     maxPrice: parseInt(state.maxPrice, 10) ?? 0,
     location_lat: state.location_lat ?? null,
     location_lng: state.location_lng ?? null,
+    country_short: state.country_short ?? null,
     room: parseInt(state.room, 10) ?? 0,
     guest: parseInt(state.guest, 10) ?? 0,
   };
@@ -34,6 +35,7 @@ const NavbarSearch = () => {
           // toFixed - làm tròn
           location_lat: singleMapData ? singleMapData.lat.toFixed(3) : null,
           location_lng: singleMapData ? singleMapData.lng.toFixed(3) : null,
+          country_short: singleMapData ? singleMapData.country_short : 'O',
         });
       });
     }
@@ -44,6 +46,7 @@ const NavbarSearch = () => {
       const query = {
         location_lat: parseFloat(searchLocation.location_lat),
         location_lng: parseFloat(searchLocation.location_lng),
+        country_short: searchLocation.country_short,
       };
       const params = setStateToUrl(query);
       dispatch({
