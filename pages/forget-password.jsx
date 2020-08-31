@@ -2,7 +2,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import Head from 'next/head';
 import Logo from 'components/UI/Logo/Logo';
-import ForgetPassWordForm from 'container/ForgetPassWord/ForgetPassWordForm';
+import ForgetPassWordForm from 'container/ForgetPassword/ForgetPasswordForm';
 import { getIsLoggedIn } from 'library/helpers/restriction';
 import redirect from 'library/helpers/redirect';
 import ForgetPassWordWrapper, {
