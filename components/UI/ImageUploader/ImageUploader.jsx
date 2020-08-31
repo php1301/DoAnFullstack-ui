@@ -47,8 +47,11 @@ export default class ImageUploader extends React.Component {
     });
   };
 
-  // eslint-disable-next-line react/destructuring-assignment
-  handleChange = ({ fileList }) => { this.setState({ fileList }); this.props.setUrl(fileList); }
+  handleChange = ({ fileList, file }) => {
+    this.setState({ fileList });
+    // eslint-disable-next-line react/destructuring-assignment
+    if (file.response !== 'removed') { this.props.setUrl(fileList); }
+  }
 
   handleRemove = (file) => {
     const { deleteUrl } = this.props;
@@ -89,7 +92,7 @@ export default class ImageUploader extends React.Component {
       this.setState({ loadingProfile: true });
       setTimeout(() => {
         this.setState({ loadingProfile: false, previewVisible: false });
-        toast.success('Profile Picture uploaded, refresh to see the effect.\nOption: Router.replace from next/router',
+        toast.success('Profile Picture uploaded',
           {
             position: 'top-right',
             autoClose: 5000,
@@ -143,7 +146,7 @@ export default class ImageUploader extends React.Component {
       this.setState({ loadingCover: true });
       setTimeout(() => {
         this.setState({ loadingCover: false, previewVisible: false });
-        toast.success('Cover Picture uploaded, refresh to see the effect.\nOption: Router.replace from next/router',
+        toast.success('Cover Picture uploaded',
           {
             position: 'top-right',
             autoClose: 5000,
