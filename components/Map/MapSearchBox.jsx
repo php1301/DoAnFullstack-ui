@@ -100,7 +100,7 @@ const MapWithSearchBox = compose(
     });
 
     geocoder.geocode({ latLng: latlng }, function(results, status) {
-      console.log(results, 'results');
+      // console.log(results, 'results');
       if (results[0] && results[0].formatted_address) {
         setLocationInput({
           searchedLocation: results[0] && results[0].formatted_address,

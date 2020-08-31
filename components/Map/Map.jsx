@@ -34,8 +34,8 @@ export const MapDataProcessing = compose(
   withHandlers({
     onMarkerClustererClick: () => (markerClusterer) => {
       const clickedMarkers = markerClusterer.getMarkers();
-      console.log(`Current clicked markers length: ${clickedMarkers.length}`);
-      console.log(clickedMarkers);
+      // console.log(`Current clicked markers length: ${clickedMarkers.length}`);
+      // console.log(clickedMarkers);
     },
   }),
   // Xử lý state với recompose

@@ -34,7 +34,6 @@ const HotelMapMarkerCluster = (props) => {
       });
     }
   }
-  console.log(locationArray);
   return locationArray.map((singlePostLocation) => (
     <Marker
       key
