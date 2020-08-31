@@ -5,7 +5,7 @@ import Footers from '../../../components/Footer/Footer';
 import LogoImage from '../../../assets/images/logo-alt.svg';
 import FooterMenu from './FooterMenu';
 
-const url = 'https://github.com/php1301';
+const url = '//github.com/php1301';
 
 const Footer = ({ path }) => (
   <Footers
@@ -23,7 +23,7 @@ const Footer = ({ path }) => (
           {' '}
           {new Date().getFullYear()}
           {' '}
-          AirBNB - Isomorphic.
+          AirBNB - TripFinder.
         </p>
       </>
 )}

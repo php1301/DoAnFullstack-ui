@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-
+import { useQuery } from 'react-apollo';
 import { withRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -10,11 +10,13 @@ import { IoIosClose } from 'react-icons/io';
 import Text from 'components/UI/Text/Text';
 import Button from 'components/UI/Antd/Button/Button';
 import Drawer from 'components/UI/Antd/Drawer/Drawer';
+import Tag from 'components/UI/Antd/Tag/Tag';
 import Logo from 'components/UI/Logo/Logo';
 import Navbar from 'components/Navbar/Navbar';
 import Notifications from 'components/Notifications/Notifications';
 
 import { USER_PROFILE_PAGE } from 'settings/constants';
+import { GET_USER_INFO } from 'apollo-graphql/query/query';
 import { LayoutContext } from 'context/LayoutProvider';
 import palace from 'assets/images/logo-alt.svg';
 
@@ -26,6 +28,7 @@ import HeaderWrapper, {
   AvatarInfo,
   LogoArea,
 } from './Header.style';
+
 
 const LogoIcon = () => (
   <svg width="25" height="27.984" viewBox="0 0 25 27.984">
@@ -52,8 +55,17 @@ const Header = ({ router, user, isLoggedIn }) => {
     setState((prevState) => !prevState);
     // isToggleOn: !prevState.isToggleOn
   };
+  const {
+    loading,
+    data,
+  } = useQuery(GET_USER_INFO, {
+    variables: {
+      id: user.id,
+    },
+  });
+  if (loading) return null;
   const headerType = router.pathname === '/' ? 'transparent' : 'default'; // Nếu là section Home thì set Header type trans để truyền vô đối số ở NavBar
-  const AvatarImg = user.profile_pic_main ?? 'https://i.imgur.com/Lio3cDN.png'; // fix thành avatar ở backend gửi
+  const AvatarImg = data && data.getUserInfo.profile_pic_main; // fix thành avatar ở backend gửi
   const userName = `${user.first_name} ${user.last_name}`;
   return (
     <HeaderWrapper>
@@ -67,12 +79,12 @@ const Header = ({ router, user, isLoggedIn }) => {
               <Logo withLink linkTo="/" src={palace} title="TripFinder." />
             </>
           )}
-          navMenu={<MainMenu id={user.id} />}
+          navMenu={<MainMenu id={user.id} isLoggedIn={isLoggedIn} />}
           isLogin={isLoggedIn}
           avatar={<Logo src={AvatarImg} />}
           authMenu={<AuthMenu />}
           // Chỗ truyền 1 trong những info của user - avatar
-          profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} />}
+          profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} user={user} />}
           headerType={headerType}
           searchComponent={<NavbarSearch />}
           location={router}
@@ -86,7 +98,7 @@ const Header = ({ router, user, isLoggedIn }) => {
             </>
             <NavbarSearch />
           </LogoArea>
-          <Notifications id={user.id} />
+          {isLoggedIn ? <Notifications id={user.id} /> : ''}
           <Button
             className={`hamburg-btn ${state ? 'active' : ''}`}
             onClick={sidebarHandler}
@@ -117,13 +129,23 @@ const Header = ({ router, user, isLoggedIn }) => {
                   <AvatarInfo>
                     <Text as="h3" content={userName} />
                     <Link href={USER_PROFILE_PAGE}>
-                      <a>View Profile</a>
+                      <a
+                        role="button"
+                        tabIndex="-1"
+                        onKeyDown={sidebarHandler}
+                        onClick={sidebarHandler}
+                      >
+                        View Profile
+                      </a>
                     </Link>
+                    <Tag style={{ marginLeft: '7px', textAlign: 'center' }} color={user.role !== 'Normal' ? 'gold' : 'gray'}>
+                      {user.role || 'Normal'}
+                    </Tag>
                   </AvatarInfo>
                 </AvatarWrapper>
               )
               : <AuthMenu className="auth-menu" />}
-            <MobileMenu className="main-menu" />
+            <MobileMenu sidebarHandler={sidebarHandler} className="main-menu" />
           </Drawer>
         </MobileNavbar>
       </Sticky>
