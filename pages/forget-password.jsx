@@ -10,7 +10,7 @@ import ForgetPassWordWrapper, {
   TitleInfo,
   ForgetPassWordFormWrapper,
   ForgetPassWordBannerWrapper,
-} from '../container/ForgetPassWord/ForgetPassWord.style';
+} from 'container/ForgetPassword/ForgetPassword.style';
 // demo image
 import signInImage from 'assets/images/login-page-bg.jpg';
 import palace from 'assets/images/logo-alt.svg';
