@@ -41,7 +41,7 @@ export const SearchStateKeyCheck = (state) => {
 // Ki thuat paginator - spread data hien giờ + slice số lượng data thêm vô
 // bắt đầu từ: độ dài hiện giờ của posts
 // kết thúc từ độ dài hiện giờ của posts + số lượng data responsive từ limit
-export const Paginator = (posts, processedData, limit) => [...posts, ...processedData.data
+export const Paginator = (posts, processedData, limit) => [...posts, ...processedData
   .slice(posts.length, posts.length + limit)];
 
 
