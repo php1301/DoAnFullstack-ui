@@ -1,6 +1,10 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import Head from 'next/head';
 import Logo from 'components/UI/Logo/Logo';
-import ForgetPassWordForm from '../container/ForgetPassWord/ForgetPassWordForm';
+import ForgetPassWordForm from 'container/ForgetPassWord/ForgetPassWordForm';
+import { getIsLoggedIn } from 'library/helpers/restriction';
+import redirect from 'library/helpers/redirect';
 import ForgetPassWordWrapper, {
   Title,
   TitleInfo,
@@ -14,6 +18,10 @@ import palace from 'assets/images/logo-alt.svg';
 const ForgetPassWord = () => {
   return (
     <ForgetPassWordWrapper>
+      <Head>
+      <title>Forget Password Page</title>
+    </Head>
+      <ToastContainer />
       <ForgetPassWordFormWrapper>
         <Logo withLink linkTo="/" src={palace} title="TripFinder." />
         <Title>Welcome Back</Title>
@@ -33,4 +41,12 @@ const ForgetPassWord = () => {
     </ForgetPassWordWrapper>
   );
 }
-export default ForgetPassWord
+export async function getServerSideProps(context) {
+  const isLoggedIn = getIsLoggedIn(context);
+  if (isLoggedIn === true) redirect(context, '/profile');
+  return {
+    props: {},
+  };
+}
+
+export default ForgetPassWord;
