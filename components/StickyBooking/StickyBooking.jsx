@@ -1,5 +1,7 @@
 import React from 'react';
+import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons';
 import useWindowSize from './useWindowSize';
+import Text from 'components/UI/Text/Text';
 import StickyBookingWrapper, {
   HotelInfo,
   InfoArea,
@@ -10,9 +12,10 @@ import StickyBookingWrapper, {
   ActionBtn,
   HotelRating,
 } from './StickyBooking.style';
+import Loader from 'components/Loader/Loader';
 
 const StickyBooking = ({
-  logo, title, price, rating, action, className,
+  logo, title, price, rating, action, className, isNegotiable, bedRoom, guestRoom,
 }) => {
   // Add all classs to an array
   const addAllClasses = ['sticky_booking'];
@@ -24,9 +27,10 @@ const StickyBooking = ({
 
   // useWindowSize hook
   let widthWindow = 0;
-  if (typeof window !== 'undefined') {
-    widthWindow = useWindowSize();
+  if (typeof window === 'undefined') {
+    return <Loader />;
   }
+  widthWindow = useWindowSize();
   const windowInnerWidth = process.browser && widthWindow.innerWidth;
 
   return (
@@ -50,7 +54,30 @@ const StickyBooking = ({
                 / Night
               </Price>
             )}
+            {
+              <a style={{ color: '#008489', fontWeight: '700' }}>
+                {`Rooms: ${bedRoom || 0} Guest: ${guestRoom || 0}`}
+              </a>
+            }
             {rating && <HotelRating>{rating}</HotelRating>}
+            <Text
+              as="span"
+              content={isNegotiable
+                ? (
+                  <p>
+                    Negotiable
+                    {' '}
+                    <CheckCircleTwoTone twoToneColor="#52c41a" />
+                  </p>
+                )
+                : (
+                  <p>
+                    Negotiable
+                    {' '}
+                    <CloseCircleTwoTone twoToneColor="#eb2f96" />
+                  </p>
+                )}
+            />
           </InfoArea>
         ) : (
           ''
