@@ -3,7 +3,6 @@ import { useMutation } from 'react-apollo';
 import { toast, ToastContainer } from 'react-toastify';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import GoogleLogin from 'react-google-login';
-import Link from 'next/link';
 import Router from 'next/router';
 import Head from 'next/head';
 import Row from 'components/UI/Antd/Grid/Row';
@@ -11,33 +10,35 @@ import Col from 'components/UI/Antd/Grid/Col';
 import Divider from 'components/UI/Antd/Divider/Divider';
 import Button from 'components/UI/Antd/Button/Button';
 import Logo from 'components/UI/Logo/Logo';
-import SignUpForm from 'container/SignUp/SignUpForm';
-import { LOGIN_PAGE } from 'settings/constants';
+import SignInForm from 'container/SignIn/SignInForm';
+import ActiveLink from 'library/helpers/activeLink';
 import { USER_COOKIE } from 'library/helpers/session';
 import { REGISTRATION_PAGE } from 'settings/constants';
 import { AuthContext } from 'context/AuthProvider';
 import { FACEBOOK_LOGIN, GOOGLE_LOGIN } from 'apollo-graphql/mutation/mutation';
-import SignUpWrapper, {
+import SignInWrapper, {
   Title,
   TitleInfo,
   Text,
-  SignUpFormWrapper,
-  SignUpBannerWrapper,
-} from '../container/SignUp/SignUp.style';
+  SignInFormWrapper,
+  SignInBannerWrapper,
+} from 'container/SignIn/SignIn.style';
 // demo image
 import signInImage from 'assets/images/login-page-bg.jpg';
 import tripFinder from 'assets/images/logo-alt.svg';
 
-const SignUp = () => {
+const SignInPage = ({query, ...props}) => {
   const { addItem, setUser, setLoggedIn } = useContext(AuthContext);
   const [facebookLogin] = useMutation(FACEBOOK_LOGIN);
   const [googleLogin] = useMutation(GOOGLE_LOGIN);
+  const { prev }= query
   const [state, setState] = useState({
     facebookBtnLoading: false,
     githubBtnLoading: false,
     twitterBtnLoading: false,
     googleBtnLoading: false,
   });
+
 
   const responseFacebook = async response => {
     setState({ ...state, facebookBtnLoading: true });
@@ -124,23 +125,23 @@ const SignUp = () => {
   const twitterAuthAction = () => {
     setState({ ...state, twitterBtnLoading: true });
     setTimeout(() => {
-      setState({ ...state, twitterBtnLoading: false });
-    }, 600);
+      setState({ ...state, twitterBtnLoading: false }, 600);
+    });
   };
+
+
   return (
-    <SignUpWrapper>
-      <ToastContainer/>
-      <SignUpFormWrapper>
-        <Head>
-          <title>
-            Register
-          </title>
+    <SignInWrapper>
+      <Head>
+        <title>Login</title>
         </Head>
+      <SignInFormWrapper>
         <Logo withLink linkTo="/" src={tripFinder} title="TripFinder." />
-        <Title>Welcome to TripFinder.</Title>
-        <TitleInfo>Please register for your account</TitleInfo>
-        <SignUpForm />
-        <Divider>Or Register With </Divider>
+        <Title>Welcome Back</Title>
+        <TitleInfo>Please log into your account</TitleInfo>
+      <SignInForm prev={prev}/>
+        <ToastContainer/>
+        <Divider>Or Log in with </Divider>
         <Row gutter={16}>
           <Col span={12}>
           <FacebookLogin
@@ -202,7 +203,7 @@ const SignUp = () => {
               onClick={renderProps.onClick}
             >
               Gmail
-            </Button>)}
+            </Button>            )}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
@@ -211,14 +212,12 @@ const SignUp = () => {
           </Col>
         </Row>
         <Text>
-          Already have an account! &nbsp;
-          <Link href={`${LOGIN_PAGE}`}>
-            <a>Login</a>
-          </Link>
+          Don't have an account? &nbsp;
+          <ActiveLink href={`${REGISTRATION_PAGE}`}>Registration</ActiveLink>
         </Text>
-      </SignUpFormWrapper>
+      </SignInFormWrapper>
 
-      <SignUpBannerWrapper>
+      <SignInBannerWrapper>
         <div
           style={{
             backgroundImage: `url(${signInImage})`,
@@ -227,8 +226,9 @@ const SignUp = () => {
             backgroundSize: 'cover',
           }}
         />
-      </SignUpBannerWrapper>
-    </SignUpWrapper>
+      </SignInBannerWrapper>
+    </SignInWrapper>
   );
-}
-export default SignUp
+};
+
+export default SignInPage;
