@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import Router from 'next/router';
 import RenderSignInForm from 'components/SignIn/RenderSignInForm';
 import * as Yup from 'yup';
-import { AuthContext } from '../../context/AuthProvider';
+import { AuthContext } from 'context/AuthProvider';
 import { FORGET_PASSWORD_PAGE } from 'settings/constants';
 
 const SignInForm = ({ prev }) => {

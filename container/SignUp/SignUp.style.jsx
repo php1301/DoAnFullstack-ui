@@ -105,8 +105,8 @@ export const SignUpFormWrapper = styled.div`
       background-color: ${themeGet('color.7', '#3b5998')};
     }
     &.github-btn {
-      border-color: ${themeGet('color.14', '#00ACEE')};
-      background-color: ${themeGet('color.14', '#00ACEE')};
+      border-color: ${themeGet('color.16', '#00ACEE')};
+      background-color: ${themeGet('color.16', '#24292E')};
     }
     &.firebase-btn {
       border-color: ${themeGet('color', '#FFCB2B')};

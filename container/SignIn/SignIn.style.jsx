@@ -112,8 +112,8 @@ export const SignInFormWrapper = styled.div`
     }
 
     &.github-btn {
-      border-color: ${themeGet('color.14', '#00ACEE')};
-      background-color: ${themeGet('color.14', '#00ACEE')};
+      border-color: ${themeGet('color.16', '#00ACEE')};
+      background-color: ${themeGet('color.16', '#24292E')};
     }
 
     &.firebase-btn {
