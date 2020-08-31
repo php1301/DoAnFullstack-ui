@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Index from '../index';
+import Index from 'pages/index';
 // instance của index page
 describe('index page', () => {
   // it('mô tả sự kiện test')... expect(logic)
