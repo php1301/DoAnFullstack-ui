@@ -1,0 +1,9 @@
+{
+  "common": {
+    "title": "Các khách sạn sang trọng",
+    "change-locale": "Đổi {{locale}}"
+  },
+
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server"
+}
