@@ -9,6 +9,7 @@
 
 import React from 'react';
 import { Popover, Modal } from 'antd';
+import { v4 as uuidv4 } from 'uuid';
 import Card from '../Antd/Card/Card';
 import moment from 'moment';
 import LikeDislike from './LikeDislike';
@@ -22,9 +23,9 @@ export default class App extends React.Component {
     };
   }
 
-  showModal = () => {
+  showModal = url => {
     this.setState({
-      visible: true,
+      visible: url,
     });
   };
 
@@ -41,7 +42,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { singleReview, authorRating } = this.props;
+    const { singleReview, authorRating, user } = this.props;
     const { visible } = this.state;
     const reviewAuthorFirstName = singleReview
       ? singleReview.reviewAuthorFirstName
@@ -51,17 +52,20 @@ export default class App extends React.Component {
       : '';
     const authorName = reviewAuthorFirstName + ' ' + reviewAuthorLastName;
     const content = singleReview ? singleReview.reviewText : '';
-    const justAdded = singleReview && singleReview.justAdded || null;
+    const reviewID = singleReview ? singleReview.reviewID : '';
+    const reviewedHotelId = singleReview ? singleReview.reviewedHotelId : '';
+    // const justAdded = singleReview && singleReview.justAdded || null;
     const reviewTitle = singleReview ? singleReview.reviewTitle : '';
     const commentDate = singleReview ? singleReview.reviewDate : '';
     const postTime = new Date(commentDate).getTime();
     const authorAvatar = singleReview ? singleReview.reviewAuthorPic : '';
+    const reviewOverall = singleReview ? singleReview.reviewOverall : '';
     const reviewRating = singleReview ? singleReview.reviewFields : '';
     const reviewPics = singleReview && singleReview.reviewPics ? singleReview.reviewPics : '';
     const reviewOptional = singleReview && singleReview.reviewOptional ? singleReview.reviewOptional : '';
     const reviewTips = singleReview && singleReview.reviewTips ? singleReview.reviewTips : '';
     return (
-      <div className={`comment-area ${justAdded ? 'comment-just-now' : ''}`}>
+      <div className={`comment-area ${moment(postTime).diff(moment(),'seconds') > -10 ? 'comment-just-now' : ''}`}>
         <div className="comment-wrapper">
           <div className="comment-header">
             <div className="avatar-area">
@@ -90,24 +94,32 @@ export default class App extends React.Component {
               </div>
             </div>
             <div className="rating-area">
-              <LikeDislike />
+              <LikeDislike id={reviewID} hotelId={reviewedHotelId} user={user} />
             </div>
           </div>
           <div className="comment-body">
+          <div className="rating-widget" key={uuidv4()}>
+                  <Rating
+                        key={uuidv4()}
+                        rating={reviewOverall}
+                        ratingFieldName="Overall"
+                        type="individual"
+                  />
+              </div>
             <h4>{reviewTitle}</h4>
             <p>{content}</p>
-            <h5>{`*Review tips:${reviewTips}*`}</h5>
+            <h5>{`*Review tips: ${reviewTips ? reviewTips : 'No review tips'}*`}</h5>
             {reviewPics[0] ? (<Card className="image-comment">
               {reviewPics && reviewPics.map((i) => (
                 <>
-                  <Card.Grid onClick={this.showModal} style={{ width: '33.33%' }}>
+                  <Card.Grid onClick={()=>{ this.showModal(i.url); } } style={{ width: '33.33%' }}>
                     <img
                       alt={i.url}
                       src={i.url}
                     />
                   </Card.Grid>
                   <Modal
-                    visible={visible}
+                    visible={visible === i.url}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                     closable

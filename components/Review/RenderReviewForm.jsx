@@ -248,7 +248,7 @@ export default function RenderReviewForm({
         <UploadPhoto>
           <Label> Do You have photos to share? (Optional)</Label>
           <Label>Để hạn chế bandwidth của AWS bị exceeded nên chỉ cho upload mock data</Label>
-          <Label>Xóa 1 tấm ảnh trong 3 tấm mock để upload(Test upload ảnh AWS trong Profile)</Label>
+          <Label>Xóa 1 tấm ảnh ở dưới mock để upload(Test upload ảnh AWS trong Profile)</Label>
           <Field
             component={PhotoUploadComponent}
             name="reviewPhotos"
