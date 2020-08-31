@@ -10,20 +10,21 @@ import { useMutation } from 'react-apollo';
 export const AuthContext = React.createContext();
 
 
-const fakeUserData = {
-  id: 1,
-  name: 'John Doe',
-  avatar:
-      'http://s3.amazonaws.com/redqteam.com/isomorphic-reloaded-image/profilepic.png',
-  roles: ['USER', 'ADMIN'],
-};
+// const fakeUserData = {
+//   id: 1,
+//   name: 'John Doe',
+//   avatar:
+//       'https://i.imgur.com/Lio3cDN.png',
+//   roles: ['USER', 'ADMIN'],
+// };
 
 /**
  * Mock jwt từ jwt.io
  * Token thật đến từ server khi login
  */
 
-const fakeToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1lIjoidGFyZXEgam9iYXllcmUiLCJyb2xlcyI6ImFkbWluIn0.k74_B-zeWket405dIAt018mnQFMh_6_BTFpjB77HtRQ';
+// eslint-disable-next-line max-len
+// const fakeToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1lIjoidGFyZXEgam9iYXllcmUiLCJyb2xlcyI6ImFkbWluIn0.k74_B-zeWket405dIAt018mnQFMh_6_BTFpjB77HtRQ';
 
 const addItem = (key, value = '') => {
 // 2 options
@@ -140,16 +141,6 @@ const AuthProvider = (props) => {
     setLoggedIn(true);
   };
 
-  const forgetPass = (params) => {
-    //   Gọi api forgetPass method POST
-    console.log(params, 'forget password from Props');
-  };
-
-  const changePass = (params) => {
-    //   Gọi api changePass method POST
-    console.log(params, 'change password from Props');
-  };
-
   const logOut = () => {
     setUser(null);
     setToken(null);
@@ -169,8 +160,7 @@ const AuthProvider = (props) => {
         signIn,
         signUp,
         setUser,
-        forgetPass,
-        changePass,
+        setLoggedIn,
         tokenAuth,
         addItem,
         user,
