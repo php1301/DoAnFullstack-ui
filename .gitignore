@@ -28,11 +28,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-public/static/data/hotel-single.json
-public/static/data/location.json
-public/static/data/top-hotel.json
-public/static/data/hotel.json
-public/static/data/agent.json
 mock.txt
 
 #amplify
