@@ -203,8 +203,6 @@ const SignInPage = ({query, ...props}) => {
               Gmail
             </Button>            )}
             buttonText="Login"
-            onSuccess={ () =>{ responseGoogle(); }}
-            onFailure={ () =>{ responseGoogle(); }}
             cookiePolicy={'single_host_origin'}
           />
           </Col>
