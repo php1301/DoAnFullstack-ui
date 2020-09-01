@@ -34,7 +34,6 @@ module.exports = {
     ],
     "env": {
         "jest": true,
-        "mochai": true,
     },
     "rules": {
         "jsx-a11y/anchor-is-valid": "off",
