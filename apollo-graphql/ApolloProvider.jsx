@@ -18,7 +18,7 @@ import fetch from 'node-fetch';
 // -> sử dụng cho getServerSidesProps
 // export const withApolloClient = () => {
   const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
-  uri: `wss://${process.env.API}/graphql`,
+  uri: `wss://api.hotel-prisma.ml/graphql`,
   options: {
     reconnect: true,
     lazy: true,
@@ -36,7 +36,7 @@ import fetch from 'node-fetch';
 }) : null;
 
 const httplink = new createHttpLink({
-	uri: `https://${process.env.API}/graphql`,
+	uri: `https://api.hotel-prisma.ml/graphql`,
   credentials: 'include',
   fetch,
   onError: ({ networkError, graphQLErrors }) => {
