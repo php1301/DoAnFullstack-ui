@@ -47,6 +47,7 @@ export const Paginator = (posts, processedData, limit) => [...posts, ...processe
 
 const GetAPIData = async (apiUrl) => {
   const promises = apiUrl.map(async (repo) => {
+    console.log(process.env.SERVER_API)
     const apiPath = `${process.env.SERVER_API}/static/data`; // đọc từ biến env
     const api = `${apiPath}/${repo.endpoint}.json`;
     // console.log(api, 'api api');
