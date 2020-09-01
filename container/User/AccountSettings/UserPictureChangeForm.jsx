@@ -91,7 +91,7 @@ export default function AgentPictureChangeForm({ payloadUser, user }) {
       // Captcha
       // etc...
       if (count > 1) {
-        fetch('http://localhost:3000/api/uploadFile', {
+        fetch('https://api.hotel-prisma.ml/api/uploadFile', {
           method: 'POST',
           body: formData,
         })

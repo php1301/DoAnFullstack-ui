@@ -225,7 +225,7 @@ export default class ImageUploader extends React.Component {
           data={previewImage}
           className="image_uploader"
           // {...props}
-          // action="http://localhost:3000/api/uploadFile"
+          // action="https://hotel-prisma.vercel.app/api/uploadFile"
         >
           {fileList.length >= 4 ? null : uploadButton}
         </Dragger>

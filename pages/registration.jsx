@@ -116,7 +116,7 @@ const SignUp = () => {
   }
   const responseGithub = () => {
     setState({ ...state, githubBtnLoading: true });
-    Router.push(`//github.com/login/oauth/authorize?client_id=95ca68a24f1a6d7342e7&scope=user&redirect_uri=http://localhost:3002/auth-processing`)
+    Router.push(`//github.com/login/oauth/authorize?client_id=95ca68a24f1a6d7342e7&scope=user&redirect_uri=https://hotel-prisma.vercel.app/auth-processing`)
     setTimeout(() => {
       setState({ ...state, githubBtnLoading: false }, 600);
     });

@@ -140,7 +140,7 @@ const UserProfileInfo = (props) => {
       id: userInfo.stripeId || 'acct_1HJ9bEJG8dVmSzXR'
     };
     try {
-    const redirect = await fetch('http://localhost:3000/api/access-mock-stripe', {
+    const redirect = await fetch('https://api.hotel-prisma.ml/api/access-mock-stripe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Nhớ body phải match Content-Type

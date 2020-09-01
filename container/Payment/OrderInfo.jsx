@@ -101,7 +101,7 @@ const OrderInfo = ({
       stripeId,
     }
     try {
-     const clientSecretPromise = await fetch('http://localhost:3000/api/mock-payment', {
+     const clientSecretPromise = await fetch('https://api.hotel-prisma.ml/api/mock-payment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', // Nhớ body phải match Content-Type

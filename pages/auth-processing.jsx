@@ -15,7 +15,7 @@ const AuthProcessing = ({ query }) => {
     Router.push('/account-settings');
   }
   useEffect(async () => {
-    const githubPayload = await fetch('http://localhost:3000/github/callback', {
+    const githubPayload = await fetch('https://api.hotel-prisma.ml/github/callback', {
       method: 'POST',
       credentials: 'include', // lưu token
       headers: {

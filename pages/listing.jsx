@@ -240,7 +240,7 @@ const ListingPage = ({
       delete i.image.id;
     });
     // console.log(mock);
-    fetch('http://localhost:3000/api/mock', {
+    fetch('https://api.hotel-prisma.ml/api/mock', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Nhớ body phải match Content-Type
