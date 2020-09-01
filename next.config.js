@@ -11,8 +11,17 @@ const localeSubpaths = {
   fr: 'fr',
   en: 'eng',
 };
-
 const nextConfig = {
+  env: {
+    API: process.env.API,
+    PUBLIC_STRIPE: 'pk_test_51HIEaKG2Irl69bCYs8SrcVpELrrrIVX3ijWAB5SvtVyv7lHBW1wmlPDz3VLKJxc7GsEpM77PFyToNyqoZlQWmQF000znXGCXKW',
+    SECRET_STRIPE: 'sk_test_51HIEaKG2Irl69bCYVs0J4OXXiXrv3qwP8VXjJOF3xzQgS71TRtFXakc0Ycb0GhwnL8gdy7J73Ejr41W6fmovHy6H00nvQfdxzW',
+    GOOGLE_API_KEY: 'AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus',
+    GOOGLE_CLIENT_ID: '180471842970-2sfc0dunc4t0hk54ei7hb314tmpj33h3.apps.googleusercontent.com',
+    FACEBOOK_APP_ID: '673291723279188',
+    REACT_APP_GOOGLE_MAP_API_KEY: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAuxPEcwDMrEq04KEJjzhAyMyiJWPbUAus&libraries=geometry,drawing,places',
+    SERVER_API: process.env.SERVER_API,
+  },
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {
     localeSubpaths,
