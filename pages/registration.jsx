@@ -63,10 +63,9 @@ const SignUp = () => {
     }
     catch(e) {
       setTimeout(() => {
-        setLoggedIn(true);
-        setState({ ...state, googleBtnLoading: false }, 2000);
+        setState({ ...state, facebookBtnLoading: false }, 2000);
     });
-    toast.error(e.message.slice(15), {
+    toast.error(e.message, {
       position: 'top-left',
       autoClose: 5000,
       hideProgressBar: true,
@@ -100,10 +99,9 @@ const SignUp = () => {
       }
       catch(e) {
         setTimeout(() => {
-          setLoggedIn(true);
           setState({ ...state, googleBtnLoading: false }, 2000);
       });
-      toast.error(e.message.slice(15), {
+      toast.error(e.message, {
         position: 'top-left',
         autoClose: 5000,
         hideProgressBar: true,

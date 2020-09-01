@@ -39,8 +39,7 @@ const SignInPage = ({query, ...props}) => {
     googleBtnLoading: false,
   });
 
-  console.log(process.env.FACEBOOK_APP_ID)
-  console.log(process.env.GOOGLE_CLIENT_ID)
+
   const responseFacebook = async response => {
     setState({ ...state, facebookBtnLoading: true });
    
@@ -65,10 +64,9 @@ const SignInPage = ({query, ...props}) => {
     }
     catch(e) {
       setTimeout(() => {
-        setLoggedIn(true);
-        setState({ ...state, googleBtnLoading: false }, 2000);
+        setState({ ...state, facebookBtnLoading: false }, 2000);
     });
-    toast.error(e.message.slice(15), {
+    toast.error(e.message, {
       position: 'top-left',
       autoClose: 5000,
       hideProgressBar: true,
@@ -102,10 +100,9 @@ const SignInPage = ({query, ...props}) => {
       }
       catch(e) {
         setTimeout(() => {
-          setLoggedIn(true);
           setState({ ...state, googleBtnLoading: false }, 2000);
       });
-      toast.error(e.message.slice(15), {
+      toast.error(e.message, {
         position: 'top-left',
         autoClose: 5000,
         hideProgressBar: true,
@@ -149,7 +146,7 @@ const SignInPage = ({query, ...props}) => {
             appId={process.env.FACEBOOK_APP_ID}
             fields="name,email,picture,link"
             scope="public_profile,user_link"
-            callback={responseFacebook}
+            callback={ () =>{ responseFacebook(); }}
             render={props=>(
             <Button
               loading={state.facebookBtnLoading}
@@ -157,7 +154,7 @@ const SignInPage = ({query, ...props}) => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={props.onClick}
+              onClick={ ()=> { props.onClick(); }}
             >
               Facebook
             </Button>
@@ -171,7 +168,7 @@ const SignInPage = ({query, ...props}) => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={responseGithub}
+              onClick={()=>{ responseGithub(); }}
             >
               Github
             </Button>
@@ -201,13 +198,13 @@ const SignInPage = ({query, ...props}) => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={renderProps.onClick}
+              onClick={()=>{renderProps.onClick();}}
             >
               Gmail
             </Button>            )}
             buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
+            onSuccess={ () =>{ responseGoogle(); }}
+            onFailure={ () =>{ responseGoogle(); }}
             cookiePolicy={'single_host_origin'}
           />
           </Col>
