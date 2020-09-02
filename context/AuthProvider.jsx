@@ -37,7 +37,10 @@ const addItem = (key, value = '') => {
 const clearItem = (key) => {
   // if (key) localStorage.remove(key);
   // Cookies
+  // Uncomment dòng này khi làm prod
   Cookies.remove(key, { path: '/', domain: '.hotel-prisma.ml' });
+  // Comment dòng này khi làm prod
+  // Cookies.remove(key)
 };
 
 const isValidToken = () => {
@@ -74,10 +77,10 @@ const AuthProvider = (props) => {
           },
         },
       });
-      const tokenPayload = Cookies.get('token');
+      // const tokenPayload = Cookies.get('token');
+      // setToken(tokenPayload);
+      // addItem(TOKEN_COOKIE, tokenPayload);
       setUser(userPayload.data.login);
-      setToken(tokenPayload);
-      addItem(TOKEN_COOKIE, tokenPayload);
       addItem(USER_COOKIE, userPayload.data.login);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
@@ -146,6 +149,9 @@ const AuthProvider = (props) => {
     setToken(null);
     clearItem(TOKEN_COOKIE);
     clearItem(USER_COOKIE);
+    // Comment 2 dòng này khi làm production
+    Cookies.remove(TOKEN_COOKIE);
+    Cookies.remove(USER_COOKIE);
     setLoggedIn(false);
     window.location.reload();
     // redirect({}, '/');
