@@ -42,7 +42,7 @@ const SignInPage = ({query, ...props}) => {
 
   const responseFacebook = async response => {
     setState({ ...state, facebookBtnLoading: true });
-   
+    console.log(response);
     // console.log(response);
     try {
     const userPayload = await facebookLogin({
@@ -78,6 +78,7 @@ const SignInPage = ({query, ...props}) => {
     }
   };
   const responseGoogle = async response => {
+    console.log(response);
     setState({ ...state, googleBtnLoading: true });
     // console.log(response)
     try {
