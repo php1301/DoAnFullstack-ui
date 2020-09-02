@@ -74,11 +74,11 @@ const AuthProvider = (props) => {
           },
         },
       });
-      // const tokenPayload = Cookies.get('token');
-    // console.log('Here', tokenPayload);
+      const tokenPayload = Cookies.get('token');
+    console.log('Here', tokenPayload);
       setUser(userPayload.data.login);
-      // setToken(tokenPayload);
-      // addItem(TOKEN_COOKIE, tokenPayload);
+      setToken(tokenPayload);
+      addItem(TOKEN_COOKIE, tokenPayload);
       addItem(USER_COOKIE, userPayload.data.login);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
