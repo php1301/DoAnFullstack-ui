@@ -17,7 +17,7 @@ import fetch from 'node-fetch';
 // -> sử dụng cho getServerSidesProps
 // export const withApolloClient = () => {
   const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
-  uri: `wss://${process.env.API}/graphql`,
+  uri: `ws://${process.env.API}/graphql`,
   options: {
     reconnect: true,
     lazy: true,
