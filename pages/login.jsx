@@ -42,7 +42,6 @@ const SignInPage = ({query, ...props}) => {
 
   const responseFacebook = async response => {
     setState({ ...state, facebookBtnLoading: true });
-    console.log(response);
     // console.log(response);
     try {
     const userPayload = await facebookLogin({
@@ -78,7 +77,6 @@ const SignInPage = ({query, ...props}) => {
     }
   };
   const responseGoogle = async response => {
-    console.log(response);
     setState({ ...state, googleBtnLoading: true });
     // console.log(response)
     try {
@@ -199,13 +197,13 @@ const SignInPage = ({query, ...props}) => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={()=>{renderProps.onClick();}}
+              onClick={(value)=>{renderProps.onClick(value);}}
             >
               Gmail
             </Button>            )}
             buttonText="Login"
-            onSuccess={()=>{ responseGoogle(); }}
-            onFailure={()=>{ responseGoogle(); }}
+            onSuccess={(value)=>{ responseGoogle(value); }}
+            onFailure={(value)=>{ responseGoogle(value); }}
             cookiePolicy={'single_host_origin'}
           />
           </Col>

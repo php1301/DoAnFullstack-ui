@@ -140,12 +140,12 @@ const SignUp = () => {
         <SignUpForm />
         <Divider>Or Register With </Divider>
         <Row gutter={16}>
-          <Col span={12}>
+        <Col span={12}>
           <FacebookLogin
             appId={process.env.FACEBOOK_APP_ID}
             fields="name,email,picture,link"
             scope="public_profile,user_link"
-            callback={ () =>{ responseFacebook(); }}
+            callback={ (value) =>{ responseFacebook(value); }}
             render={props=>(
             <Button
               loading={state.facebookBtnLoading}
@@ -153,7 +153,7 @@ const SignUp = () => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={ ()=> { props.onClick(); }}
+              onClick={ (value)=> { props.onClick(value); }}
             >
               Facebook
             </Button>
@@ -197,13 +197,13 @@ const SignUp = () => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={()=>{renderProps.onClick();}}
+              onClick={(value)=>{renderProps.onClick(value);}}
             >
               Gmail
             </Button>            )}
             buttonText="Login"
-            onSuccess={()=>{ responseGoogle(); }}
-            onFailure={()=>{ responseGoogle(); }}
+            onSuccess={(value)=>{ responseGoogle(value); }}
+            onFailure={(value)=>{ responseGoogle(value); }}
             cookiePolicy={'single_host_origin'}
           />
           </Col>
