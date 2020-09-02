@@ -155,7 +155,7 @@ const SignInPage = ({query, ...props}) => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={ ()=> { props.onClick(); }}
+              onClick={ (value)=> { props.onClick(value); }}
             >
               Facebook
             </Button>
