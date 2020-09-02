@@ -14,7 +14,6 @@ export const secretPage = (ctx) => {
   // console.log(ctx)
   // ctx từ getInitialProps
   const token = getCookie(TOKEN_COOKIE, ctx);
-  console.log('secret', token);
   const isLoggedIn = !!token;
   if (!isLoggedIn) {
     // Có thể sử dụng ctx.pathname để lấy prevUrl

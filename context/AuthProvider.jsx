@@ -37,7 +37,7 @@ const addItem = (key, value = '') => {
 const clearItem = (key) => {
   // if (key) localStorage.remove(key);
   // Cookies
-  Cookies.remove(key);
+  Cookies.remove(key, { path: '/', domain: '.hotel-prisma.ml' });
 };
 
 const isValidToken = () => {
