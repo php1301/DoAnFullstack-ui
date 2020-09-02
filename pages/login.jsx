@@ -147,7 +147,7 @@ const SignInPage = ({query, ...props}) => {
             appId={process.env.FACEBOOK_APP_ID}
             fields="name,email,picture,link"
             scope="public_profile,user_link"
-            callback={ () =>{ responseFacebook(); }}
+            callback={ (value) =>{ responseFacebook(value); }}
             render={props=>(
             <Button
               loading={state.facebookBtnLoading}
