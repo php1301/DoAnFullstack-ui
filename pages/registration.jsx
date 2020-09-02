@@ -114,7 +114,7 @@ const SignUp = () => {
   }
   const responseGithub = () => {
     setState({ ...state, githubBtnLoading: true });
-    Router.push(`//github.com/login/oauth/authorize?client_id=95ca68a24f1a6d7342e7&scope=user&redirect_uri=https://hotel-prisma.vercel.app/auth-processing`)
+    Router.push(`//github.com/login/oauth/authorize?client_id=95ca68a24f1a6d7342e7&scope=user&redirect_uri=https://vercel-v2.hotel-prisma.ml/auth-processing`)
     setTimeout(() => {
       setState({ ...state, githubBtnLoading: false }, 600);
     });
@@ -145,7 +145,7 @@ const SignUp = () => {
             appId={process.env.FACEBOOK_APP_ID}
             fields="name,email,picture,link"
             scope="public_profile,user_link"
-            callback={responseFacebook}
+            callback={ () =>{ responseFacebook(); }}
             render={props=>(
             <Button
               loading={state.facebookBtnLoading}
@@ -153,7 +153,7 @@ const SignUp = () => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={props.onClick}
+              onClick={ ()=> { props.onClick(); }}
             >
               Facebook
             </Button>
@@ -167,7 +167,7 @@ const SignUp = () => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={responseGithub}
+              onClick={()=>{ responseGithub(); }}
             >
               Github
             </Button>
@@ -197,13 +197,13 @@ const SignUp = () => {
               type="primary"
               style={{ width: '100%', marginBottom: 16 }}
               size="large"
-              onClick={renderProps.onClick}
+              onClick={()=>{renderProps.onClick();}}
             >
               Gmail
-            </Button>)}
+            </Button>            )}
             buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
+            onSuccess={()=>{ responseGoogle(); }}
+            onFailure={()=>{ responseGoogle(); }}
             cookiePolicy={'single_host_origin'}
           />
           </Col>

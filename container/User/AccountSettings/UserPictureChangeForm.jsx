@@ -173,7 +173,7 @@ export default function AgentPictureChangeForm({ payloadUser, user }) {
       <ReCAPTCHA
         onExpired={() => { setCaptcha(false); }}
         onChange={handleCheckCaptcha}
-        sitekey="6Lcxg70ZAAAAAAEf9lX8G-KlHmIEn_TVbbAzvPBs"
+        sitekey="6LcNw8YZAAAAAPidpXhKmC6OlATc9nKGBf6a_mUi"
       />
       {/* <Heading content="Profile Image" as="h4" />
       <ImageUploader setUrl={setUrl} /> */}

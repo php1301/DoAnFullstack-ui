@@ -40,7 +40,7 @@ export default function PriceCard({
         email: user.email,
         type,
       };
-      const accountTest = await fetch('https://hotel-prisma.vercel.app/api/mock-stripe', {
+      const accountTest = await fetch('https://api.hotel-prisma.ml/api/mock-stripe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Nhớ body phải match Content-Type

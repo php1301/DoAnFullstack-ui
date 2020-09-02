@@ -75,7 +75,6 @@ const AuthProvider = (props) => {
         },
       });
       const tokenPayload = Cookies.get('token');
-    console.log('Here', tokenPayload);
       setUser(userPayload.data.login);
       setToken(tokenPayload);
       addItem(TOKEN_COOKIE, tokenPayload);
