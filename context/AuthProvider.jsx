@@ -77,6 +77,7 @@ const AuthProvider = (props) => {
           },
         },
       });
+      // Uncomment các dòng này khi làm local
       // const tokenPayload = Cookies.get('token');
       // setToken(tokenPayload);
       // addItem(TOKEN_COOKIE, tokenPayload);
@@ -113,10 +114,11 @@ const AuthProvider = (props) => {
           },
         },
       });
-      const tokenPayload = Cookies.get('token');
+      // Uncomment các dòng này khi làm local
+      // const tokenPayload = Cookies.get('token');
+      // setToken(tokenPayload);
+      // addItem(TOKEN_COOKIE, tokenPayload);
       setUser(userPayload.data.signup);
-      setToken(tokenPayload);
-      addItem(TOKEN_COOKIE, tokenPayload);
       addItem(USER_COOKIE, userPayload.data.signup);
       // addItem(USER_COOKIE, fakeUserData);
       setLoggedIn(true);
