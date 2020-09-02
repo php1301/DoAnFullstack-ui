@@ -46,8 +46,8 @@
 		],
 		"image": {
 			"id": 90096,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 		},
 		"location": {
 			"id": 67404,
@@ -64,15 +64,15 @@
 		"gallery": [
 			{
 				"id": 11287,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			},
 			{
 				"id": 51759,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 1888,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -82,7 +82,7 @@
 				"name": "Tasty",
 				"image": {
 					"id": 22552,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
 				}
 			},
 			{
@@ -91,7 +91,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 77761,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			}
 		]
@@ -143,8 +143,8 @@
 		],
 		"image": {
 			"id": 25738,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 		},
 		"location": {
 			"id": 57557,
@@ -161,15 +161,15 @@
 		"gallery": [
 			{
 				"id": 64454,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			},
 			{
 				"id": 21253,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			},
 			{
 				"id": 46809,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -179,7 +179,7 @@
 				"name": "Handmade",
 				"image": {
 					"id": 19167,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
 				}
 			},
 			{
@@ -188,7 +188,7 @@
 				"name": "Fantastic",
 				"image": {
 					"id": 16428,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
 				}
 			}
 		]
@@ -240,8 +240,8 @@
 		],
 		"image": {
 			"id": 42681,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 		},
 		"location": {
 			"id": 45160,
@@ -258,15 +258,15 @@
 		"gallery": [
 			{
 				"id": 37686,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			},
 			{
 				"id": 15249,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			},
 			{
 				"id": 23724,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -276,7 +276,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 48920,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
 				}
 			},
 			{
@@ -285,7 +285,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 63044,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
 				}
 			}
 		]
@@ -337,8 +337,8 @@
 		],
 		"image": {
 			"id": 87047,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 		},
 		"location": {
 			"id": 27125,
@@ -355,15 +355,15 @@
 		"gallery": [
 			{
 				"id": 62073,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 94501,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			},
 			{
 				"id": 11548,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -373,7 +373,7 @@
 				"name": "Tasty",
 				"image": {
 					"id": 61717,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
 				}
 			},
 			{
@@ -382,7 +382,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 38977,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
 				}
 			}
 		]
@@ -434,8 +434,8 @@
 		],
 		"image": {
 			"id": 32194,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 		},
 		"location": {
 			"id": 33715,
@@ -452,15 +452,15 @@
 		"gallery": [
 			{
 				"id": 51437,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			},
 			{
 				"id": 62903,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			},
 			{
 				"id": 69198,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -470,7 +470,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 96094,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
 				}
 			},
 			{
@@ -479,7 +479,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 62679,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
 				}
 			}
 		]
@@ -531,8 +531,8 @@
 		],
 		"image": {
 			"id": 52861,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 		},
 		"location": {
 			"id": 23076,
@@ -549,15 +549,15 @@
 		"gallery": [
 			{
 				"id": 98348,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			},
 			{
 				"id": 10832,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			},
 			{
 				"id": 70635,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -567,7 +567,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 58361,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
 				}
 			},
 			{
@@ -576,7 +576,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 37088,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
 				}
 			}
 		]
@@ -628,8 +628,8 @@
 		],
 		"image": {
 			"id": 91141,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 		},
 		"location": {
 			"id": 10393,
@@ -646,15 +646,15 @@
 		"gallery": [
 			{
 				"id": 99115,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			},
 			{
 				"id": 27188,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			},
 			{
 				"id": 33855,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -664,7 +664,7 @@
 				"name": "Tasty",
 				"image": {
 					"id": 75607,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			},
 			{
@@ -673,7 +673,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 53293,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
 				}
 			}
 		]
@@ -725,8 +725,8 @@
 		],
 		"image": {
 			"id": 14297,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 		},
 		"location": {
 			"id": 93702,
@@ -743,15 +743,15 @@
 		"gallery": [
 			{
 				"id": 35180,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			},
 			{
 				"id": 27573,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			},
 			{
 				"id": 68402,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -761,7 +761,7 @@
 				"name": "Intelligent",
 				"image": {
 					"id": 56187,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
 				}
 			},
 			{
@@ -770,7 +770,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 87999,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
 				}
 			}
 		]
@@ -822,8 +822,8 @@
 		],
 		"image": {
 			"id": 22340,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 		},
 		"location": {
 			"id": 81726,
@@ -840,15 +840,15 @@
 		"gallery": [
 			{
 				"id": 70509,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			},
 			{
 				"id": 32412,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			},
 			{
 				"id": 12967,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -858,7 +858,7 @@
 				"name": "Small",
 				"image": {
 					"id": 84182,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
 				}
 			},
 			{
@@ -867,7 +867,7 @@
 				"name": "Licensed",
 				"image": {
 					"id": 63767,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
 				}
 			}
 		]
@@ -919,8 +919,8 @@
 		],
 		"image": {
 			"id": 60214,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 		},
 		"location": {
 			"id": 82805,
@@ -937,15 +937,15 @@
 		"gallery": [
 			{
 				"id": 7788,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			},
 			{
 				"id": 21707,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 7459,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -955,7 +955,7 @@
 				"name": "Small",
 				"image": {
 					"id": 53415,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
 				}
 			},
 			{
@@ -964,7 +964,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 81374,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
 				}
 			}
 		]
@@ -1016,8 +1016,8 @@
 		],
 		"image": {
 			"id": 26144,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 		},
 		"location": {
 			"id": 84050,
@@ -1034,15 +1034,15 @@
 		"gallery": [
 			{
 				"id": 44332,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			},
 			{
 				"id": 34700,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 99806,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1052,7 +1052,7 @@
 				"name": "Small",
 				"image": {
 					"id": 10185,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
 				}
 			},
 			{
@@ -1061,7 +1061,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 67182,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			}
 		]
@@ -1113,8 +1113,8 @@
 		],
 		"image": {
 			"id": 49595,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 		},
 		"location": {
 			"id": 74790,
@@ -1131,15 +1131,15 @@
 		"gallery": [
 			{
 				"id": 58613,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			},
 			{
 				"id": 44236,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 21946,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1149,7 +1149,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 58629,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
 				}
 			},
 			{
@@ -1158,7 +1158,7 @@
 				"name": "Sleek",
 				"image": {
 					"id": 4891,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
 				}
 			}
 		]
@@ -1210,8 +1210,8 @@
 		],
 		"image": {
 			"id": 1719,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 		},
 		"location": {
 			"id": 34339,
@@ -1228,15 +1228,15 @@
 		"gallery": [
 			{
 				"id": 14495,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			},
 			{
 				"id": 83768,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			},
 			{
 				"id": 57361,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1246,7 +1246,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 81026,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
 				}
 			},
 			{
@@ -1255,7 +1255,7 @@
 				"name": "Intelligent",
 				"image": {
 					"id": 14937,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
 				}
 			}
 		]
@@ -1307,8 +1307,8 @@
 		],
 		"image": {
 			"id": 66682,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 		},
 		"location": {
 			"id": 28501,
@@ -1325,15 +1325,15 @@
 		"gallery": [
 			{
 				"id": 83511,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 96769,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			},
 			{
 				"id": 71739,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1343,7 +1343,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 33062,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
 				}
 			},
 			{
@@ -1352,7 +1352,7 @@
 				"name": "Ergonomic",
 				"image": {
 					"id": 66264,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
 				}
 			}
 		]
@@ -1404,8 +1404,8 @@
 		],
 		"image": {
 			"id": 27169,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 		},
 		"location": {
 			"id": 52689,
@@ -1422,15 +1422,15 @@
 		"gallery": [
 			{
 				"id": 21583,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			},
 			{
 				"id": 6406,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			},
 			{
 				"id": 68447,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1440,7 +1440,7 @@
 				"name": "Tasty",
 				"image": {
 					"id": 90707,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
 				}
 			},
 			{
@@ -1449,7 +1449,7 @@
 				"name": "Handcrafted",
 				"image": {
 					"id": 47746,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
 				}
 			}
 		]
@@ -1501,8 +1501,8 @@
 		],
 		"image": {
 			"id": 83800,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 		},
 		"location": {
 			"id": 90805,
@@ -1519,15 +1519,15 @@
 		"gallery": [
 			{
 				"id": 42616,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			},
 			{
 				"id": 28382,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			},
 			{
 				"id": 55505,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1537,7 +1537,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 43167,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
 				}
 			},
 			{
@@ -1546,7 +1546,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 98191,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
 				}
 			}
 		]
@@ -1598,8 +1598,8 @@
 		],
 		"image": {
 			"id": 81248,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 		},
 		"location": {
 			"id": 56947,
@@ -1616,15 +1616,15 @@
 		"gallery": [
 			{
 				"id": 43904,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 37243,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 76234,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1634,7 +1634,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 890,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			},
 			{
@@ -1643,8 +1643,8 @@
 				"name": "Fantastic",
 				"image": {
 					"id": 98189,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
-					"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
+					"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 				}
 			}
 		]
@@ -1696,8 +1696,8 @@
 		],
 		"image": {
 			"id": 37089,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 		},
 		"location": {
 			"id": 72441,
@@ -1714,15 +1714,15 @@
 		"gallery": [
 			{
 				"id": 22071,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			},
 			{
 				"id": 41217,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 9590,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1732,7 +1732,7 @@
 				"name": "Handcrafted",
 				"image": {
 					"id": 31149,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
 				}
 			},
 			{
@@ -1741,7 +1741,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 50761,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
 				}
 			}
 		]
@@ -1793,8 +1793,8 @@
 		],
 		"image": {
 			"id": 80393,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 		},
 		"location": {
 			"id": 34290,
@@ -1811,15 +1811,15 @@
 		"gallery": [
 			{
 				"id": 37128,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			},
 			{
 				"id": 58920,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			},
 			{
 				"id": 54862,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1829,7 +1829,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 22507,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
 				}
 			},
 			{
@@ -1838,7 +1838,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 47914,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
 				}
 			}
 		]
@@ -1890,8 +1890,8 @@
 		],
 		"image": {
 			"id": 31814,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 		},
 		"location": {
 			"id": 45327,
@@ -1908,15 +1908,15 @@
 		"gallery": [
 			{
 				"id": 86126,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			},
 			{
 				"id": 37165,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 39914,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -1926,7 +1926,7 @@
 				"name": "Intelligent",
 				"image": {
 					"id": 21543,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
 				}
 			},
 			{
@@ -1935,7 +1935,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 87771,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
 				}
 			}
 		]
@@ -1987,8 +1987,8 @@
 		],
 		"image": {
 			"id": 24561,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 		},
 		"location": {
 			"id": 28783,
@@ -2005,15 +2005,15 @@
 		"gallery": [
 			{
 				"id": 54880,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			},
 			{
 				"id": 25028,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 96290,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2023,7 +2023,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 95459,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			},
 			{
@@ -2032,7 +2032,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 66075,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
 				}
 			}
 		]
@@ -2084,8 +2084,8 @@
 		],
 		"image": {
 			"id": 38980,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 		},
 		"location": {
 			"id": 81797,
@@ -2102,15 +2102,15 @@
 		"gallery": [
 			{
 				"id": 17331,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 50400,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			},
 			{
 				"id": 33563,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2120,7 +2120,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 10054,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
 				}
 			},
 			{
@@ -2129,7 +2129,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 47654,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
 				}
 			}
 		]
@@ -2181,8 +2181,8 @@
 		],
 		"image": {
 			"id": 31963,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 		},
 		"location": {
 			"id": 28469,
@@ -2199,15 +2199,15 @@
 		"gallery": [
 			{
 				"id": 35339,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			},
 			{
 				"id": 53877,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			},
 			{
 				"id": 20301,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2217,7 +2217,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 56132,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
 				}
 			},
 			{
@@ -2226,7 +2226,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 56802,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
 				}
 			}
 		]
@@ -2278,8 +2278,8 @@
 		],
 		"image": {
 			"id": 93284,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 		},
 		"location": {
 			"id": 63338,
@@ -2296,15 +2296,15 @@
 		"gallery": [
 			{
 				"id": 54753,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			},
 			{
 				"id": 22077,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 36516,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2314,7 +2314,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 62162,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
 				}
 			},
 			{
@@ -2323,7 +2323,7 @@
 				"name": "Handcrafted",
 				"image": {
 					"id": 31743,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
 				}
 			}
 		]
@@ -2375,8 +2375,8 @@
 		],
 		"image": {
 			"id": 99362,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 		},
 		"location": {
 			"id": 2732,
@@ -2393,15 +2393,15 @@
 		"gallery": [
 			{
 				"id": 20976,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			},
 			{
 				"id": 67759,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			},
 			{
 				"id": 14429,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2411,7 +2411,7 @@
 				"name": "Sleek",
 				"image": {
 					"id": 88490,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
 				}
 			},
 			{
@@ -2420,7 +2420,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 47349,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
 				}
 			}
 		]
@@ -2472,8 +2472,8 @@
 		],
 		"image": {
 			"id": 60881,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 		},
 		"location": {
 			"id": 22316,
@@ -2490,15 +2490,15 @@
 		"gallery": [
 			{
 				"id": 13299,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			},
 			{
 				"id": 8343,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			},
 			{
 				"id": 75745,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2508,7 +2508,7 @@
 				"name": "Sleek",
 				"image": {
 					"id": 85643,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
 				}
 			},
 			{
@@ -2517,7 +2517,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 4206,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
 				}
 			}
 		]
@@ -2569,8 +2569,8 @@
 		],
 		"image": {
 			"id": 59346,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 		},
 		"location": {
 			"id": 51227,
@@ -2587,15 +2587,15 @@
 		"gallery": [
 			{
 				"id": 36812,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 54332,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			},
 			{
 				"id": 94838,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2605,7 +2605,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 12544,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
 				}
 			},
 			{
@@ -2614,7 +2614,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 6554,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			}
 		]
@@ -2666,8 +2666,8 @@
 		],
 		"image": {
 			"id": 18787,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 		},
 		"location": {
 			"id": 84971,
@@ -2684,15 +2684,15 @@
 		"gallery": [
 			{
 				"id": 83227,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			},
 			{
 				"id": 2954,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			},
 			{
 				"id": 47260,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2702,7 +2702,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 89630,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
 				}
 			},
 			{
@@ -2711,7 +2711,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 355,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
 				}
 			}
 		]
@@ -2763,8 +2763,8 @@
 		],
 		"image": {
 			"id": 27005,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 		},
 		"location": {
 			"id": 28607,
@@ -2781,15 +2781,15 @@
 		"gallery": [
 			{
 				"id": 91812,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			},
 			{
 				"id": 84346,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 24219,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2799,7 +2799,7 @@
 				"name": "Handmade",
 				"image": {
 					"id": 54660,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
 				}
 			},
 			{
@@ -2808,7 +2808,7 @@
 				"name": "Small",
 				"image": {
 					"id": 61480,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			}
 		]
@@ -2860,8 +2860,8 @@
 		],
 		"image": {
 			"id": 37482,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 		},
 		"location": {
 			"id": 49740,
@@ -2878,15 +2878,15 @@
 		"gallery": [
 			{
 				"id": 30918,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			},
 			{
 				"id": 44282,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 34623,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2896,7 +2896,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 52397,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
 				}
 			},
 			{
@@ -2905,7 +2905,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 18748,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			}
 		]
@@ -2957,8 +2957,8 @@
 		],
 		"image": {
 			"id": 35709,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 		},
 		"location": {
 			"id": 76980,
@@ -2975,15 +2975,15 @@
 		"gallery": [
 			{
 				"id": 54872,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			},
 			{
 				"id": 25257,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			},
 			{
 				"id": 65352,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -2993,7 +2993,7 @@
 				"name": "Licensed",
 				"image": {
 					"id": 62062,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
 				}
 			},
 			{
@@ -3002,7 +3002,7 @@
 				"name": "Licensed",
 				"image": {
 					"id": 24692,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
 				}
 			}
 		]
@@ -3054,8 +3054,8 @@
 		],
 		"image": {
 			"id": 80766,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 		},
 		"location": {
 			"id": 94428,
@@ -3072,15 +3072,15 @@
 		"gallery": [
 			{
 				"id": 83707,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			},
 			{
 				"id": 28977,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			},
 			{
 				"id": 26821,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3090,7 +3090,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 99769,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
 				}
 			},
 			{
@@ -3099,7 +3099,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 1359,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
 				}
 			}
 		]
@@ -3151,8 +3151,8 @@
 		],
 		"image": {
 			"id": 76016,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 		},
 		"location": {
 			"id": 60469,
@@ -3169,15 +3169,15 @@
 		"gallery": [
 			{
 				"id": 44655,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			},
 			{
 				"id": 39401,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			},
 			{
 				"id": 4174,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3187,7 +3187,7 @@
 				"name": "Licensed",
 				"image": {
 					"id": 43621,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
 				}
 			},
 			{
@@ -3196,7 +3196,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 10075,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
 				}
 			}
 		]
@@ -3248,8 +3248,8 @@
 		],
 		"image": {
 			"id": 33542,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 		},
 		"location": {
 			"id": 28332,
@@ -3266,15 +3266,15 @@
 		"gallery": [
 			{
 				"id": 50117,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			},
 			{
 				"id": 69044,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 92346,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3284,7 +3284,7 @@
 				"name": "Small",
 				"image": {
 					"id": 99500,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
 				}
 			},
 			{
@@ -3293,7 +3293,7 @@
 				"name": "Intelligent",
 				"image": {
 					"id": 95852,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
 				}
 			}
 		]
@@ -3345,8 +3345,8 @@
 		],
 		"image": {
 			"id": 77963,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 		},
 		"location": {
 			"id": 208,
@@ -3363,15 +3363,15 @@
 		"gallery": [
 			{
 				"id": 1894,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			},
 			{
 				"id": 67185,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			},
 			{
 				"id": 85708,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3381,7 +3381,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 37904,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
 				}
 			},
 			{
@@ -3390,7 +3390,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 45353,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
 				}
 			}
 		]
@@ -3442,8 +3442,8 @@
 		],
 		"image": {
 			"id": 76566,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 		},
 		"location": {
 			"id": 51236,
@@ -3460,15 +3460,15 @@
 		"gallery": [
 			{
 				"id": 21962,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 55970,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			},
 			{
 				"id": 57167,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3478,7 +3478,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 46658,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			},
 			{
@@ -3487,7 +3487,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 15898,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
 				}
 			}
 		]
@@ -3539,8 +3539,8 @@
 		],
 		"image": {
 			"id": 29985,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 		},
 		"location": {
 			"id": 81441,
@@ -3557,15 +3557,15 @@
 		"gallery": [
 			{
 				"id": 60047,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 37297,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			},
 			{
 				"id": 77118,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3575,7 +3575,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 44555,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
 				}
 			},
 			{
@@ -3584,7 +3584,7 @@
 				"name": "Small",
 				"image": {
 					"id": 83660,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
 				}
 			}
 		]
@@ -3636,8 +3636,8 @@
 		],
 		"image": {
 			"id": 73045,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 		},
 		"location": {
 			"id": 7531,
@@ -3654,15 +3654,15 @@
 		"gallery": [
 			{
 				"id": 54911,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 96847,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			},
 			{
 				"id": 69291,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3672,7 +3672,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 79593,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
 				}
 			},
 			{
@@ -3681,7 +3681,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 94324,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
 				}
 			}
 		]
@@ -3733,8 +3733,8 @@
 		],
 		"image": {
 			"id": 28745,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 		},
 		"location": {
 			"id": 57685,
@@ -3751,15 +3751,15 @@
 		"gallery": [
 			{
 				"id": 95712,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			},
 			{
 				"id": 14953,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 73203,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3769,7 +3769,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 77323,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
 				}
 			},
 			{
@@ -3778,7 +3778,7 @@
 				"name": "Handcrafted",
 				"image": {
 					"id": 49731,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
 				}
 			}
 		]
@@ -3830,8 +3830,8 @@
 		],
 		"image": {
 			"id": 4850,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 		},
 		"location": {
 			"id": 50355,
@@ -3848,15 +3848,15 @@
 		"gallery": [
 			{
 				"id": 60783,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			},
 			{
 				"id": 85913,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			},
 			{
 				"id": 53254,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3866,7 +3866,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 49341,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
 				}
 			},
 			{
@@ -3875,7 +3875,7 @@
 				"name": "Gorgeous",
 				"image": {
 					"id": 47582,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			}
 		]
@@ -3927,8 +3927,8 @@
 		],
 		"image": {
 			"id": 99298,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 		},
 		"location": {
 			"id": 60072,
@@ -3945,15 +3945,15 @@
 		"gallery": [
 			{
 				"id": 95696,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			},
 			{
 				"id": 47987,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 			},
 			{
 				"id": 78696,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -3963,7 +3963,7 @@
 				"name": "Sleek",
 				"image": {
 					"id": 30503,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg"
 				}
 			},
 			{
@@ -3972,7 +3972,7 @@
 				"name": "Handmade",
 				"image": {
 					"id": 14597,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15.jpg"
 				}
 			}
 		]
@@ -4024,8 +4024,8 @@
 		],
 		"image": {
 			"id": 25079,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 		},
 		"location": {
 			"id": 58604,
@@ -4042,15 +4042,15 @@
 		"gallery": [
 			{
 				"id": 57839,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			},
 			{
 				"id": 84756,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 			},
 			{
 				"id": 93432,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4060,7 +4060,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 12120,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg"
 				}
 			},
 			{
@@ -4069,7 +4069,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 29221,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9.jpg"
 				}
 			}
 		]
@@ -4121,8 +4121,8 @@
 		],
 		"image": {
 			"id": 82888,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 		},
 		"location": {
 			"id": 89997,
@@ -4139,15 +4139,15 @@
 		"gallery": [
 			{
 				"id": 76516,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			},
 			{
 				"id": 60508,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 			},
 			{
 				"id": 78119,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4157,7 +4157,7 @@
 				"name": "Fantastic",
 				"image": {
 					"id": 58645,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg"
 				}
 			},
 			{
@@ -4166,7 +4166,7 @@
 				"name": "Handcrafted",
 				"image": {
 					"id": 48740,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3.jpg"
 				}
 			}
 		]
@@ -4218,8 +4218,8 @@
 		],
 		"image": {
 			"id": 97137,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 		},
 		"location": {
 			"id": 1879,
@@ -4236,15 +4236,15 @@
 		"gallery": [
 			{
 				"id": 91692,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			},
 			{
 				"id": 46703,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20_thumb.jpg"
 			},
 			{
 				"id": 5371,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4254,7 +4254,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 79256,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg"
 				}
 			},
 			{
@@ -4263,7 +4263,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 91433,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17.jpg"
 				}
 			}
 		]
@@ -4315,8 +4315,8 @@
 		],
 		"image": {
 			"id": 25935,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 		},
 		"location": {
 			"id": 9304,
@@ -4333,15 +4333,15 @@
 		"gallery": [
 			{
 				"id": 9500,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			},
 			{
 				"id": 49786,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14_thumb.jpg"
 			},
 			{
 				"id": 6738,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4351,7 +4351,7 @@
 				"name": "Fantastic",
 				"image": {
 					"id": 85698,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg"
 				}
 			},
 			{
@@ -4360,7 +4360,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 46169,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11.jpg"
 				}
 			}
 		]
@@ -4412,8 +4412,8 @@
 		],
 		"image": {
 			"id": 80556,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 		},
 		"location": {
 			"id": 86829,
@@ -4430,15 +4430,15 @@
 		"gallery": [
 			{
 				"id": 58430,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			},
 			{
 				"id": 41380,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8_thumb.jpg"
 			},
 			{
 				"id": 58941,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4448,7 +4448,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 71908,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg"
 				}
 			},
 			{
@@ -4457,7 +4457,7 @@
 				"name": "Refined",
 				"image": {
 					"id": 85250,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5.jpg"
 				}
 			}
 		]
@@ -4509,8 +4509,8 @@
 		],
 		"image": {
 			"id": 32140,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 		},
 		"location": {
 			"id": 17324,
@@ -4527,15 +4527,15 @@
 		"gallery": [
 			{
 				"id": 23103,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			},
 			{
 				"id": 8504,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2_thumb.jpg"
 			},
 			{
 				"id": 67754,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4545,7 +4545,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 94478,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-20.jpg"
 				}
 			},
 			{
@@ -4554,7 +4554,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 6959,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-19.jpg"
 				}
 			}
 		]
@@ -4606,8 +4606,8 @@
 		],
 		"image": {
 			"id": 41632,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-18_thumb.jpg"
 		},
 		"location": {
 			"id": 48797,
@@ -4624,15 +4624,15 @@
 		"gallery": [
 			{
 				"id": 49921,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-17_thumb.jpg"
 			},
 			{
 				"id": 43045,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-16_thumb.jpg"
 			},
 			{
 				"id": 19843,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-15_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4642,7 +4642,7 @@
 				"name": "Unbranded",
 				"image": {
 					"id": 99921,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-14.jpg"
 				}
 			},
 			{
@@ -4651,7 +4651,7 @@
 				"name": "Rustic",
 				"image": {
 					"id": 30943,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-13.jpg"
 				}
 			}
 		]
@@ -4703,8 +4703,8 @@
 		],
 		"image": {
 			"id": 78004,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-12_thumb.jpg"
 		},
 		"location": {
 			"id": 60343,
@@ -4721,15 +4721,15 @@
 		"gallery": [
 			{
 				"id": 31596,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-11_thumb.jpg"
 			},
 			{
 				"id": 51643,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-10_thumb.jpg"
 			},
 			{
 				"id": 83948,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-9_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4739,7 +4739,7 @@
 				"name": "Incredible",
 				"image": {
 					"id": 28297,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-8.jpg"
 				}
 			},
 			{
@@ -4748,7 +4748,7 @@
 				"name": "Generic",
 				"image": {
 					"id": 75368,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-7.jpg"
 				}
 			}
 		]
@@ -4800,8 +4800,8 @@
 		],
 		"image": {
 			"id": 36025,
-			"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg",
-			"thumb_url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
+			"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6.jpg",
+			"thumb_url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-6_thumb.jpg"
 		},
 		"location": {
 			"id": 44703,
@@ -4818,15 +4818,15 @@
 		"gallery": [
 			{
 				"id": 37129,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-5_thumb.jpg"
 			},
 			{
 				"id": 77124,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-4_thumb.jpg"
 			},
 			{
 				"id": 85472,
-				"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
+				"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-3_thumb.jpg"
 			}
 		],
 		"categories": [
@@ -4836,7 +4836,7 @@
 				"name": "Practical",
 				"image": {
 					"id": 54324,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-2.jpg"
 				}
 			},
 			{
@@ -4845,7 +4845,7 @@
 				"name": "Awesome",
 				"image": {
 					"id": 82286,
-					"url": "http://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
+					"url": "https://s3.amazonaws.com/redqteam.com/tripfinder-images/hotel-1.jpg"
 				}
 			}
 		]
