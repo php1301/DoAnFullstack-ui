@@ -144,7 +144,7 @@ const SignInPage = ({query, ...props}) => {
           <FacebookLogin
             appId={process.env.FACEBOOK_APP_ID}
             fields="name,email,picture,link"
-            scope="public_profile,user_link"
+            scope="public_profile,email,user_link"
             callback={ (value) =>{ responseFacebook(value); }}
             render={props=>(
             <Button
