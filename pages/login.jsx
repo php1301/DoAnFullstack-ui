@@ -42,7 +42,6 @@ const SignInPage = ({query, ...props}) => {
 
   const responseFacebook = async response => {
     setState({ ...state, facebookBtnLoading: true });
-    console.log(response);
     try {
     const userPayload = await facebookLogin({
       variables: {
@@ -208,6 +207,9 @@ const SignInPage = ({query, ...props}) => {
           />
           </Col>
         </Row>
+        <Text>
+          Do Facebook của App đang bị dính 1 số vấn đề về permission nên có thể sẽ login fail
+        </Text>
         <Text>
           Don't have an account? &nbsp;
           <ActiveLink href={`${REGISTRATION_PAGE}`}>Registration</ActiveLink>

@@ -209,6 +209,9 @@ const SignUp = () => {
           </Col>
         </Row>
         <Text>
+          Do Facebook của App đang bị dính 1 số vấn đề về permission nên có thể sẽ login fail
+        </Text>
+        <Text>
           Already have an account! &nbsp;
           <Link href={`${LOGIN_PAGE}`}>
             <a>Login</a>
