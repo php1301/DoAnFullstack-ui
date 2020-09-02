@@ -14,7 +14,6 @@ import Logo from 'components/UI/Logo/Logo';
 import SignUpForm from 'container/SignUp/SignUpForm';
 import { LOGIN_PAGE } from 'settings/constants';
 import { USER_COOKIE } from 'library/helpers/session';
-import { REGISTRATION_PAGE } from 'settings/constants';
 import { AuthContext } from 'context/AuthProvider';
 import { FACEBOOK_LOGIN, GOOGLE_LOGIN } from 'apollo-graphql/mutation/mutation';
 import SignUpWrapper, {
