@@ -210,7 +210,7 @@ export default function TopbarNotification({ id }) {
       console.log(unsubscribe);
       console.log(notiLoading);
       console.log(notiData);
-      unsubscribe = subscribeToMore({
+      return subscribeToMore({
       document: NOTIFICATION_BELL,
       variables: { channelId: id },
       updateQuery: (prev, { subscriptionData }) => {
@@ -232,7 +232,6 @@ export default function TopbarNotification({ id }) {
         return newData;
       },
     })
-    if (unsubscribe) return () => unsubscribe()
    }
   }, [notiData]);
   useEffect(() => {
