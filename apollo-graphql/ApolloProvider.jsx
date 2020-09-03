@@ -4,8 +4,8 @@ import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { WebSocketLink } from 'apollo-link-ws';
-import { getMainDefinition } from 'apollo-utilities'
-import { split } from 'apollo-link'
+import { getMainDefinition } from 'apollo-utilities';
+import { split } from 'apollo-link';
 import fetch from 'node-fetch';
 
 // const client = new SubscriptionClient(`ws://localhost:3000/graphql`, {
@@ -16,17 +16,17 @@ import fetch from 'node-fetch';
 // Có thể viết thành 1 hàm để lấy client tùy thích
 // -> sử dụng cho getServerSidesProps
 // export const withApolloClient = () => {
-  const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
-  uri: `wss://${process.env.API}/graphql`,
+const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser sẽ throw phải check null
+  uri: process.env.WS_API,
   options: {
     reconnect: true,
     lazy: true,
   },
-  onReconnected:()=>{
-    console.log("WS reconnected")
+  onReconnected: () => {
+    console.log('WS reconnected');
   },
-  onConnected:()=>{
-    console.log("WS connect");
+  onConnected: () => {
+    console.log('WS connect');
   },
   onError: ({ networkError, graphQLErrors }) => {
     console.log('graphQLErrors + Socket error', graphQLErrors);
@@ -35,7 +35,7 @@ import fetch from 'node-fetch';
 }) : null;
 
 const httplink = new createHttpLink({
-	uri: `https://${process.env.API}/graphql`,
+  uri: process.env.API,
   credentials: 'include',
   fetch,
   onError: ({ networkError, graphQLErrors }) => {
@@ -44,7 +44,7 @@ const httplink = new createHttpLink({
   },
 });
 
-const link = process.browser ? split( //Chỉ split khi trên browser (đủ 2 links)
+const link = process.browser ? split( // Chỉ split khi trên browser (đủ 2 links)
   // split dựa trên loại connection
   ({ query }) => {
     const { kind, operation } = getMainDefinition(query);
@@ -53,7 +53,7 @@ const link = process.browser ? split( //Chỉ split khi trên browser (đủ 2 l
   wsLink,
   httplink,
 ) : httplink;
- const client = new ApolloClient({
+const client = new ApolloClient({
   link,
   ssrMode: true,
   cache: new InMemoryCache(),

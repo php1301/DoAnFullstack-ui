@@ -16,7 +16,7 @@ import PricingWrapper, {
 const monthlyPlans = [
   {
     title: 'Basic Plan',
-    key: 'Normal',
+    key: 'BPM',
     price: '0.00',
     type: 'monthly',
     features: [

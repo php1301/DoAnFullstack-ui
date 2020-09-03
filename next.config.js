@@ -14,6 +14,7 @@ const localeSubpaths = {
 const nextConfig = {
   env: {
     API: process.env.API,
+    WS_API: process.env.API,
     PUBLIC_STRIPE: process.env.PUBLIC_STRIPE,
     SECRET_STRIPE: process.env.SECRET_STRIPE,
     GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,

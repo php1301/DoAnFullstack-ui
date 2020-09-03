@@ -35,29 +35,41 @@ export default function PriceCard({
     },
   });
   const handleStripeConnect = async (type) => {
-    if (user.role === 'Normal') {
-      const plan = {
-        email: user.email,
-        type,
-      };
-      const accountTest = await fetch('https://api.hotel-prisma.ml/api/mock-stripe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', // Nhớ body phải match Content-Type
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify(plan),
-      });
-      const accountTestPayload = await accountTest.json();
-      Router.push(accountTestPayload.accountLink.url.slice(6));
-    } else {
-      await updateStripeId({
-        variables: {
+    if (user) {
+      if (user.role === 'Normal') {
+        const plan = {
+          email: user.email,
           type,
-        },
+        };
+        const accountTest = await fetch('https://api.hotel-prisma.ml/api/mock-stripe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', // Nhớ body phải match Content-Type
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify(plan),
+        });
+        const accountTestPayload = await accountTest.json();
+        Router.push(accountTestPayload.accountLink.url.slice(6));
+      } else {
+        await updateStripeId({
+          variables: {
+            type,
+          },
+        });
+        const newCookie = { ...user, role: type };
+        Cookies.set('user', newCookie, { expires: 7 });
+      }
+    } else {
+      toast.error('Please login or register an account to subscribe to pricing-plan', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
-      const newCookie = { ...user, role: type };
-      Cookies.set('user', newCookie, { expires: 7 });
     }
   };
   if (data.type === 'annually') {
@@ -67,7 +79,6 @@ export default function PriceCard({
     price = data.price;
     pricingPlan = '/per month';
   }
-
   return (
     <PriceCardWrapper className={className}>
       <PricingHeader>
