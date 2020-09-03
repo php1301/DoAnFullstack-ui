@@ -56,19 +56,19 @@ class CustomApp extends App {
 
   render() {
     const {
-      Component, pageProps, query, user, isLoggedIn,
+      Component, pageProps, query, user, isLoggedIn, pathname
     } = this.props;
     const {
       currentSelectedLanguage,
     } = this.state;
     // console.log(currentSelectedLanguage);
     return (
-      <LanguageProvider language={currentSelectedLanguage}>
+      <ApolloComponent>
+        <LanguageProvider language={currentSelectedLanguage}>
           <AuthProvider>
             <SearchProvider query={query}>
               {/* // Render cứng header và footer - */}
-              <ApolloComponent>
-                <Layout user={user} isLoggedIn={isLoggedIn}>
+              <Layout user={user} isLoggedIn={isLoggedIn}>
                 {/* Các đoạn code ở dưới là children bao gồm cả các pages default index.js */}
                 <ThemeProvider theme={theme}>
                   <>
@@ -77,11 +77,11 @@ class CustomApp extends App {
                     <Component isLoggedIn={isLoggedIn} user={user} query={query} {...pageProps} />
                   </>
                 </ThemeProvider>
-                </Layout>
-              </ApolloComponent>
+              </Layout>
             </SearchProvider>
           </AuthProvider>
         </LanguageProvider>
+      </ApolloComponent>
     );
   }
 }
