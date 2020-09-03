@@ -78,7 +78,7 @@ export default function TopbarNotification({ id }) {
       variables: {
         userId: id,
       },
-      onSubscriptionData: async ({ subscriptionData }) => {
+      onSubscriptionData: async ({ subscriptionData, client }) => {
         if(subscriptionData && subscriptionData.data && subscriptionData.data.realtimeNotificationTransaction) {
         const { TXID, transactionPrice } = subscriptionData.data.realtimeNotificationTransaction;
         toast.info(`You have just received $${transactionPrice}.00 total from ${TXID}`,
@@ -92,7 +92,7 @@ export default function TopbarNotification({ id }) {
             progress: undefined,
           });
           try{
-            await updateTotalUnreadTransactions()
+            await updateTotalUnreadTransactions();
           }
           catch(e){
             toast.error(e.message, {
@@ -205,7 +205,8 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useEffect(() => {
-    subscribeToMore({
+    let unsubscribe;
+    unsubscribe = subscribeToMore({
       document: NOTIFICATION_BELL,
       variables: { channelId: id },
       updateQuery: (prev, { subscriptionData }) => {
@@ -226,10 +227,12 @@ export default function TopbarNotification({ id }) {
         };
         return newData;
       },
-    });
+    })
+    if (unsubscribe) return () => unsubscribe()
   }, []);
   useEffect(() => {
-    subscribeToMoreUnreadNotification({
+    let unsubscribe;
+    unsubscribe = subscribeToMoreUnreadNotification({
       document: UNREAD_NOTIFICATION,
       variables: { channelId: id },
       updateQuery: (prev, { subscriptionData }) => {
@@ -250,6 +253,7 @@ export default function TopbarNotification({ id }) {
         return newData;
       },
     });
+    if (unsubscribe) return () => unsubscribe()
   }, []);
   function handleVisibleChange() {
     setVisibility(!visible);
