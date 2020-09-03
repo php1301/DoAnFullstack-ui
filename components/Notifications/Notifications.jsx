@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect, useMemo, Fragment } from 'react';
 import { useMutation, useQuery, useSubscription } from 'react-apollo';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
@@ -204,7 +204,8 @@ export default function TopbarNotification({ id }) {
   //       progress: undefined,
   //     });
   // }
-  useEffect(() => {
+  useMemo(() => {
+    if(notiData){
       let unsubscribe;
       console.log(unsubscribe);
       console.log(notiLoading);
@@ -232,7 +233,8 @@ export default function TopbarNotification({ id }) {
       },
     })
     if (unsubscribe) return () => unsubscribe()
-  }, [notiLoading, notiData]);
+   }
+  }, [notiData]);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
