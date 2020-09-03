@@ -339,6 +339,7 @@ export default function TopbarNotification({ id }) {
       </a>
     </HeaderWrapper>
   );
+  console.log("here");
   return (
     <Popover
       content={content}
