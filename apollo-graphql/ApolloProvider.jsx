@@ -55,7 +55,7 @@ const link = process.browser ? split( // Chỉ split khi trên browser (đủ 2 
 ) : httplink;
 const client = new ApolloClient({
   link,
-  ssrMode: true,
+  ssrMode: typeof window === 'undefined',
   cache: new InMemoryCache(),
 });
 // return client;
