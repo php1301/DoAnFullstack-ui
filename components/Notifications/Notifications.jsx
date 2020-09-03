@@ -205,7 +205,6 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useMemo(() => {
-    if(notiData) {
       let unsubscribe;
       console.log(unsubscribe);
     unsubscribe = subscribeToMore({
@@ -231,8 +230,7 @@ export default function TopbarNotification({ id }) {
       },
     })
     if (unsubscribe) return () => unsubscribe()
-  }
-  }, [id]);
+  }, [notiData]);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
