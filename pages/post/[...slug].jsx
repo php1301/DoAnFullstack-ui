@@ -40,7 +40,7 @@ const SinglePostPage = ({
   let widthWindow = 0;
   // Xử lý window của SSR
   if (typeof window === 'undefined') {
-    return 'Loading';
+    return '';
   }
   const { width } = useWindowSize();
   widthWindow = width;
@@ -140,7 +140,10 @@ const SinglePostPage = ({
         reviews={reviews} */}
       <>
         <SinglePageWrapper>
-          <ToastContainer />
+          <ToastContainer style={{
+            zIndex: 99999,
+          }}
+          />
           <PostImage>
             <Button
               type="primary"
