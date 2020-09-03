@@ -47,11 +47,12 @@ class CustomApp extends App {
 
 
   componentDidMount() {
-    // const languageChoosed = localStorage.getItem('lang') || "en";
-    // const language = AppLocale[`${languageChoosed}`];
-    // this.setState({
-    //   currentSelectedLanguage: language,
-    // });
+    // Comment các dòng này khi làm ở development và debug rerender
+    const languageChoosed = localStorage.getItem('lang') || "en";
+    const language = AppLocale[`${languageChoosed}`];
+    this.setState({
+      currentSelectedLanguage: language,
+    });
   }
 
 
@@ -63,7 +64,7 @@ class CustomApp extends App {
       currentSelectedLanguage,
     } = this.state;
     // console.log(currentSelectedLanguage);
-    console.log(process.env.NODE_ENV);
+    // console.log(process.env.NODE_ENV);
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       whyDidYouRender(React);
     }

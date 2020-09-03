@@ -54,6 +54,7 @@ export const CheckBoxComp = ({ field, form, ...props }) => {
   const { checkBoxContent } = props;
 
   const onChange = () => {
+    console.log(checkedValue);
     setCheckedValue(!checkedValue);
     form.setFieldValue(field.name, checkedValue);
   };

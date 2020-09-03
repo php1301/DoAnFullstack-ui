@@ -59,7 +59,7 @@ const Header = ({ router, user, isLoggedIn }) => {
   let widthWindow = 0;
   // Xử lý window của SSR
   if (typeof window === 'undefined') {
-    return 'Loading';
+    return '';
   }
   widthWindow = useWindowSize();
   const windowInnerWidth = process.browser && widthWindow.innerWidth;
