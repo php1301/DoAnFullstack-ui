@@ -205,6 +205,7 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useEffect(() => {
+    if(notiData){
       let unsubscribe;
       console.log(unsubscribe);
     unsubscribe = subscribeToMore({
@@ -230,7 +231,8 @@ export default function TopbarNotification({ id }) {
       },
     })
     if (unsubscribe) return () => unsubscribe()
-  }, []);
+  }
+  }, [notiData]);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
@@ -281,7 +283,7 @@ export default function TopbarNotification({ id }) {
     });
     router.push(url);
   }
-  if(!notiLoading) return '...';
+  if(!notiLoading) return '...'
   const content = (
     <HeaderWrapper className="topbarNotification" style={{ zIndex: '999' }}>
       <div className="isoDropdownHeader">
