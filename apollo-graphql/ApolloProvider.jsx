@@ -20,7 +20,7 @@ const wsLink = process.browser ? new WebSocketLink({ // Vì ssr nên browser s�
   uri: process.env.WS_API,
   options: {
     reconnect: true,
-    // lazy: true,
+    lazy: true,
   },
   onReconnected: () => {
     console.log('WS reconnected');
@@ -55,7 +55,7 @@ const link = process.browser ? split( // Chỉ split khi trên browser (đủ 2 
 ) : httplink;
 const client = new ApolloClient({
   link,
-  // ssrMode: true,
+  ssrMode: true,
   cache: new InMemoryCache(),
 });
 // return client;
