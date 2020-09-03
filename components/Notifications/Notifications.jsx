@@ -205,9 +205,9 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useEffect(() => {
-    if(notiData) {
-    console.log(unsubscribe);
-    let unsubscribe;
+    if(!notiLoading && notiData){
+      let unsubscribe;
+      console.log(unsubscribe);
     unsubscribe = subscribeToMore({
       document: NOTIFICATION_BELL,
       variables: { channelId: id },
