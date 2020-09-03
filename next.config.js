@@ -13,15 +13,15 @@ const localeSubpaths = {
 };
 const nextConfig = {
   env: {
-    API: process.env.API,
-    WS_API: process.env.WS_API,
+    API: process.env.API || 'https://api.hotel-prisma.ml/graphql',
+    WS_API: process.env.WS_API || 'wss://api.hotel-prisma.ml/graphql',
     PUBLIC_STRIPE: process.env.PUBLIC_STRIPE,
     SECRET_STRIPE: process.env.SECRET_STRIPE,
     GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
     REACT_APP_GOOGLE_MAP_API_KEY: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
-    SERVER_API: process.env.SERVER_API,
+    SERVER_API: process.env.SERVER_API || 'https://vercel-v2.hotel-prisma.ml',
   },
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {

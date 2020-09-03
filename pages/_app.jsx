@@ -8,7 +8,8 @@ import AppLocale from 'translations/index';
 import theme from 'themes/default.theme';
 import GlobalStyles from 'assets/style/Global.style';
 import { withData } from 'library/helpers/restriction';
-
+// Chỉ trong development
+import whyDidYouRender from '@welldone-software/why-did-you-render';
 import { LanguageProvider } from 'context/LanguageProvider';
 import AuthProvider from 'context/AuthProvider';
 import { SearchProvider } from 'context/SearchProvider';
@@ -46,22 +47,26 @@ class CustomApp extends App {
 
 
   componentDidMount() {
-    const languageChoosed = localStorage.getItem('lang') || "en";
-    const language = AppLocale[`${languageChoosed}`];
-    this.setState({
-      currentSelectedLanguage: language,
-    });
+    // const languageChoosed = localStorage.getItem('lang') || "en";
+    // const language = AppLocale[`${languageChoosed}`];
+    // this.setState({
+    //   currentSelectedLanguage: language,
+    // });
   }
 
 
   render() {
     const {
-      Component, pageProps, query, user, isLoggedIn, pathname
+      Component, pageProps, query, user, isLoggedIn,
     } = this.props;
     const {
       currentSelectedLanguage,
     } = this.state;
     // console.log(currentSelectedLanguage);
+    console.log(process.env.NODE_ENV);
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      whyDidYouRender(React);
+    }
     return (
       <ApolloComponent>
         <LanguageProvider language={currentSelectedLanguage}>
