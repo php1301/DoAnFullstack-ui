@@ -232,6 +232,7 @@ export default function TopbarNotification({ id }) {
   }, []);
   useEffect(() => {
     let unsubscribe;
+    console.log(unsubscribe);
     unsubscribe = subscribeToMoreUnreadNotification({
       document: UNREAD_NOTIFICATION,
       variables: { channelId: id },
