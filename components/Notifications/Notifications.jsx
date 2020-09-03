@@ -206,9 +206,6 @@ export default function TopbarNotification({ id }) {
   // }
   useEffect(() => {
       let unsubscribe;
-      console.log(unsubscribe);
-      console.log(notiLoading);
-      console.log(notiData);
       unsubscribe = subscribeToMore({
       document: NOTIFICATION_BELL,
       variables: { channelId: id },
@@ -232,7 +229,7 @@ export default function TopbarNotification({ id }) {
       },
     })
     if (unsubscribe) return () => unsubscribe()
-  }, [notiLoading, notiData]);
+  }, []);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
@@ -338,7 +335,6 @@ export default function TopbarNotification({ id }) {
       </a>
     </HeaderWrapper>
   );
-  if(unreadNotificationLoading) return ' ';
   return (
     <Popover
       content={content}
