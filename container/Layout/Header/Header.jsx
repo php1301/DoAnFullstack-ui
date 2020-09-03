@@ -14,6 +14,7 @@ import Tag from 'components/UI/Antd/Tag/Tag';
 import Logo from 'components/UI/Logo/Logo';
 import Navbar from 'components/Navbar/Navbar';
 import Notifications from 'components/Notifications/Notifications';
+import useWindowSize from 'components/StickyBooking/useWindowSize';
 
 import { USER_PROFILE_PAGE } from 'settings/constants';
 import { GET_USER_INFO } from 'apollo-graphql/query/query';
@@ -55,6 +56,13 @@ const Header = ({ router, user, isLoggedIn }) => {
     setState((prevState) => !prevState);
     // isToggleOn: !prevState.isToggleOn
   };
+  let widthWindow = 0;
+  // Xử lý window của SSR
+  if (typeof window === 'undefined') {
+    return 'Loading';
+  }
+  widthWindow = useWindowSize();
+  const windowInnerWidth = process.browser && widthWindow.innerWidth;
   const {
     loading,
     data,
@@ -72,82 +80,85 @@ const Header = ({ router, user, isLoggedIn }) => {
       {/* Sticky Header */}
       <Sticky top={0} innerZ={1001} activeClass="isHeaderSticky">
         {/* Truyền các props thích hợp để navbar style và hiển thị đúng */}
-        <Navbar
-          logo={(
-            <>
-              {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={palace} title="TripFinder." />
-            </>
+        {windowInnerWidth > 990 ? (
+          <Navbar
+            logo={(
+              <>
+                {headerType === 'transparent' && <LogoIcon />}
+                <Logo withLink linkTo="/" src={palace} title="TripFinder." />
+              </>
           )}
-          navMenu={<MainMenu id={user.id} isLoggedIn={isLoggedIn} />}
-          isLogin={isLoggedIn}
-          avatar={<Logo src={AvatarImg} />}
-          authMenu={<AuthMenu />}
+            navMenu={<MainMenu id={user.id} isLoggedIn={isLoggedIn} />}
+            isLogin={isLoggedIn}
+            avatar={<Logo src={AvatarImg} />}
+            authMenu={<AuthMenu />}
           // Chỗ truyền 1 trong những info của user - avatar
-          profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} user={user} />}
-          headerType={headerType}
-          searchComponent={<NavbarSearch />}
-          location={router}
-          searchVisibility={searchVisibility}
-        />
-        <MobileNavbar className={headerType}>
-          <LogoArea>
-            <>
-              {headerType === 'transparent' && <LogoIcon />}
-              <Logo withLink linkTo="/" src={palace} title="TripFinder." />
-            </>
-            <NavbarSearch />
-          </LogoArea>
-          {isLoggedIn ? <Notifications id={user.id} /> : ''}
-          <Button
-            className={`hamburg-btn ${state ? 'active' : ''}`}
-            onClick={sidebarHandler}
-          >
-            <span />
-            <span />
-            <span />
-          </Button>
-          <Drawer
-            placement="right"
-            closable={false}
-            onClose={sidebarHandler}
-            width="285px"
-            className="mobile-header"
-            visible={state}
-          >
-            <CloseDrawer>
-              <button type="button" onClick={sidebarHandler}>
-                <IoIosClose />
-              </button>
-            </CloseDrawer>
-            {isLoggedIn
-              ? (
-                <AvatarWrapper>
-                  <AvatarImage>
-                    <Logo src={AvatarImg} />
-                  </AvatarImage>
-                  <AvatarInfo>
-                    <Text as="h3" content={userName} />
-                    <Link href={USER_PROFILE_PAGE}>
-                      <a
-                        role="button"
-                        tabIndex="-1"
-                        onKeyDown={sidebarHandler}
-                        onClick={sidebarHandler}
-                      >
-                        View Profile
-                      </a>
-                    </Link>
-                    <Tag style={{ marginLeft: '7px', textAlign: 'center' }} color={user.role !== 'Normal' ? 'gold' : 'gray'}>
-                      {user.role || 'Normal'}
-                    </Tag>
-                  </AvatarInfo>
-                </AvatarWrapper>
-              )
-              : <AuthMenu className="auth-menu" />}
-            <MobileMenu sidebarHandler={sidebarHandler} className="main-menu" />
-          </Drawer>
-        </MobileNavbar>
+            profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} user={user} />}
+            headerType={headerType}
+            searchComponent={<NavbarSearch />}
+            location={router}
+            searchVisibility={searchVisibility}
+          />
+        ) : (
+          <MobileNavbar className={headerType}>
+            <LogoArea>
+              <>
+                {headerType === 'transparent' && <LogoIcon />}
+                <Logo withLink linkTo="/" src={palace} title="TripFinder." />
+              </>
+              <NavbarSearch />
+            </LogoArea>
+            {isLoggedIn ? <Notifications id={user.id} /> : ''}
+            <Button
+              className={`hamburg-btn ${state ? 'active' : ''}`}
+              onClick={sidebarHandler}
+            >
+              <span />
+              <span />
+              <span />
+            </Button>
+            <Drawer
+              placement="right"
+              closable={false}
+              onClose={sidebarHandler}
+              width="285px"
+              className="mobile-header"
+              visible={state}
+            >
+              <CloseDrawer>
+                <button type="button" onClick={sidebarHandler}>
+                  <IoIosClose />
+                </button>
+              </CloseDrawer>
+              {isLoggedIn
+                ? (
+                  <AvatarWrapper>
+                    <AvatarImage>
+                      <Logo src={AvatarImg} />
+                    </AvatarImage>
+                    <AvatarInfo>
+                      <Text as="h3" content={userName} />
+                      <Link href={USER_PROFILE_PAGE}>
+                        <a
+                          role="button"
+                          tabIndex="-1"
+                          onKeyDown={sidebarHandler}
+                          onClick={sidebarHandler}
+                        >
+                          View Profile
+                        </a>
+                      </Link>
+                      <Tag style={{ marginLeft: '7px', textAlign: 'center' }} color={user.role !== 'Normal' ? 'gold' : 'gray'}>
+                        {user.role || 'Normal'}
+                      </Tag>
+                    </AvatarInfo>
+                  </AvatarWrapper>
+                )
+                : <AuthMenu className="auth-menu" />}
+              <MobileMenu sidebarHandler={sidebarHandler} className="main-menu" />
+            </Drawer>
+          </MobileNavbar>
+        )}
       </Sticky>
     </HeaderWrapper>
   );
