@@ -205,7 +205,7 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useEffect(() => {
-    if(!notiLoading) {
+    if(notiData) {
     console.log(unsubscribe);
     let unsubscribe;
     unsubscribe = subscribeToMore({
