@@ -40,6 +40,7 @@ const demoNotifications = [
 ];
 
 export default function TopbarNotification({ id }) {
+  console.log("render")
   const [visible, setVisibility] = React.useState(false);
   const [more, setMore] = React.useState(6);
   const [checkNotification] = useMutation(CHECK_NOTIFICATION, {
@@ -205,6 +206,7 @@ export default function TopbarNotification({ id }) {
   //     });
   // }
   useEffect(() => {
+    if(notiData){
       let unsubscribe;
       console.log(unsubscribe);
     unsubscribe = subscribeToMore({
@@ -230,7 +232,8 @@ export default function TopbarNotification({ id }) {
       },
     })
     if (unsubscribe) return () => unsubscribe()
-  }, [id]);
+  }
+  }, [notiData]);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
