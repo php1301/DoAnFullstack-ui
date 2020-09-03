@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useEffect, useMemo, Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { useMutation, useQuery, useSubscription } from 'react-apollo';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
@@ -204,13 +204,12 @@ export default function TopbarNotification({ id }) {
   //       progress: undefined,
   //     });
   // }
-  useMemo(() => {
-    if(notiData){
+  useEffect(() => {
       let unsubscribe;
       console.log(unsubscribe);
       console.log(notiLoading);
       console.log(notiData);
-      return subscribeToMore({
+      unsubscribe = subscribeToMore({
       document: NOTIFICATION_BELL,
       variables: { channelId: id },
       updateQuery: (prev, { subscriptionData }) => {
@@ -232,8 +231,8 @@ export default function TopbarNotification({ id }) {
         return newData;
       },
     })
-   }
-  }, [notiData]);
+    if (unsubscribe) return () => unsubscribe()
+  }, [notiLoading, notiData]);
   useEffect(() => {
     let unsubscribe;
     unsubscribe = subscribeToMoreUnreadNotification({
@@ -339,6 +338,7 @@ export default function TopbarNotification({ id }) {
       </a>
     </HeaderWrapper>
   );
+  if(unreadNotificationLoading) return ' ';
   return (
     <Popover
       content={content}
