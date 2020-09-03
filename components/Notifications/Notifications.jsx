@@ -73,40 +73,40 @@ export default function TopbarNotification({ id }) {
     ],
   });
   const [updateTotalUnreadTransactions] = useMutation(UPDATE_TOTAL_UNREAD_TRANSACTIONS)
-  // useSubscription(REALTIME_NOTIFICATION_TRANSACTION,
-  //   {
-  //     variables: {
-  //       userId: id,
-  //     },
-  //     onSubscriptionData: async ({ subscriptionData }) => {
-  //       if(subscriptionData && subscriptionData.data && subscriptionData.data.realtimeNotificationTransaction) {
-  //       const { TXID, transactionPrice } = subscriptionData.data.realtimeNotificationTransaction;
-  //       toast.info(`You have just received $${transactionPrice}.00 total from ${TXID}`,
-  //         {
-  //           position: 'top-left',
-  //           autoClose: 5000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //         });
-  //         try{
-  //           await updateTotalUnreadTransactions()
-  //         }
-  //         catch(e){
-  //           toast.error(e.message, {
-  //           position: 'top-right',
-  //           autoClose: 5000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //         });
-  //       }
-  //     }
-  //   }})
+  useSubscription(REALTIME_NOTIFICATION_TRANSACTION,
+    {
+      variables: {
+        userId: id,
+      },
+      onSubscriptionData: async ({ subscriptionData }) => {
+        if(subscriptionData && subscriptionData.data && subscriptionData.data.realtimeNotificationTransaction) {
+        const { TXID, transactionPrice } = subscriptionData.data.realtimeNotificationTransaction;
+        toast.info(`You have just received $${transactionPrice}.00 total from ${TXID}`,
+          {
+            position: 'top-left',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          try{
+            await updateTotalUnreadTransactions()
+          }
+          catch(e){
+            toast.error(e.message, {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      }
+    }})
   const router = useRouter();
   // console.log(id);
   // console.log(id);
@@ -228,29 +228,29 @@ export default function TopbarNotification({ id }) {
       },
     });
   }, []);
-  // useEffect(() => {
-  //   subscribeToMoreUnreadNotification({
-  //     document: UNREAD_NOTIFICATION,
-  //     variables: { channelId: id },
-  //     updateQuery: (prev, { subscriptionData }) => {
-  //       if (!subscriptionData.data) return prev;
-  //       // console.log(subscriptionData);
-  //       // console.log(prev);
-  //       // Nên log prev và subscriptionData ra để spread đúng
-  //       const { unreadNotification } = subscriptionData.data.unreadNotification;
-  //       const newData = {
-  //         // ...prev,
-  //         getUserUnreadNotification: {
-  //           ...prev.getUserUnreadNotification,
-  //           unreadNotification,
-  //         },
-  //       };
-  //       // console.log('this is new');
-  //       // console.log(newData);
-  //       return newData;
-  //     },
-  //   });
-  // }, []);
+  useEffect(() => {
+    subscribeToMoreUnreadNotification({
+      document: UNREAD_NOTIFICATION,
+      variables: { channelId: id },
+      updateQuery: (prev, { subscriptionData }) => {
+        if (!subscriptionData.data) return prev;
+        // console.log(subscriptionData);
+        // console.log(prev);
+        // Nên log prev và subscriptionData ra để spread đúng
+        const { unreadNotification } = subscriptionData.data.unreadNotification;
+        const newData = {
+          // ...prev,
+          getUserUnreadNotification: {
+            ...prev.getUserUnreadNotification,
+            unreadNotification,
+          },
+        };
+        // console.log('this is new');
+        // console.log(newData);
+        return newData;
+      },
+    });
+  }, []);
   function handleVisibleChange() {
     setVisibility(!visible);
     setMore(6);
