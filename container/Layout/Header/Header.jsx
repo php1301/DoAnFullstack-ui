@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { useQuery } from 'react-apollo';
 import { withRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -15,9 +14,8 @@ import Logo from 'components/UI/Logo/Logo';
 import Navbar from 'components/Navbar/Navbar';
 import Notifications from 'components/Notifications/Notifications';
 import useWindowSize from 'components/StickyBooking/useWindowSize';
-
+import AvatarImg from './AvatarImg';
 import { USER_PROFILE_PAGE } from 'settings/constants';
-import { GET_USER_INFO } from 'apollo-graphql/query/query';
 import { LayoutContext } from 'context/LayoutProvider';
 import palace from 'assets/images/logo-alt.svg';
 
@@ -63,17 +61,8 @@ const Header = ({ router, user, isLoggedIn }) => {
   }
   widthWindow = useWindowSize();
   const windowInnerWidth = process.browser && widthWindow.innerWidth;
-  const {
-    loading,
-    data,
-  } = useQuery(GET_USER_INFO, {
-    variables: {
-      id: user.id,
-    },
-  });
-  if (loading) return null;
   const headerType = router.pathname === '/' ? 'transparent' : 'default'; // Nếu là section Home thì set Header type trans để truyền vô đối số ở NavBar
-  const AvatarImg = data && data.getUserInfo.profile_pic_main; // fix thành avatar ở backend gửi
+  // const AvatarImg = data && data.getUserInfo.profile_pic_main; // fix thành avatar ở backend gửi
   const userName = `${user.first_name} ${user.last_name}`;
   return (
     <HeaderWrapper>
@@ -90,10 +79,16 @@ const Header = ({ router, user, isLoggedIn }) => {
           )}
             navMenu={<MainMenu id={user.id} isLoggedIn={isLoggedIn} />}
             isLogin={isLoggedIn}
-            avatar={<Logo src={AvatarImg} />}
+            avatar={isLoggedIn && (<AvatarImg user={user} />)}
             authMenu={<AuthMenu />}
           // Chỗ truyền 1 trong những info của user - avatar
-            profileMenu={<ProfileMenu avatar={<Logo src={AvatarImg} />} user={user} />}
+            profileMenu={(
+              <ProfileMenu
+                avatar={isLoggedIn
+                && (<AvatarImg user={user} />)}
+                user={user}
+              />
+            )}
             headerType={headerType}
             searchComponent={<NavbarSearch />}
             location={router}
@@ -134,7 +129,7 @@ const Header = ({ router, user, isLoggedIn }) => {
                 ? (
                   <AvatarWrapper>
                     <AvatarImage>
-                      <Logo src={AvatarImg} />
+                      <AvatarImg user={user} />
                     </AvatarImage>
                     <AvatarInfo>
                       <Text as="h3" content={userName} />

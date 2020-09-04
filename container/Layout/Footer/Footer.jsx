@@ -16,7 +16,7 @@ const Footer = ({ path }) => (
       <>
         <p>
           <Link href={url}>
-            <a target="_blank">PhucPham</a>
+            <a target="_blank" rel="noopener">PhucPham</a>
           </Link>
           {' '}
           Inspired
