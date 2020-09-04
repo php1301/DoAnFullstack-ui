@@ -9,7 +9,7 @@ import GetAPIData from 'library/helpers/get_api_data';
 
 import Container from 'components/UI/Container/Container';
 import Heading from 'components/UI/Heading/Heading';
-import SEO from 'components/Seo';
+import { SEO } from 'components/Seo';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import SectionGrid from 'components/SectionGrid/SectionGrid';
 import SearchArea from 'container/Home/Search/Search';
