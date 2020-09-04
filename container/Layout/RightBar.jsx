@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Heading from 'components/UI/Heading/Heading';
+import Link from 'next/link';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import bucketSVG from './bucket.svg';
 import IntlMessages from 'library/helpers/i18n';
 import ThemeSwitcherStyle from './RightBar.style';
 
 export default function ThemeSwitcher({ language, dispatch }) {
+  const url = '//luudanthanchet.gitbook.io/palace-tripfinder/';
   const [isActivated, setIsActivated] = useState(false);
   const [showNote, setShowNote] = useState(false);
   const toggle = () => {
@@ -26,10 +27,9 @@ export default function ThemeSwitcher({ language, dispatch }) {
       <div className="purchaseBtnWrapper">
         {showNote && (
         <>
-          <Heading content="*NOTE" />
-          <Heading content="+ Trang chủ không có fetch data hay dynamic content mà là demo getIntialProps " />
-          <Heading content="+ Code getStaticProps/getStaticPaths đã được commented trong index.js" />
-          <Heading content="+ Listing sử dụng getServerSideProps" />
+          <Link href={url}>
+            <a target="_blank" rel="noopener">Dành 1 chút vài phút để đọc mọi điều cần biết về project</a>
+          </Link>
         </>
         )}
         <a
