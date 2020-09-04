@@ -49,10 +49,10 @@ const Home = ({
   }
   return (
     <>
-      <SEO title="Hotel - Next" description="inspired - php1301 - TF" image="https://www.propernoun.co/static/images/proper-noun-social.png" />
       <Head>
         <title>Hotel | Palace</title>
       </Head>
+      <SEO title="Hotel - Next" description="inspired - php1301 - TF" image="https://www.propernoun.co/static/images/proper-noun-social.png" />
       <SearchArea />
       <Waypoint
         onEnter={() => dispatch({ type: 'HIDE_TOP_SEARCHBAR' })}
