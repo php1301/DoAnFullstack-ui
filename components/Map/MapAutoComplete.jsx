@@ -60,6 +60,7 @@ const SearchInput = compose(
         <Input
           id="map_autocomplete_input"
           type="text"
+          addonAfter=""
           defaultValue=""
           value={locationInput.searchedLocation || ''}
           placeholder="Search “Vietnam, Asia”"
