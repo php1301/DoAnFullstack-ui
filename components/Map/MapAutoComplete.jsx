@@ -57,17 +57,18 @@ const SearchInput = compose(
   return (
     <div className="map_autocomplete">
       <StandaloneSearchBox ref={refs} onPlacesChanged={onPlacesChanged}>
-        <Input
-          id="map_autocomplete_input"
-          type="text"
-          addonBefore=" "
-          defaultValue=""
-          value={locationInput.searchedLocation || ''}
-          placeholder="Search “Vietnam, Asia”"
-          size="large"
-          onChange={handleOnChange}
-          onPressEnter={handleOnPressEnter}
-        />
+        <label>
+          Search “Vietnam, Asia”
+          <Input
+            id="map_autocomplete_input"
+            type="text"
+            defaultValue=""
+            value={locationInput.searchedLocation || ''}
+            size="large"
+            onChange={handleOnChange}
+            onPressEnter={handleOnPressEnter}
+          />
+        </label>
       </StandaloneSearchBox>
     </div>
   );
