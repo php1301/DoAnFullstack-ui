@@ -139,6 +139,7 @@ const SearchForm = () => {
         <FaMapMarkerAlt className="map-marker" />
         <MapAutoComplete updateValue={(value) => updateValueFunc(value)} />
         <label for="map_autocomplete_input">
+          .
           <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
