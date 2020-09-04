@@ -105,7 +105,7 @@ export default function ProductCard({
         {gallery && gallery.length > 0 && gallery.map(({ url, title }) => (
           <img
             src={url}
-            alt={title}
+            alt={title || 'Grid Image'}
             key={uuidv4()}
             draggable={false}
             style={{

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useRef } from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs } from 'react-google-maps';
@@ -56,15 +57,18 @@ const SearchInput = compose(
   return (
     <div className="map_autocomplete">
       <StandaloneSearchBox ref={refs} onPlacesChanged={onPlacesChanged}>
-        <Input
-          type="text"
-          defaultValue=""
-          value={locationInput.searchedLocation || ''}
-          placeholder="Search “Vietnam, Asia”"
-          size="large"
-          onChange={handleOnChange}
-          onPressEnter={handleOnPressEnter}
-        />
+        <label>
+          Search
+          <Input
+            type="text"
+            defaultValue=""
+            value={locationInput.searchedLocation || ''}
+            placeholder="Search “Vietnam, Asia”"
+            size="large"
+            onChange={handleOnChange}
+            onPressEnter={handleOnPressEnter}
+          />
+        </label>
       </StandaloneSearchBox>
     </div>
   );

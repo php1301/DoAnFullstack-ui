@@ -34,7 +34,7 @@ export const ContentWrapper = styled.div`
   z-index: 2;
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h1`
   color: ${themeGet('color.1', '#ffffff')};
   font-size: 25px;
   line-height: 30px;

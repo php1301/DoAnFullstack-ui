@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta name="theme-color" content="#008489" />
           <meta name="description" content="React next listing." />

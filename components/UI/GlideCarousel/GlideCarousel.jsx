@@ -82,6 +82,7 @@ const GlideCarousel = ({
             {totalBullets.map((index) => (
               <BulletButton
                 key={index}
+                aria-label="Glide Nav"
                 className="glide__bullet"
                 data-glide-dir={`=${index}`}
               />

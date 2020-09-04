@@ -190,7 +190,7 @@ const ThemeSwitcherStyle = styled.div`
       font-size: 14px;
       font-weight: 700;
       color: rgb(255, 255, 255);
-      background-color: rgb(68, 130, 255);
+      background-color: rgb(50, 51, 50);
       text-transform: uppercase;
       line-height: 1;
       text-align: center;
