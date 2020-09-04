@@ -2,12 +2,14 @@ import App from 'next/app';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import 'react-toastify/dist/ReactToastify.min.css';
 import 'react-dates/lib/css/_datepicker.css';
+import Router from 'next/router';
 import { ThemeProvider } from 'styled-components';
 // import { appWithTranslation } from '../i18n';
 import AppLocale from 'translations/index';
 import theme from 'themes/default.theme';
 import GlobalStyles from 'assets/style/Global.style';
 import { withData } from 'library/helpers/restriction';
+import * as gtag from 'library/helpers/gtag';
 // Chỉ trong development
 import whyDidYouRender from '@welldone-software/why-did-you-render';
 import { LanguageProvider } from 'context/LanguageProvider';
@@ -53,6 +55,13 @@ class CustomApp extends App {
     this.setState({
       currentSelectedLanguage: language,
     });
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    Router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange)
+    }
   }
 
 

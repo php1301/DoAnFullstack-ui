@@ -15,6 +15,7 @@ const nextConfig = {
   env: {
     API: process.env.API || 'https://api.hotel-prisma.ml/graphql',
     WS_API: process.env.WS_API || 'wss://api.hotel-prisma.ml/graphql',
+    G_ID: process.env.G_ID || ' ',
     PUBLIC_STRIPE: process.env.PUBLIC_STRIPE,
     SECRET_STRIPE: process.env.SECRET_STRIPE,
     GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
