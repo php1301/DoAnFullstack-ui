@@ -58,6 +58,7 @@ const SearchInput = compose(
     <div className="map_autocomplete">
       <StandaloneSearchBox ref={refs} onPlacesChanged={onPlacesChanged}>
         <label>
+          {' '}
           <Input
             type="text"
             defaultValue=""
