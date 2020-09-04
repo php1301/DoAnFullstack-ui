@@ -9,6 +9,7 @@ import GetAPIData from 'library/helpers/get_api_data';
 
 import Container from 'components/UI/Container/Container';
 import Heading from 'components/UI/Heading/Heading';
+import SEO from 'components/Seo';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import SectionGrid from 'components/SectionGrid/SectionGrid';
 import SearchArea from 'container/Home/Search/Search';
@@ -48,6 +49,7 @@ const Home = ({
   }
   return (
     <>
+      <SEO title="Hotel - Next" description="inspired - php1301 - TF" image="https://www.propernoun.co/static/images/proper-noun-social.png" />
       <Head>
         <title>Hotel | Palace</title>
       </Head>
