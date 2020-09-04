@@ -28,7 +28,7 @@ export default function ThemeSwitcher({ language, dispatch }) {
         {showNote && (
         <>
           <Link href={url}>
-            <a target="_blank" rel="noopener">Dành 1 chút vài phút để đọc mọi điều cần biết về project</a>
+            <a target="_blank" rel="noopener">Click vào đây và dành một vài phút để đọc mọi điều cần biết về project này</a>
           </Link>
         </>
         )}
