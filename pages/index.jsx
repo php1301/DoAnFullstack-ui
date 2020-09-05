@@ -50,7 +50,7 @@ const Home = ({
   return (
     <>
       <Head>
-        <title>Hotel | Palace</title>
+        <title> ĐỒ ÁN | FULLSTACK FS08 CYBERSOFT</title>
       </Head>
       <SEO title="Hotel - Next" description="inspired - php1301 - TF" image="https://www.propernoun.co/static/images/proper-noun-social.png" />
       <SearchArea />
