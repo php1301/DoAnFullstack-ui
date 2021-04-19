@@ -1,4 +1,4 @@
-# ĐỒ ÁN FULLSTACK (UI) - ...
+# ĐỒ ÁN FULLSTACK (UI)
 
 ___
 
