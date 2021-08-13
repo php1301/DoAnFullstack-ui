@@ -57,7 +57,7 @@
     "md-file-tree": "^0.2.0",
     "mobile-detect": "^1.4.4",
     "moment": "^2.24.0",
-    "next": "9.3.3",
+    "next": "11.1.0",
     "next-compose-plugins": "^2.2.0",
     "next-cookies": "^2.0.3",
     "next-fonts": "^1.0.3",
